@@ -22,7 +22,7 @@ public class AritmeticasActivity extends AppCompatActivity {
     }
 
     public void anterior(View view){
-        Intent intent = new Intent(AritmeticasActivity.this, ExpressoesActivity.class);
+        Intent intent = new Intent(AritmeticasActivity.this, ExemploOperadoresAritmeticosActivity.class);
         startActivity(intent);
     }
 

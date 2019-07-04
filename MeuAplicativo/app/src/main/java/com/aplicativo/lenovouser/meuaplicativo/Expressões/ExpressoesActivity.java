@@ -16,7 +16,7 @@ public class ExpressoesActivity extends AppCompatActivity {
     }
 
     public void aritmeticas(View view){
-        Intent intent = new Intent(ExpressoesActivity.this, AritmeticasActivity.class);
+        Intent intent = new Intent(ExpressoesActivity.this, OperadoresAritmeticosActivity.class);
         startActivity(intent);
     }
 

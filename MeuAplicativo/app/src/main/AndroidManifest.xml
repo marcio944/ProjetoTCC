@@ -94,7 +94,9 @@
         <activity android:name=".Introducao.Questao4AlgoritmosActivity" />
         <activity android:name=".Introducao.Questao5AlgoritmosActivity" />
         <activity android:name=".Dados.Questao4PrimitivosActivity" />
-        <activity android:name=".Dados.Questao5PrimitivosActivity"></activity>
+        <activity android:name=".Dados.Questao5PrimitivosActivity" />
+        <activity android:name=".Expressões.OperadoresAritmeticosActivity" />
+        <activity android:name=".Expressões.ExemploOperadoresAritmeticosActivity"></activity>
     </application>
 
 </manifest>

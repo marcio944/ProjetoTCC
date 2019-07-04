@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void expressoes(View view){
+    public void operadoresexpressoes(View view){
         Intent intent = new Intent(MainActivity.this, ExpressoesActivity.class);
         startActivity(intent);
     }
