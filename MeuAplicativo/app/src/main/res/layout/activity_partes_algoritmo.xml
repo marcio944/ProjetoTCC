@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Introducao.PartesAlgoritmoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button_Poximo_Algoritmo"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView_Algoritmo"
+            android:layout_alignTop="@+id/button_Anterior_Algoritmo"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:onClick="exemploPartesAlgoritmo"
+            android:text="Próximo" />
+
+        <Button
+            android:id="@+id/button_Anterior_Algoritmo"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textView_Algoritmo"
+            android:layout_marginBottom="36dp"
+            android:background="@color/colorPrimary"
+            android:text="Anterior"
+            android:onClick="retornarIntroducao"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/textView_Algoritmo"
+            android:layout_width="359dp"
+            android:layout_height="457dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="Um algortimo quando programado num computador é constituído pelo menos das 3 partes, sendo elas:
+            \n\n1. Entrada de dados;
+            \n\n2. Processamento de dados;
+            \n\n3. Saída de dados;"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

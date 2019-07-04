@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Introducao.Questao5FluxogramaActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="89dp"
+            android:layout_marginStart="31dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:onClick="anterior"
+            android:text="Anterior" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="142dp"
+            android:text="Os símbolos I, II e III ilustrados acima significam, respectivamente, tarefa ou operação, decisão e conexão na mesma página."
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="171dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="371dp"
+            android:layout_height="129dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/simbolos_fluxograma_questao5"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/button5"
+            android:layout_marginEnd="42dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:onClick="proximo"
+            android:text="Próximo" />
+
+        <RadioGroup
+            android:layout_width="111dp"
+            android:layout_height="93dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/button5"
+            android:layout_marginTop="255dp">
+
+            <RadioButton
+                android:id="@+id/radioButton14"
+                android:layout_width="133dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Certo" />
+
+            <RadioButton
+                android:id="@+id/radioButton13"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Errado" />
+        </RadioGroup>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

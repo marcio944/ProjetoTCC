@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dados.Questao4PrimitivosActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView54"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:text="Na programação de computadores, uma variável do tipo boolean ou lógico pode receber valores:"
+            android:textSize="18dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="47dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="134dp" >
+
+            <RadioButton
+                android:id="@+id/radioButton55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="inteiros." />
+
+            <RadioButton
+                android:id="@+id/radioButton54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="verdadeiros ou falsos." />
+
+            <RadioButton
+                android:id="@+id/radioButton53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="reais." />
+
+            <RadioButton
+                android:id="@+id/radioButton52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="formados por cadeias de caracteres." />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button69"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="38dp"
+            android:layout_marginStart="36dp"
+            android:background="@color/colorPrimary"
+            android:text="Anterior"
+            android:onClick="anterior"
+            android:textColor="#ffffff"  />
+
+        <Button
+            android:id="@+id/button70"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/button69"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp"
+            android:background="@color/colorPrimary"
+            android:onClick="proximo"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

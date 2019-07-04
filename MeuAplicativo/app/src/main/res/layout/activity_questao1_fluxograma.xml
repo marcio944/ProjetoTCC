@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Introducao.Questao1FluxogramaActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewQuestao1Fluxograma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:text="O instrumento que por meio de gráficos representa o fluxo ou sequência de procedimentos e rotinas; pode ser vertical, de blocos, analítico ou de Skiner e Anderson, entre outros; facilita a análise do trabalho e a sua simplificação e permite compreender melhor a rotina, denomina-se:"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_retornarExemplo"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/radioButton"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="97dp"
+            android:layout_marginStart="30dp"
+            android:background="@color/colorPrimary"
+            android:text="Anterior"
+            android:onClick="anteriorExemplo"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button_ProximoQuestao2Fluxograma"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/button_retornarExemplo"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="28dp"
+            android:background="@color/colorPrimary"
+            android:text="Próximo"
+            android:onClick="questao2"
+            android:textColor="#ffffff" />
+
+        <RadioGroup
+            android:layout_width="173dp"
+            android:layout_height="149dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/button_retornarExemplo"
+            android:layout_marginTop="169dp">
+
+            <RadioButton
+                android:id="@+id/radioButton19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lotacionograma" />
+
+            <RadioButton
+                android:id="@+id/radioButton18"
+                android:layout_width="194dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Organograma" />
+
+            <RadioButton
+                android:id="@+id/radioButton17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Funcionograma" />
+
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fluxograma"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="172dp" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

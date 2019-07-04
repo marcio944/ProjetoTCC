@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EntradaSaída.ExemploSaidaActivity">
+
+    <RelativeLayout
+        android:layout_width="413dp"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="150dp">
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="386dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="49dp"
+            android:text="Exemplos do uso de Saída de Dados em Algoritmos"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="344dp"
+            android:layout_height="170dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="113dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/saida" />
+
+        <Button
+            android:id="@+id/button49"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="49dp"
+            android:layout_marginStart="25dp"
+            android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/button49"
+            android:layout_marginEnd="54dp"
+            android:background="@color/colorPrimary"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton12"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/button49"
+            android:layout_marginStart="158dp"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

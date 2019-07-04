@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Condicao.CondicaoCompostaActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:text="Estrutura de Condição Composta: se-então-senão" />
+
+        <TextView
+            android:id="@+id/textView50"
+            android:layout_width="362dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="72dp"
+            android:text="@string/condicaocomposta"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/button59"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="46dp"
+            android:layout_marginStart="35dp"
+            android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/button59"
+            android:layout_marginEnd="35dp"
+            android:background="@color/colorPrimary"
+            android:onClick="proximo"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton17"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="49dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:onClick="inicio"
+            app:srcCompat="@drawable/home" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

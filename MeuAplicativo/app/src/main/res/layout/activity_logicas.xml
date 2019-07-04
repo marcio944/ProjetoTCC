@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Expressões.LogicasActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="369dp"
+            android:layout_height="414dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="34dp"
+            android:text="As expressões lógicas são aquelas cujo valor só pode ser verdadeiro ou falso. São compostas por operadores relacionais, operadores lógicos, e por identificadores variáveis ou constantes do tipo lógico.As expressões lógicas também podem ser compostas por resultados de expressões aritméticas."
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/button33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="43dp"
+            android:layout_marginStart="37dp"
+            android:background="@color/colorPrimary"
+            android:text="Anterior"
+            android:textColor="#ffffff"
+            android:onClick="anterior"/>
+
+        <Button
+            android:id="@+id/button34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/button33"
+            android:layout_marginEnd="36dp"
+            android:background="@color/colorPrimary"
+            android:text="Próximo"
+            android:textColor="#ffffff"
+            android:onClick="proximo"/>
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/button33"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Introducao.Questao3FluxogramaActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="33dp">
+
+        <TextView
+            android:id="@+id/textViewQuestao3Fluxograma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="22dp"
+            android:text="Com relação aos fluxogramas, julgue os seguintes itens. Os fluxogramas são gráficos de processamento úteis para implantar, revisar ou analisar um sistema e planejar rotinas de trabalho."
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="88dp"
+            android:layout_marginStart="33dp"
+            android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <RadioGroup
+            android:layout_width="136dp"
+            android:layout_height="96dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textViewQuestao3Fluxograma"
+            android:layout_marginTop="152dp">
+
+            <RadioButton
+                android:id="@+id/radioButton8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Certo" />
+
+            <RadioButton
+                android:id="@+id/radioButton7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Errado" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/button"
+            android:layout_marginEnd="38dp"
+            android:background="@color/colorPrimary"
+            android:text="Próximo"
+            android:onClick="proximo"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

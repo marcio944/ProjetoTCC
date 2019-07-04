@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Expressões.ExemploPrecedenciaAritmeticosActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="62dp"
+            android:text="Precedência Geral de Operadores Aritméticos"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="366dp"
+            android:layout_height="163dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="119dp"
+            app:srcCompat="@drawable/precedencia_aritmeticos" />
+
+        <Button
+            android:id="@+id/button37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="44dp"
+            android:layout_marginStart="35dp"
+            android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/button37"
+            android:layout_marginEnd="37dp"
+            android:background="@color/colorPrimary"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/button37"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

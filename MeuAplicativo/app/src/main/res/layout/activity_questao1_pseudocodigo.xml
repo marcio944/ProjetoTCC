@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Introducao.Questao1PseudocodigoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="27dp"
+            app:srcCompat="@drawable/questao1_pseudocodigo" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="238dp"
+            android:text="Qual será a saída do algoritmo acima?" />
+
+        <RadioGroup
+            android:layout_width="226dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textView5"
+            android:layout_marginBottom="165dp">
+
+            <RadioButton
+                android:id="@+id/radioButton22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="O resultado da soma é: 40!" />
+
+            <RadioButton
+                android:id="@+id/radioButton21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="O resultado da soma é: 35!" />
+
+            <RadioButton
+                android:id="@+id/radioButton16"
+                android:layout_width="236dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="O resultado da soma é: 45!" />
+
+            <RadioButton
+                android:id="@+id/radioButton15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="O resultado da soma é: 25!" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textView5"
+            android:layout_marginBottom="59dp"
+            android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/button7"
+            android:layout_marginEnd="30dp"
+            android:background="@color/colorPrimary"
+            android:onClick="proximo"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

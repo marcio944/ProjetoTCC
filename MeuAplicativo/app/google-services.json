@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "656821498392",
+    "firebase_url": "https://meuaplicativo-91f14.firebaseio.com",
+    "project_id": "meuaplicativo-91f14",
+    "storage_bucket": "meuaplicativo-91f14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656821498392:android:87820d5ee80e9e96",
+        "android_client_info": {
+          "package_name": "com.aplicativo.lenovouser.meuaplicativo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656821498392-75mduoknfqo2ukn3l83nptvnf90i4oqg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aplicativo.lenovouser.meuaplicativo",
+            "certificate_hash": "5a85a394ab9e2bc8e0dc540c34f8f9f9d917fcf9"
+          }
+        },
+        {
+          "client_id": "656821498392-7v11ncav2vuehhqu213k2tmmnerj6kj2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF2lF6ehUcxa4XCOdTf0Ljd2-L0uxlbKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "656821498392-7v11ncav2vuehhqu213k2tmmnerj6kj2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

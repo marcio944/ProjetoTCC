@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aplicativo.lenovouser.meuaplicativo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Usuário.LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Usuário.CadastroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Usuário.recuperarSenhaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Introducao.IntroducaoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Introducao.ConceitoAlgoritmoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Introducao.ExemploAlgoritmoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Dados.DadosActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Controle.ControleActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Expressões.ExpressoesActivity" />
+        <activity android:name=".Condicao.CondicaoActivity" />
+        <activity android:name=".Repetição.RepeticaoActivity" />
+        <activity android:name=".Dados.PrimitivosActivity" />
+        <activity android:name=".Introducao.PartesAlgoritmoActivity" />
+        <activity android:name=".Introducao.ExemploPartesActivity" />
+        <activity android:name=".Introducao.FluxogramaActivity" />
+        <activity android:name=".Introducao.ExemploFluxogramaActivity" />
+        <activity android:name=".Introducao.PseudocodigoActivity" />
+        <activity android:name=".Introducao.ExemploPseudocodigoActivity" />
+        <activity android:name=".Dados.Primitivos2Activity" />
+        <activity android:name=".Introducao.Questao1AlgoritmosActivity" />
+        <activity android:name=".Introducao.Questao1FluxogramaActivity" />
+        <activity android:name=".Introducao.Questao2FluxogramaActivity" />
+        <activity android:name=".Introducao.SimbolosFluxogramaActivity" />
+        <activity android:name=".Introducao.Questao3FluxogramaActivity" />
+        <activity android:name=".Introducao.Questao4FluxogramaActivity" />
+        <activity android:name=".Introducao.Questao5FluxogramaActivity" />
+        <activity android:name=".Introducao.Questao1PseudocodigoActivity" />
+        <activity android:name=".Introducao.Questao2PseudocodigoActivity" />
+        <activity android:name=".Introducao.Questao3PseudocodigoActivity" />
+        <activity android:name=".Introducao.Questao4PseudocodigoActivity" />
+        <activity android:name=".Introducao.ComandosPseudocodigoActivity" />
+        <activity android:name=".Introducao.EstruturaPseudocodigoActivity" />
+        <activity android:name=".Introducao.Questao5PseudocodigoActivity" />
+        <activity android:name=".Dados.Questao1PrimitivosActivity" />
+        <activity android:name=".Dados.Questao2PrimitivosActivity" />
+        <activity android:name=".Dados.Questao3PrimitivosActivity" />
+        <activity android:name=".Dados.ConstantesVariaveisActivity" />
+        <activity android:name=".Dados.ExemploConstantesVariaveisActivity" />
+        <activity android:name=".Expressões.AritmeticasActivity" />
+        <activity android:name=".Expressões.ExemploAritmeticasActivity" />
+        <activity android:name=".Expressões.LogicasActivity" />
+        <activity android:name=".Expressões.ExemploLogicasActivity" />
+        <activity android:name=".Expressões.PrecedenciaAritmeticosActivity" />
+        <activity android:name=".Expressões.ExemploPrecedenciaAritmeticosActivity" />
+        <activity android:name=".Expressões.ExemploOperadoresRelacionaisActivity" />
+        <activity android:name=".Expressões.OperadoresLogicosActivity" />
+        <activity android:name=".Expressões.OperadoresRelacionaisActivity" />
+        <activity android:name=".Expressões.ExemploOperadoresLogicosActivity" />
+        <activity android:name=".EntradaSaída.EntradaSaidaActivity" />
+        <activity android:name=".EntradaSaída.EntradaActivity" />
+        <activity android:name=".EntradaSaída.SaidaActivity" />
+        <activity android:name=".EntradaSaída.ExemploSaidaActivity" />
+        <activity android:name=".EntradaSaída.ExemploEntradaActivity" />
+        <activity android:name=".Condicao.CondicaoSimplesActivity" />
+        <activity android:name=".Condicao.ExemploCondicaoSimplesActivity" />
+        <activity android:name=".Condicao.CondicaoCompostaActivity" />
+        <activity android:name=".Condicao.ExemploCondicaoCompostaActivity" />
+        <activity android:name=".Introducao.Questao2AlgoritmosActivity" />
+        <activity android:name=".Introducao.Questao3AlgoritmosActivity" />
+        <activity android:name=".Introducao.Questao4AlgoritmosActivity" />
+        <activity android:name=".Introducao.Questao5AlgoritmosActivity" />
+        <activity android:name=".Dados.Questao4PrimitivosActivity" />
+        <activity android:name=".Dados.Questao5PrimitivosActivity"></activity>
+    </application>
+
+</manifest>

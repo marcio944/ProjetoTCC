@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dados.Questao2PrimitivosActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="361dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="Objetos do tipo real são representados por números racionais e têm uma parte inteira e outra fracionária.  " />
+
+        <RadioGroup
+            android:layout_width="99dp"
+            android:layout_height="76dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textView23"
+            android:layout_marginTop="120dp">
+
+            <RadioButton
+                android:id="@+id/radioButton33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="certo" />
+
+            <RadioButton
+                android:id="@+id/radioButton32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="errado" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button23"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/button24"
+            android:layout_marginEnd="40dp"
+            android:text="Próximo"
+            android:onClick="proximo"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/button24"
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="26dp"
+            android:layout_marginStart="38dp"
+            android:text="Anterior"
+            android:onClick="anterior"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"/>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

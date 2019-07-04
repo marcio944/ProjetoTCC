@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Introducao.PseudocodigoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button_proximoExemplo"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/button_Anterior_Introducao"
+            android:layout_marginEnd="39dp"
+            android:background="@color/colorPrimary"
+            android:onClick="exemploPseudocodigo"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button_Anterior_Introducao"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="38dp"
+            android:layout_marginStart="36dp"
+            android:background="@color/colorPrimary"
+            android:onClick="retornarIntroducao"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/textView_Pseudocodigo"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="O pseudocódigo é uma maneira intermediária entre a linguagem natural e uma linguagem de programação de representar um algoritmo. Ela utiliza um conjunto restrito de palavras-chave, em geral na língua nativa do programador, que tem equivalentes nas linguagens de programação. Além disso, o pseudocódigo não requer todo a rigidez sintática necessária numa linguagem de programação, permitindo que o aprendiz se detenha na lógica do algoritmos e não no formalismo da sua representação."
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

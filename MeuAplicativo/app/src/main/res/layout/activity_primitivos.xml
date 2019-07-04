@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dados.PrimitivosActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button_PoximoPrimitivos"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView_Primitivos"
+            android:layout_alignTop="@+id/button_AnteriorDados"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:onClick="proximoPrimitivos"
+            android:text="Próximo" />
+
+        <Button
+            android:id="@+id/button_AnteriorDados"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textView_Primitivos"
+            android:layout_marginBottom="36dp"
+            android:background="@color/colorPrimary"
+            android:text="Anterior"
+            android:onClick="retornarDados"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/textView_Primitivos"
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="Os dados em um computador devem ser armazenados de acordo com o tipo de informação que se deseja representar e com o tipo de operação que será realizada com eles. A representação correta e adequada de uma informação permite otimizar os recursos computacionais disponíveis, além de acelerar o processamento. A seguir são definidos os tipos de dados mais comuns encontrados na maioria das linguagens de programação e que constituem a base de como qualquer informação será armazenada no mesmo."
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

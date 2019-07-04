@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dados.ExemploConstantesVariaveisActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView56"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:textStyle="bold"
+            android:text="Exemplo do uso de Constantes e Variáveis em Algoritmos." />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="318dp"
+            android:layout_height="183dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="105dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/constantesvariaveis" />
+
+        <Button
+            android:id="@+id/button73"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageView13"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="62dp"
+            android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button74"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imageView13"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginBottom="65dp"
+            android:background="@color/colorPrimary"
+            android:onClick="proximo"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

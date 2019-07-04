@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"></string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="sintax_escreva">Sintax: escreva(valor)</string>
+    <string name="sintax_leia">Sintax: leia(variável)</string>
+    <string name="operadores_logicos">Os operadores relacionais são aqueles que comparam dois valores do mesmo tipo. O
+retorno da expressão relacional indica se o resultado da comparação foi verdadeiro
+ou falso. Por exemplo, a expressão 2 = 2 é uma expressão lógica válida cujo valor
+é verdadeiro. Em contrapartida, a expressão 2 = 8 é uma expressão lógica também
+válida, mas cujo valor é falso. </string>
+    <string name="sintax_atribuicao">Sintax: variável valor</string>
+    <string name="saida">Para imprimirmos algum tipo de informação na tela do computador utilizamos o comando escreva seguido da informação que será escrita. Dessa forma, se quisermos
+imprimir uma mensagem como por exemplo “Ola mundo!”, isto seria feito com a instrução \n \n escreva (Olá Mundo) \n \n
+    As aspas servem para delimitar uma sequência de caracteres, uma constante, mas não fazem parte do conteúdo a ser impresso. Para imprimir o valor de uma variável,
+basta colocar o seu identificador diretamente. O fragmento de código \n \n
+        ttt ← 123 \n \n
+        escreva (ttt) \n \n
+        imprime 123 na saída. Como a sequência ttt não tem aspas, durante a execução o
+algoritmo considera ttt como sendo o identificador de uma variável e o substitui pelo
+seu conteúdo, neste caso 123.
+</string>
+    <string name="entrada">Da mesma maneira que necessitamos enviar informações de dentro do algoritmo para
+a saida padrão (em geral a tela), também necessitamos receber informações de fora do
+algoritmo, a partir da entrada padrão (em geral o teclado). Para realizarmos a entrada de dados utilizaremos o comando leia. Ao utilizar o
+comando leia o programador deve saber de antemão qual a variável que irá armazenar
+o valor que será fornecido pelo usuário. Sendo assim, é necessário declarar variáveis que possam
+armazenar valores que sejam compatíveis com as informações solicitadas ao usuário. Após declaradas as variáveis que receberão os valores fornecidos pelo usuário podemos utilizar o comando leia para receber esses valores. Para isso devemos escrever
+leia seguido da variável que receberá os valores entre parênteses. </string>
+    <string name="condicaosimples">A estrutura de condição mais simples é a se-entao, utilizada da seguinte forma: \n \n se <br /><b>expressão-lógica</b> então: \n \n
+        \t \t <br /><b>bloco de comandos</b> \n \n fim-se \n \n A <br /><b>expressão-lógica</b> é uma expressão que deverá retornar um valor de verdadeiro (V) ou de falso (F), e caso o resultado dessa expressão for verdadeiro, será executado
+o bloco de comandos que está dentro da estrutura. Caso seja falso, a execução do programa ignora o bloco de comando e continua na linha seguinte à estutura de condição. \n \n <br /><b>O bloco de comandos</b> é uma sequência de código que será executado somente quando
+o resultado da expressão lógica for verdadeiro. Por fim, a instrução fim-se indica que a estrutra se-entao chegou ao final, servido para delimitar o bloco de instruções.</string>
+    <string name="condicaocomposta">A estrutura de condição se-então, oferece a possibilidade de executarmos uma determinada ação ou comando se o resultado da expressão lógica for verdadeiro e de executarmos uma ação diferente se o resultado da expressão lógica for falso. Para essas situações é utilizado o comando senão, como mostrado abaixo. \n\n
+    se <b>expressão-lógica</b> então: \n \n
+\t \t <b>bloco de comandos verdade</b> \n \n senão: \n \n
+    \t \t <b>bloco de comandos falsidade</b> \n \n
+fim-se</string>
+</resources>

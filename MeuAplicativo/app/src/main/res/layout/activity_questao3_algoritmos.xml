@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Introducao.Questao3AlgoritmosActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="298dp">
+
+        <TextView
+            android:id="@+id/textView51"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Nos algoritmos, as variáveis são, notadamente, utilizadas para representar valores previamente conhecidos."
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="118dp"
+            android:layout_height="125dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="155dp">
+
+            <RadioButton
+                android:id="@+id/radioButton43"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Certo" />
+
+            <RadioButton
+                android:id="@+id/radioButton42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Errado" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button63"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginBottom="38dp"
+            android:background="@color/colorPrimary"
+            android:text="Anterior"
+            android:onClick="anterior"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button64"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/button63"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"
+            android:background="@color/colorPrimary"
+            android:text="Próximo"
+            android:onClick="proximo"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
