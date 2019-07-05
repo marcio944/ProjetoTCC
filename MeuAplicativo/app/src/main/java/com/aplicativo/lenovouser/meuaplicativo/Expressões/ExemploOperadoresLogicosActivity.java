@@ -26,4 +26,9 @@ public class ExemploOperadoresLogicosActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void proximo(View view){
+        Intent intent = new Intent(ExemploOperadoresLogicosActivity.this, LogicasActivity.class);
+        startActivity(intent);
+    }
+
 }

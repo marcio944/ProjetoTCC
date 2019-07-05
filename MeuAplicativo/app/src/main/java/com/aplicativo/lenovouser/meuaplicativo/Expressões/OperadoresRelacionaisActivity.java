@@ -22,7 +22,7 @@ public class OperadoresRelacionaisActivity extends AppCompatActivity {
     }
 
     public void anterior(View view){
-        Intent intent = new Intent(OperadoresRelacionaisActivity.this, LogicasActivity.class);
+        Intent intent = new Intent(OperadoresRelacionaisActivity.this, ExpressoesActivity.class);
         startActivity(intent);
     }
 

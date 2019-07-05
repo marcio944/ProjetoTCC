@@ -8,26 +8,26 @@ import android.view.View;
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
-public class ExemploLogicasActivity extends AppCompatActivity {
+public class ExemploLogicasSimplesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exemplo_logicas);
+        setContentView(R.layout.activity_exemplo_logicas_simples);
     }
 
     public void inicio(View view){
-        Intent intent = new Intent(ExemploLogicasActivity.this, MainActivity.class);
+        Intent intent = new Intent(ExemploLogicasSimplesActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
     public void anterior(View view){
-        Intent intent = new Intent(ExemploLogicasActivity.this, LogicasActivity.class);
+        Intent intent = new Intent(ExemploLogicasSimplesActivity.this, LogicasActivity.class);
         startActivity(intent);
     }
 
     public void proximo(View view){
-        Intent intent = new Intent(ExemploLogicasActivity.this, OperadoresLogicosActivity.class);
+        Intent intent = new Intent(ExemploLogicasSimplesActivity.this, ExemploLogicasCompostasActivity.class);
         startActivity(intent);
     }
 

@@ -73,7 +73,7 @@
         <activity android:name=".Expressões.AritmeticasActivity" />
         <activity android:name=".Expressões.ExemploAritmeticasActivity" />
         <activity android:name=".Expressões.LogicasActivity" />
-        <activity android:name=".Expressões.ExemploLogicasActivity" />
+        <activity android:name=".Expressões.ExemploLogicasSimplesActivity" />
         <activity android:name=".Expressões.PrecedenciaAritmeticosActivity" />
         <activity android:name=".Expressões.ExemploPrecedenciaAritmeticosActivity" />
         <activity android:name=".Expressões.ExemploOperadoresRelacionaisActivity" />
@@ -96,7 +96,10 @@
         <activity android:name=".Dados.Questao4PrimitivosActivity" />
         <activity android:name=".Dados.Questao5PrimitivosActivity" />
         <activity android:name=".Expressões.OperadoresAritmeticosActivity" />
-        <activity android:name=".Expressões.ExemploOperadoresAritmeticosActivity"></activity>
+        <activity android:name=".Expressões.ExemploOperadoresAritmeticosActivity" />
+        <activity android:name=".Expressões.ExemploLogicasCompostasActivity" />
+        <activity android:name=".Condicao.CondicaoEncadeadaActivity" />
+        <activity android:name=".Condicao.ExemploCondicaoEncadeadaActivity"></activity>
     </application>
 
 </manifest>

@@ -43,15 +43,15 @@
                 android:id="@+id/button_Aritmeticas"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginBottom="190dp"
-                android:layout_marginStart="-218dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="-225dp"
                 android:layout_marginTop="350dp"
+                android:layout_marginBottom="190dp"
                 android:background="@color/colorPrimary"
+                android:onClick="aritmeticas"
                 android:text="Iniciar"
-                android:textColor="#FFFFFF"
-                android:onClick="aritmeticas"/>
+                android:textColor="#FFFFFF" />
 
             <View
                 android:id="@+id/view"
@@ -73,8 +73,8 @@
                 android:layout_marginStart="-245dp"
                 android:layout_marginTop="96dp"
                 android:fontFamily="Times new Roman"
-                android:text="Expressões Lógicas"
-                android:textSize="24dp" />
+                android:text="Operadores Relacionais\nOperadores Lógicos\nExpressões Lógicas"
+                android:textSize="22dp" />
 
             <Button
                 android:id="@+id/button_Logicas"
@@ -83,7 +83,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginBottom="190dp"
-                android:layout_marginStart="-198dp"
+                android:layout_marginStart="-220dp"
                 android:layout_marginTop="350dp"
                 android:background="@color/colorPrimary"
                 android:text="Iniciar"

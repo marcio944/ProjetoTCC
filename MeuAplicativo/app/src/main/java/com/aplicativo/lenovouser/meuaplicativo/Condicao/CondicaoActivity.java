@@ -20,4 +20,14 @@ public class CondicaoActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void condicaoComposta(View view){
+        Intent intent = new Intent(CondicaoActivity.this, CondicaoCompostaActivity.class);
+        startActivity(intent);
+    }
+
+    public void condicaoEncadeada(View view){
+        Intent intent = new Intent(CondicaoActivity.this, CondicaoEncadeadaActivity.class);
+        startActivity(intent);
+    }
+
 }

@@ -21,7 +21,7 @@ public class ExpressoesActivity extends AppCompatActivity {
     }
 
     public void logicas(View view){
-        Intent intent = new Intent(ExpressoesActivity.this, LogicasActivity.class);
+        Intent intent = new Intent(ExpressoesActivity.this, OperadoresRelacionaisActivity.class);
         startActivity(intent);
     }
 

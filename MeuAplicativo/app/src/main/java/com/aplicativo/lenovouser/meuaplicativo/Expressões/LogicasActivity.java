@@ -22,12 +22,12 @@ public class LogicasActivity extends AppCompatActivity {
     }
 
     public void anterior(View view){
-        Intent intent = new Intent(LogicasActivity.this, ExpressoesActivity.class);
+        Intent intent = new Intent(LogicasActivity.this, ExemploOperadoresLogicosActivity.class);
         startActivity(intent);
     }
 
     public void proximo(View view){
-        Intent intent = new Intent(LogicasActivity.this, OperadoresRelacionaisActivity.class);
+        Intent intent = new Intent(LogicasActivity.this, ExemploLogicasSimplesActivity.class);
         startActivity(intent);
     }
 }
