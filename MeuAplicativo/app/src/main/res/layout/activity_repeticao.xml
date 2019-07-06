@@ -50,6 +50,7 @@
                 android:layout_marginTop="350dp"
                 android:background="@color/colorPrimary"
                 android:text="Iniciar"
+                android:onClick="testeInicio"
                 android:textColor="#FFFFFF" />
 
             <View
@@ -86,6 +87,7 @@
                 android:layout_marginTop="350dp"
                 android:background="@color/colorPrimary"
                 android:text="Iniciar"
+                android:onClick="testeFim"
                 android:textColor="#FFFFFF" />
 
             <View
@@ -122,6 +124,7 @@
                 android:layout_marginTop="350dp"
                 android:background="@color/colorPrimary"
                 android:text="Iniciar"
+                android:onClick="repeticaoControle"
                 android:textColor="#FFFFFF" />
 
         </LinearLayout>

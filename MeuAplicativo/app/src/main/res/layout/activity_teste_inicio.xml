@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Repetição.TesteInicioActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView64"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:text="Teste no Início: enquanto-faça"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView65"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+            android:text="Antes de entrar na estrutura de repetição, uma expressão lógica é avaliada e caso o resultado da mesma for verdadeiro, os comandos que estão dentro da estrutura serão executados. Após a execução dos comandos, a expressão lógica é novamente avaliada. Caso o resultado da expressão lógica for falso, o algoritmo sai da estrutura de repetição e segue para a próxima linha.\nDe maneira geral, o mecanismo que altera o valor da expressão lógica que controla o laço está embutido dentro do bloco de comandos ou depende de alguma variável externa que será fornecida em tempo de execução.\nA estrutura enquanto-faça é usada principalmente quando não se sabe com antecedência a quantidade de repetições que precisam serrealizadas. Por exemplo, suponha que estamos oferecendo ao usuário 3 opções de menu sendo que uma dessas opções seria a de sair do programa. Caso desejemos que o usuário possa executar várias vezes as opções dispostas no menu, não temos como adivinhar quando o usuário irá optar por sair do algoritmo, sendo assim, não podemos limitar a repetição à um determinado número de vezes."
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/button89"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="36dp"
+            android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/button89"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/colorPrimary"
+            android:onClick="proximo"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton25"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/button89"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="164dp"
+            android:layout_marginRight="164dp"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

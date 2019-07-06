@@ -99,7 +99,13 @@
         <activity android:name=".Expressões.ExemploOperadoresAritmeticosActivity" />
         <activity android:name=".Expressões.ExemploLogicasCompostasActivity" />
         <activity android:name=".Condicao.CondicaoEncadeadaActivity" />
-        <activity android:name=".Condicao.ExemploCondicaoEncadeadaActivity"></activity>
+        <activity android:name=".Condicao.ExemploCondicaoEncadeadaActivity" />
+        <activity android:name=".Repetição.TesteInicioActivity" />
+        <activity android:name=".Repetição.ExemploTesteInicioActivity" />
+        <activity android:name=".Repetição.TesteFimActivity" />
+        <activity android:name=".Repetição.ExemploTesteFimActivity" />
+        <activity android:name=".Repetição.RepeticaoControleActivity" />
+        <activity android:name=".Repetição.ExemploRepeticaoControleActivity"></activity>
     </application>
 
 </manifest>
