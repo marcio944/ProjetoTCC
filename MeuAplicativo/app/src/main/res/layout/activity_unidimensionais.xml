@@ -4,35 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Repetição.RepeticaoControleActivity">
+    tools:context=".Homogêneas.UnidimensionaisActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView70"
+            android:id="@+id/textView74"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="27dp"
-            android:text="Repetição com Controle: faça-para"
+            android:text="Vetores Unidimensionais"
             android:textSize="18dp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView71"
+            android:id="@+id/textView75"
             android:layout_width="357dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="64dp"
-            android:text="A estrutura para-faça é composta de um mecanismo de controle que estabelece de antemão quantas vezes o laço será executado. Para ser utilizada, a estrutura precisa das informações referentes aos valores de inicio, fim e incremento. Nessa estrutura, uma determinada variável assumirá valores pertencentes ao intervalo identificado pelos valores de inicio e fim, respeitando o incremento informado. Por exemplo a expressão i de 0 ate 10 passo 2 significa que i assumirá os valores 0,2,4,6,8,10. Nesse caso, o laço seria executado 5 vezes."
+            android:text="Vetores são varíaveis compostas que podem armazenar um conjunto de valores. Todos estes valores são referenciados através do nome do vetor (o mesmo para todo o conjunto de valores) e de um índice (distinto para cada valor).\nOs valores armazenados numa variável vetorial são todos do mesmo tipo, por isso os vetores são chamados de variáveis compostas homogêneas.\nOs vetores são declarados anexando-se ao nome da variável um colchete com o número de posições que o vetor porerá conter:\n\t\t\tint idade[8].\nNeste caso será criada uma variável idade[] que conterá 8 posições - índices 0 a 7 - onde poderão ser armazenados números inteiros. Os vetores podem ser de qualquer tipo alfanumérico.
+Cada uma das posições do vetor são referenciadas através do nome do vetor seguido do respecivo índice colocado entre colchetes."
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/button97"
+            android:id="@+id/button101"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -47,29 +48,32 @@
             android:textColor="#ffffff" />
 
         <Button
-            android:id="@+id/button98"
+            android:id="@+id/button102"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/button97"
+            android:layout_alignTop="@+id/button101"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="36dp"
-            android:layout_marginRight="36dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginRight="38dp"
             android:background="@color/colorPrimary"
             android:onClick="proximo"
             android:text="Próximo"
             android:textColor="#ffffff" />
 
         <ImageButton
-            android:id="@+id/imageButton29"
+            android:id="@+id/imageButton32"
             android:layout_width="75dp"
             android:layout_height="50dp"
-            android:layout_alignTop="@+id/button97"
-            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/button101"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="158dp"
+            android:layout_marginRight="158dp"
             android:background="@null"
             android:onClick="inicio"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/home" />
     </RelativeLayout>
-
 </android.support.constraint.ConstraintLayout>

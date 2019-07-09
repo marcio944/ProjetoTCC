@@ -10,6 +10,7 @@ import com.aplicativo.lenovouser.meuaplicativo.Condicao.CondicaoActivity;
 import com.aplicativo.lenovouser.meuaplicativo.Dados.DadosActivity;
 import com.aplicativo.lenovouser.meuaplicativo.EntradaSaída.EntradaSaidaActivity;
 import com.aplicativo.lenovouser.meuaplicativo.Expressões.ExpressoesActivity;
+import com.aplicativo.lenovouser.meuaplicativo.Homogêneas.HomogeneasActivity;
 import com.aplicativo.lenovouser.meuaplicativo.Introducao.IntroducaoActivity;
 import com.aplicativo.lenovouser.meuaplicativo.Repetição.RepeticaoActivity;
 
@@ -50,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void repeticao(View view){
         Intent intent = new Intent(MainActivity.this, RepeticaoActivity.class);
+        startActivity(intent);
+    }
+
+    public void homogenias(View view){
+        Intent intent = new Intent(MainActivity.this, HomogeneasActivity.class);
         startActivity(intent);
     }
 

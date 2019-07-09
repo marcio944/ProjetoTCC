@@ -105,7 +105,10 @@
         <activity android:name=".Repetição.TesteFimActivity" />
         <activity android:name=".Repetição.ExemploTesteFimActivity" />
         <activity android:name=".Repetição.RepeticaoControleActivity" />
-        <activity android:name=".Repetição.ExemploRepeticaoControleActivity"></activity>
+        <activity android:name=".Repetição.ExemploRepeticaoControleActivity" />
+        <activity android:name=".Homogêneas.HomogeneasActivity" />
+        <activity android:name=".Homogêneas.UnidimensionaisActivity" />
+        <activity android:name=".Homogêneas.ExemploUnidimensionaisActivity"></activity>
     </application>
 
 </manifest>

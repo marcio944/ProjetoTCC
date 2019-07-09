@@ -1,154 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="595dp"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="25dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="650dp"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="-4dp">
+            <ImageButton
+                android:id="@+id/imageButton_Introducao"
+                android:layout_width="129dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@null"
+                android:onClick="introducao"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/introducao" />
 
-                <ImageButton
-                    android:id="@+id/imageButton_Introducao"
-                    android:layout_width="129dp"
-                    android:layout_height="130dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@null"
-                    android:onClick="introducao"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/introducao" />
+            <TextView
+                android:id="@+id/textView_Introducao"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/imageButton_Introducao"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:text="Introdução" />
 
-                <ImageButton
-                    android:id="@+id/imageButton_Dados"
-                    android:layout_width="129dp"
-                    android:layout_height="130dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignTop="@+id/imageButton_Introducao"
-                    android:layout_marginEnd="32dp"
-                    android:background="@null"
-                    android:onClick="dados"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/dados" />
+            <ImageButton
+                android:id="@+id/imageButton_Dados"
+                android:layout_width="129dp"
+                android:layout_height="130dp"
+                android:layout_alignTop="@+id/imageButton_Introducao"
+                android:layout_marginTop="-160dp"
+                android:layout_marginLeft="225dp"
+                android:background="@null"
+                android:onClick="dados"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/dados" />
 
-                <ImageButton
-                    android:id="@+id/imageButton_Expressoes"
-                    android:layout_width="129dp"
-                    android:layout_height="130dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignStart="@+id/imageButton_Introducao"
-                    android:layout_marginTop="232dp"
-                    android:background="@null"
-                    android:onClick="operadoresexpressoes"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/operadores_aritmeticos2"
-                    tools:layout_editor_absoluteX="41dp"
-                    tools:layout_editor_absoluteY="178dp" />
+            <TextView
+                android:id="@+id/textView_Dados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView_Introducao"
+                android:layout_marginLeft="215dp"
+                android:layout_marginTop="10dp"
+                android:text="Representação de Dados" />
 
-                <TextView
-                    android:id="@+id/textView_Introducao"
-                    android:layout_width="129dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignStart="@+id/imageButton_Introducao"
-                    android:layout_marginTop="180dp"
-                    android:text="Introdução" />
+            <ImageButton
+                android:id="@+id/imageButton_Expressoes"
+                android:layout_width="129dp"
+                android:layout_height="130dp"
+                android:layout_alignStart="@+id/imageButton_Introducao"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:background="@null"
+                android:onClick="operadoresexpressoes"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/operadores_aritmeticos2"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="178dp" />
 
-                <TextView
-                    android:id="@+id/textView_Dados"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignTop="@+id/textView_Introducao"
-                    android:layout_marginEnd="20dp"
-                    android:text="Representação de Dados" />
+            <TextView
+                android:id="@+id/textView_Expressoes"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/imageButton_Expressoes"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:text="Operadores e Expressões" />
 
-                <TextView
-                    android:id="@+id/textView_Expressoes"
-                    android:layout_width="128dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/imageButton_Expressoes"
-                    android:layout_marginBottom="249dp"
-                    android:text="Operadores e Expressões" />
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="129dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="225dp"
+                android:layout_marginTop="-175dp"
+                android:layout_alignStart="@+id/imageButton_Dados"
+                android:layout_alignTop="@+id/imageButton_Expressoes"
+                android:background="@null"
+                android:onClick="entradasaida"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/entrada_saida" />
 
-                <ImageButton
-                    android:id="@+id/imageButton_Condicao"
-                    android:layout_width="129dp"
-                    android:layout_height="130dp"
-                    android:layout_alignStart="@+id/imageButton_Introducao"
-                    android:layout_alignTop="@+id/imageButton_Repeticao"
-                    android:background="@null"
-                    android:onClick="condicao"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/condicional" />
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/imageButton_Dados"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="241dp"
+                android:layout_marginLeft="225dp"
+                android:layout_marginTop="10dp"
+                android:text="Comandos de Entrada e Saída" />
 
-                <TextView
-                    android:id="@+id/textView_Condicao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/imageButton_Introducao"
-                    android:layout_alignTop="@+id/textView_Repeticao"
-                    android:text="Estruras de Codição" />
+            <ImageButton
+                android:id="@+id/imageButton_Condicao"
+                android:layout_width="129dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="-210dp"
+                android:layout_marginLeft="30dp"
+                android:layout_alignStart="@+id/imageButton_Introducao"
+                android:layout_alignTop="@+id/imageButton_Repeticao"
+                android:background="@null"
+                android:onClick="condicao"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/condicional" />
 
-                <ImageButton
-                    android:id="@+id/imageButton_Repeticao"
-                    android:layout_width="129dp"
-                    android:layout_height="130dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/imageButton_Dados"
-                    android:layout_marginBottom="100dp"
-                    android:background="@null"
-                    android:onClick="repeticao"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/repeticao" />
+            <TextView
+                android:id="@+id/textView_Condicao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_alignStart="@+id/imageButton_Introducao"
+                android:layout_alignTop="@+id/textView_Repeticao"
+                android:text="Estruras de Codição" />
 
-                <TextView
-                    android:id="@+id/textView_Repeticao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/imageButton_Dados"
-                    android:layout_marginBottom="66dp"
-                    android:text="Estruturas de Repetição" />
+            <ImageButton
+                android:id="@+id/imageButton_Repeticao"
+                android:layout_width="129dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="225dp"
+                android:layout_marginTop="-158dp"
+                android:layout_alignStart="@+id/imageButton_Dados"
+                android:layout_alignParentBottom="true"
+                android:background="@null"
+                android:onClick="repeticao"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/repeticao" />
 
-                <ImageButton
-                    android:id="@+id/imageButton9"
-                    android:layout_width="130dp"
-                    android:layout_height="132dp"
-                    android:layout_alignStart="@+id/imageButton_Dados"
-                    android:layout_alignTop="@+id/imageButton_Expressoes"
-                    android:background="@null"
-                    android:scaleType="fitXY"
-                    android:onClick="entradasaida"
-                    app:srcCompat="@drawable/entrada_saida" />
+            <TextView
+                android:id="@+id/textView_Repeticao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="225dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignStart="@+id/imageButton_Dados"
+                android:layout_alignParentBottom="true"
+                android:text="Estruturas de Repetição" />
 
-                <TextView
-                    android:id="@+id/textView35"
-                    android:layout_width="128dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/imageButton_Dados"
-                    android:layout_marginBottom="241dp"
-                    android:text="Comandos de Entrada e Saída" />
+            <ImageButton
+                android:id="@+id/imageButton31"
+                android:layout_width="129dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_alignStart="@+id/imageButton_Condicao"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:onClick="homogenias"
+                app:srcCompat="@drawable/variaveishomogenias" />
 
-            </RelativeLayout>
+            <TextView
+                android:id="@+id/textView73"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="Variáveis Compostas Homogênias" />
         </LinearLayout>
     </ScrollView>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
