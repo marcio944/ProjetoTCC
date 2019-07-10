@@ -108,7 +108,13 @@
         <activity android:name=".Repetição.ExemploRepeticaoControleActivity" />
         <activity android:name=".Homogêneas.HomogeneasActivity" />
         <activity android:name=".Homogêneas.UnidimensionaisActivity" />
-        <activity android:name=".Homogêneas.ExemploUnidimensionaisActivity"></activity>
+        <activity android:name=".Homogêneas.ExemploUnidimensionaisActivity" />
+        <activity android:name=".Homogêneas.BidimensionaisActivity" />
+        <activity android:name=".Homogêneas.ExemploBidimensionaisActivity" />
+        <activity android:name=".Dados.IdentificacaoActivity" />
+        <activity android:name=".Dados.DefinicaoActivity" />
+        <activity android:name=".Dados.AtribuicaoActivity" />
+        <activity android:name=".Dados.ExemploAtribuicaoActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dados.IdentificacaoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView79"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:text="Identificação"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView80"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="46dp"
+            android:text="Para que os dados sejam manipulados no computador, é necessário que estes estejam associados a um nome, um identificador. O conteúdo deste identificador será o dado em si e o seu nome será usado para acessar o dado e realizar operações com o mesmo.\nA nomeação dos identificadores deve obedecer a algumas regras, sendo elas:\n1. Sempre começar com um caractere alfabético;\n2. Pode ser seguido por um ou mais caracteres alfanumérico;\n3. Não conter caracteres especiais nem espaços com excessão do sublinhado '_';\n4. Não é permitido utilizar palavras reservadas (palavras próprias da linguagem de programação;\nIdentificadores Válidos: raio, _nome, R, num_clientes, BJ33f15, NumPessoasDoentes.\nIdentificadores Inválidos: (ee), 32-vr, mil*, 12ddd, o:P
+                        \nAo nomearmos os identificadores dos nossos dados é conveniente usarmos palavras mnemônicas, ou seja, palavras que nos façam lembrar o caráter do conteúdo armazenado. Isso facilita a leitura do código programado e possibilita uma melhor documentação do mesmo. Por exemplo, ao armazenarmos o nome completo, a idade e a quantidade de filhos de uma pessoa, é mais prático e coerente usarmos os identificadores NomeSobrenome, Idade e NumFilhos do que usarmos nomes aleatórios como X, Y e Z."
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/button109"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="36dp"
+            android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button110"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageButton36"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="34dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/colorPrimary"
+            android:onClick="proximo"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton36"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/button109"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

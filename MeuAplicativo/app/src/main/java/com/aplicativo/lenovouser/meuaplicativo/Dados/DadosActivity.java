@@ -25,4 +25,9 @@ public class DadosActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void manipulacao_dados(View view){
+        Intent intent = new Intent(DadosActivity.this, IdentificacaoActivity.class);
+        startActivity(intent);
+    }
+
 }

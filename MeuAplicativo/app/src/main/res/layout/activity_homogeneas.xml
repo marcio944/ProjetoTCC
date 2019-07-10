@@ -87,7 +87,7 @@ tools:context=".Homogêneas.HomogeneasActivity">
             android:layout_marginTop="350dp"
             android:background="@color/colorPrimary"
             android:text="Iniciar"
-            android:onClick="condicaoComposta"
+            android:onClick="bidimensionais"
             android:textColor="#FFFFFF" />
 
         <View

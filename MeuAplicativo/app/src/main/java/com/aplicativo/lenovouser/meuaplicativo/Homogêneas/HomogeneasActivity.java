@@ -20,4 +20,9 @@ public class HomogeneasActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void bidimensionais(View view){
+        Intent intent = new Intent(HomogeneasActivity.this, BidimensionaisActivity.class);
+        startActivity(intent);
+    }
+
 }

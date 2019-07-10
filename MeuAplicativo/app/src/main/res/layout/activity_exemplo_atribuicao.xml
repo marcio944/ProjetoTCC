@@ -4,24 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Homogêneas.ExemploUnidimensionaisActivity">
+    tools:context=".Dados.ExemploAtribuicaoActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView76"
+            android:id="@+id/textView85"
             android:layout_width="373dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="23dp"
-            android:text="Exemplo do uso de Vetores Unidimensionais em Algoritmos."
+            android:layout_marginTop="26dp"
+            android:text="Exemplo de Atribuiçoes de Valores a uma Variável em Algoritmos."
             android:textSize="15dp"
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/imageView22"
+            android:id="@+id/imageView24"
             android:layout_width="354dp"
             android:layout_height="189dp"
             android:layout_alignParentTop="true"
@@ -29,10 +29,10 @@
             android:layout_marginTop="93dp"
             android:background="@null"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/exemplounidimensionais" />
+            app:srcCompat="@drawable/atribuicoes" />
 
         <Button
-            android:id="@+id/button103"
+            android:id="@+id/button115"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -42,24 +42,24 @@
             android:background="@color/colorPrimary"
             android:onClick="anterior"
             android:text="Anterior"
-            android:textColor="#ffffff"  />
+            android:textColor="#ffffff" />
 
         <Button
-            android:id="@+id/button104"
+            android:id="@+id/button116"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/imageButton33"
+            android:layout_alignTop="@+id/imageButton39"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="40dp"
+            android:layout_marginEnd="37dp"
             android:background="@color/colorPrimary"
             android:text="Próximo"
             android:textColor="#ffffff" />
 
         <ImageButton
-            android:id="@+id/imageButton33"
+            android:id="@+id/imageButton39"
             android:layout_width="75dp"
             android:layout_height="50dp"
-            android:layout_alignBottom="@+id/button103"
+            android:layout_alignBottom="@+id/button115"
             android:layout_centerHorizontal="true"
             android:background="@null"
             android:onClick="inicio"
