@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
 
@@ -16,9 +17,13 @@ public class ExemploPseudocodigoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exemplo_pseudocodigo);
     }
 
-    public void retornarPseudocodigo(View view){
-        Intent intent = new Intent(ExemploPseudocodigoActivity.this, ComandosPseudocodigoActivity.class);
+    public void inicio(View view){
+        Intent intent = new Intent(ExemploPseudocodigoActivity.this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void retornarPseudocodigo(View view){
+
     }
 
     public void proximo(View view){

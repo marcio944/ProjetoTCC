@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class SimbolosFluxogramaActivity extends AppCompatActivity {
@@ -15,12 +16,17 @@ public class SimbolosFluxogramaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_simbolos_fluxograma);
     }
 
-    public void anteriorExemploFluxograma(View view){
+    public void inicio(View view){
+        Intent intent = new Intent(SimbolosFluxogramaActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void anterior(View view){
         Intent intent = new Intent(SimbolosFluxogramaActivity.this, ExemploFluxogramaActivity.class);
         startActivity(intent);
     }
 
-    public void proximoQuestao1Fluxograma(View view){
+    public void proximo(View view){
         Intent intent = new Intent(SimbolosFluxogramaActivity.this, Questao1FluxogramaActivity.class);
         startActivity(intent);
     }

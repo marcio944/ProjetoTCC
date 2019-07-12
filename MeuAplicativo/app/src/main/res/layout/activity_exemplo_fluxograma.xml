@@ -34,11 +34,12 @@
 
         <Button
             android:id="@+id/button_retornarFluxograma"
-            android:layout_width="135dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/imageView_ExemploFluxograma"
-            android:layout_marginBottom="95dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="37dp"
+            android:layout_marginStart="46dp"
             android:background="@color/colorPrimary"
             android:onClick="anterior"
             android:text="Anterior"
@@ -46,15 +47,27 @@
 
         <Button
             android:id="@+id/button_ProximoExeAlgoritmo"
-            android:layout_width="135dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageButton43"
             android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/button_retornarFluxograma"
-            android:layout_marginEnd="55dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="46dp"
             android:background="@color/colorPrimary"
-            android:text="Próximo"
             android:onClick="proximo"
+            android:text="Próximo"
             android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton43"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/button_retornarFluxograma"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
 
     </RelativeLayout>
 

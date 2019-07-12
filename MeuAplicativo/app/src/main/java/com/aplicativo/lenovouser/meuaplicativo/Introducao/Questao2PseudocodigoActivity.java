@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class Questao2PseudocodigoActivity extends AppCompatActivity {
@@ -18,6 +19,11 @@ public class Questao2PseudocodigoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao2_pseudocodigo);
         radioButton = (RadioButton) findViewById(R.id.radioButton24);
+    }
+
+    public void inicio(View view){
+        Intent intent = new Intent(Questao2PseudocodigoActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     public  void anterior(View view){

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,24 +12,31 @@
 
         <Button
             android:id="@+id/button_proximoExemplo"
-            android:layout_width="135dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/textView_Fluxograma"
             android:layout_alignTop="@+id/button_Anterior_Introducao"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
             android:background="@color/colorPrimary"
-            android:onClick="exemploFluxograma"
+            android:onClick="proximo"
             android:text="Próximo"
             android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/button_Anterior_Introducao"
-            android:layout_width="135dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/textView_Fluxograma"
-            android:layout_marginBottom="40dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="36dp"
             android:background="@color/colorPrimary"
-            android:onClick="retornarIntroducao"
+            android:onClick="anterior"
             android:text="Anterior"
             android:textColor="#ffffff" />
 
@@ -42,6 +50,17 @@
             android:text="Os fluxogramas são uma apresentação do algoritmo em formato gráfico. Cada ação ou situação é representada por uma caixa. Tomadas de decisões são indicadas por caixas especiais, possibilitando ao fluxo de ações tomar caminhos distintos.
 \nO início e o fim do algoritmo são marcados com uma figura elíptica; as ações a serem executadas estão em retângulos; sendo que as estruturas de controle condicionais estão em losangos e indicam duas possibilidades de proseguimento do algoritmo, uma para o caso da expressão avaliada (condição) ser verdadeira e outra para o caso de ser falsa."
             android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton47"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/button_Anterior_Introducao"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
 
     </RelativeLayout>
 

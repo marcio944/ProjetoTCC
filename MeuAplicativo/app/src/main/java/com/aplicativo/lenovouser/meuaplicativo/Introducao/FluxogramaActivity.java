@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class FluxogramaActivity extends AppCompatActivity {
@@ -15,12 +16,17 @@ public class FluxogramaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fluxograma);
     }
 
-    public void exemploFluxograma(View view){
+    public void inicio(View view){
+        Intent intent = new Intent(FluxogramaActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void proximo(View view){
         Intent intent = new Intent(FluxogramaActivity.this, ExemploFluxogramaActivity.class);
         startActivity(intent);
     }
 
-    public void retornarIntroducao(View view){
+    public void anterior(View view){
         Intent intent = new Intent(FluxogramaActivity.this, IntroducaoActivity.class);
         startActivity(intent);
     }

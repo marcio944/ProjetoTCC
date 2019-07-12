@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class Questao3AlgoritmosActivity extends AppCompatActivity {
@@ -18,6 +19,11 @@ public class Questao3AlgoritmosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao3_algoritmos);
         radioButton = (RadioButton) findViewById(R.id.radioButton42);
+    }
+
+    public void inicio(View view){
+        Intent intent = new Intent(Questao3AlgoritmosActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void anterior(View view){

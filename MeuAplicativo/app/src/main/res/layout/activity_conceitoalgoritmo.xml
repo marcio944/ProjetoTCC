@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,29 +9,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/button_Poximo_Algoritmo"
-            android:layout_width="135dp"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/textView_Algoritmo"
-            android:layout_alignTop="@+id/button_Anterior_Algoritmo"
-            android:background="@color/colorPrimary"
-            android:textColor="#ffffff"
-            android:onClick="iniciarExemploAlgoritmo"
-            android:text="Próximo" />
-
-        <Button
-            android:id="@+id/button_Anterior_Algoritmo"
-            android:layout_width="135dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/textView_Algoritmo"
-            android:layout_marginBottom="36dp"
-            android:background="@color/colorPrimary"
-            android:text="Anterior"
-            android:onClick="retornarIntroducao"
-            android:textColor="#ffffff" />
 
         <TextView
             android:id="@+id/textView_Algoritmo"
@@ -44,6 +22,43 @@ para resolver um determinado problema. Sempre que desenvolvemos um algoritmo
 estamos estabelecendo um padrão de comportamento que deverá ser seguido (uma
 norma de execução de ações) para alcançar o resultado de um problema."
             android:textSize="25dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton41"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/button13"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="46dp"
+            android:layout_marginStart="35dp"
+            android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageButton41"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="35dp"
+            android:background="@color/colorPrimary"
+            android:onClick="proximo"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

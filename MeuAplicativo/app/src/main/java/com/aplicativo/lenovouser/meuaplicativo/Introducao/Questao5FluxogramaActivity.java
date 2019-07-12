@@ -23,6 +23,11 @@ public class Questao5FluxogramaActivity extends AppCompatActivity {
         radioButton = (RadioButton) findViewById(R.id.radioButton14);
     }
 
+    public void inicio(View view){
+        Intent intent = new Intent(Questao5FluxogramaActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
     public void anterior(View view){
         Intent intent = new Intent(Questao5FluxogramaActivity.this, Questao4FluxogramaActivity.class);
         startActivity(intent);

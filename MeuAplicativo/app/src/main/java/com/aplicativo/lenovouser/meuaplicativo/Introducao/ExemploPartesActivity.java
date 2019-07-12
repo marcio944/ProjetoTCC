@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class ExemploPartesActivity extends AppCompatActivity {
@@ -15,9 +16,18 @@ public class ExemploPartesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exemplo_partes);
     }
 
-    public void retornarPartes(View view){
+    public void inicio(View view){
+        Intent intent = new Intent(ExemploPartesActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void anterior(View view){
         Intent intent = new Intent(ExemploPartesActivity.this, PartesAlgoritmoActivity.class);
         startActivity(intent);
+    }
+
+    public void proximo(View view){
+
     }
 
 }

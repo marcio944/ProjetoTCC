@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class Questao4PseudocodigoActivity extends AppCompatActivity {
@@ -18,6 +19,11 @@ public class Questao4PseudocodigoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao4_pseudocodigo);
         editText = (EditText) findViewById(R.id.editText2);
+    }
+
+    public void inicio(View view){
+        Intent intent = new Intent(Questao4PseudocodigoActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void proximo(View view){

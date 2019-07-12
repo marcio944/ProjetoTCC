@@ -62,7 +62,6 @@
         <activity android:name=".Introducao.Questao2PseudocodigoActivity" />
         <activity android:name=".Introducao.Questao3PseudocodigoActivity" />
         <activity android:name=".Introducao.Questao4PseudocodigoActivity" />
-        <activity android:name=".Introducao.ComandosPseudocodigoActivity" />
         <activity android:name=".Introducao.EstruturaPseudocodigoActivity" />
         <activity android:name=".Introducao.Questao5PseudocodigoActivity" />
         <activity android:name=".Dados.Questao1PrimitivosActivity" />

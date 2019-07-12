@@ -32,25 +32,39 @@
 
         <Button
             android:id="@+id/button_retornarAlgoritmo"
-            android:layout_width="135dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/imageView_ExemploAlgoritmo"
-            android:layout_marginBottom="87dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="37dp"
+            android:layout_marginStart="46dp"
             android:background="@color/colorPrimary"
-            android:textColor="#ffffff"
             android:onClick="anterior"
-            android:text="Anterior" />
+            android:text="Anterior"
+            android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/button_ProximoExeAlgoritmo"
-            android:layout_width="135dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/imageView_ExemploAlgoritmo"
             android:layout_alignTop="@+id/button_retornarAlgoritmo"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="46dp"
             android:background="@color/colorPrimary"
-            android:textColor="#ffffff"
             android:onClick="proximo"
-            android:text="Próximo" />
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton42"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/button_retornarAlgoritmo"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

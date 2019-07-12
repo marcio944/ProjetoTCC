@@ -28,7 +28,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="46dp"
-            android:text="Após realizada a declaração de um identificador, é possível iniciar a manipulação dos dados que esse identificador irá representar a partir da atribuição de valores ao mesmo. Esse processo de atribuir ou alterar o valor dos dados de um identificador é chamado de atribuição e é representado pelo símbolo $ \leftarrow $ quando estivermos trabalhando com identificadores variáveis, e pelo símbolo = quando estivermos trabalhando com identificadores constantes .
+            android:text="Após realizada a declaração de um identificador, é possível iniciar a manipulação dos dados que esse identificador irá representar a partir da atribuição de valores ao mesmo. Esse processo de atribuir ou alterar o valor dos dados de um identificador é chamado de atribuição .
 Uma varíavel pode armazenar apenas um único valor por vez, sendo que sempre que um novo valor é atribuído a variável o valor anterior que estava armazenado na mesma é perdido."
             android:textSize="15dp" />
 

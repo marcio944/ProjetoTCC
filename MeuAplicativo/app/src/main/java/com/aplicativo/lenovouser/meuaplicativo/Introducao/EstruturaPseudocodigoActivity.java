@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class EstruturaPseudocodigoActivity extends AppCompatActivity {
@@ -15,9 +16,13 @@ public class EstruturaPseudocodigoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_estrutura_pseudocodigo);
     }
 
-    public void proximo(View view){
-        Intent intent = new Intent(EstruturaPseudocodigoActivity.this, ComandosPseudocodigoActivity.class);
+    public void inicio(View view){
+        Intent intent = new Intent(EstruturaPseudocodigoActivity.this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void proximo(View view){
+
     }
 
     public void anterior(View view){
