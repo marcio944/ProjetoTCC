@@ -113,7 +113,10 @@
         <activity android:name=".Dados.IdentificacaoActivity" />
         <activity android:name=".Dados.DefinicaoActivity" />
         <activity android:name=".Dados.AtribuicaoActivity" />
-        <activity android:name=".Dados.ExemploAtribuicaoActivity"></activity>
+        <activity android:name=".Dados.ExemploAtribuicaoActivity" />
+        <activity android:name=".Dados.Questao1ConstantesVariaveisActivity" />
+        <activity android:name=".Dados.Questao2ConstantesVariaveisActivity" />
+        <activity android:name=".Dados.Questao3ConstantesVariaveisActivity"></activity>
     </application>
 
 </manifest>

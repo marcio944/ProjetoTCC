@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dados.Questao3ConstantesVariaveisActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="22dp"
+            android:text="Sobre variáveis e constantes, considere as afirmativas a seguir.
+\n\nI. Constantes são valores fixos que um programa não pode alterar.
+\nII. Variáveis declaradas dentro de uma função são chamadas de variáveis locais.
+\nIII. Uma variável é uma posição de memória usada para guardar um valor.
+\nIV. Uma variável global é usada para que uma função receba argumentos.
+\n\nAssinale a alternativa correta."
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="148dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="160dp"
+            android:layout_marginLeft="20dp">
+
+            <RadioButton
+                android:id="@+id/radioButton65"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Somente as afirmativas I e II são corretas." />
+
+            <RadioButton
+                android:id="@+id/radioButton64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Somente as afirmativas I e IV são corretas." />
+
+            <RadioButton
+                android:id="@+id/radioButton63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Somente as afirmativas III e IV são corretas." />
+
+            <RadioButton
+                android:id="@+id/radioButton66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Somente as afirmativas I, II e III são corretas." />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button125"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="43dp"
+            android:layout_marginStart="34dp"
+            android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button126"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/button125"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="35dp"
+            android:background="@color/colorPrimary"
+            android:onClick="proximo"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton62"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/button125"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
