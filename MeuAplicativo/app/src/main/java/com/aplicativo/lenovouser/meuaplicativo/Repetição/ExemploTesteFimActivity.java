@@ -27,7 +27,7 @@ public class ExemploTesteFimActivity extends AppCompatActivity {
     }
 
     public void proximo(View view){
-        Intent intent = new Intent(ExemploTesteFimActivity.this, ExemploTesteInicioActivity.class);
+        Intent intent = new Intent(ExemploTesteFimActivity.this, Questao1TesteFimActivity.class);
         startActivity(intent);
     }
 }

@@ -17,7 +17,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="27dp"
-            android:text="Repetição com Controle: faça-para"
+            android:text="Repetição com Controle: para-faça"
             android:textSize="18dp"
             android:textStyle="bold" />
 

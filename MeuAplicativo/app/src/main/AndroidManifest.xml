@@ -122,7 +122,12 @@
         <activity android:name=".Repetição.Questao1TesteInicioActivity" />
         <activity android:name=".Repetição.Questao2TesteInicioActivity" />
         <activity android:name=".Repetição.Questao3TesteInicioActivity" />
-        <activity android:name=".Repetição.Questao4TesteInicioActivity"></activity>
+        <activity android:name=".Repetição.Questao4TesteInicioActivity" />
+        <activity android:name=".Repetição.Questao1TesteFimActivity" />
+        <activity android:name=".Repetição.Questao2TesteFimActivity" />
+        <activity android:name=".Repetição.Questao3TesteFimActivity" />
+        <activity android:name=".Condicao.Questao1CompostaActivity" />
+        <activity android:name=".Repetição.Questao1RepeticaoControleActivity"></activity>
     </application>
 
 </manifest>

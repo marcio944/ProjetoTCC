@@ -10,34 +10,34 @@ import android.widget.Toast;
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
-public class Questao4TesteInicioActivity extends AppCompatActivity {
+public class Questao1TesteFimActivity extends AppCompatActivity {
 
     RadioButton radioButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questao4_teste_inicio);
-        radioButton = (RadioButton) findViewById(R.id.radioButton83);
+        setContentView(R.layout.activity_questao1_teste_fim);
+        radioButton = (RadioButton) findViewById(R.id.radioButton85);
     }
 
     public void inicio(View view){
-        Intent intent = new Intent(Questao4TesteInicioActivity.this, MainActivity.class);
+        Intent intent = new Intent(Questao1TesteFimActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
     public void anterior(View view){
-        Intent intent = new Intent(Questao4TesteInicioActivity.this, Questao3TesteInicioActivity.class);
+        Intent intent = new Intent(Questao1TesteFimActivity.this, ExemploTesteFimActivity.class);
         startActivity(intent);
     }
 
     public void proximo(View view){
         if(radioButton.isChecked()) {
-            Toast.makeText(Questao4TesteInicioActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(Questao4TesteInicioActivity.this, RepeticaoActivity.class);
+            Toast.makeText(Questao1TesteFimActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao1TesteFimActivity.this, Questao2TesteFimActivity.class);
             startActivity(intent);
         }else{
-            Toast.makeText(Questao4TesteInicioActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            Toast.makeText(Questao1TesteFimActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
         }
     }
 
