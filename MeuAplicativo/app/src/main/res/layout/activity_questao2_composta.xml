@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Condicao.Questao2CompostaActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="228dp"
+            android:text="A estrutura lógica presente no diagrama apresentado é do tipo"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="247dp"
+            android:layout_height="189dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="18dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/questao2condicaocomposta" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="148dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="130dp"
+            android:layout_marginLeft="20dp" >
+
+            <RadioButton
+                android:id="@+id/radioButton100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SE ENTÃO" />
+
+            <RadioButton
+                android:id="@+id/radioButton99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CASO SELECIONA" />
+
+            <RadioButton
+                android:id="@+id/radioButton98"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CASO REPITA" />
+
+            <RadioButton
+                android:id="@+id/radioButton97"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SE ENTÃO SENÃO" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button149"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="43dp"
+            android:layout_marginStart="34dp"
+            android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button150"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/button149"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="35dp"
+            android:background="@color/colorPrimary"
+            android:onClick="proximo"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton74"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/button149"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

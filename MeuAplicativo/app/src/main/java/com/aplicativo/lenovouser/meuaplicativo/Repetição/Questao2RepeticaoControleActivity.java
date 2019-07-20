@@ -10,34 +10,32 @@ import android.widget.Toast;
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
-public class Questao3TesteFimActivity extends AppCompatActivity {
+public class Questao2RepeticaoControleActivity extends AppCompatActivity {
 
     RadioButton radioButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questao3_teste_fim);
-        radioButton = (RadioButton) findViewById(R.id.radioButton92);
+        setContentView(R.layout.activity_questao2_repeticao_controle);
+        radioButton = (RadioButton) findViewById(R.id.radioButton103);
     }
 
     public void inicio(View view){
-        Intent intent = new Intent(Questao3TesteFimActivity.this, MainActivity.class);
+        Intent intent = new Intent(Questao2RepeticaoControleActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
     public void anterior(View view){
-        Intent intent = new Intent(Questao3TesteFimActivity.this, Questao2TesteFimActivity.class);
+        Intent intent = new Intent(Questao2RepeticaoControleActivity.this, Questao1RepeticaoControleActivity.class);
         startActivity(intent);
     }
 
     public void proximo(View view){
         if(radioButton.isChecked()) {
-            Toast.makeText(Questao3TesteFimActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(Questao3TesteFimActivity.this, Questao4TesteFimActivity.class);
-            startActivity(intent);
+            Toast.makeText(Questao2RepeticaoControleActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
         }else{
-            Toast.makeText(Questao3TesteFimActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            Toast.makeText(Questao2RepeticaoControleActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
         }
     }
 

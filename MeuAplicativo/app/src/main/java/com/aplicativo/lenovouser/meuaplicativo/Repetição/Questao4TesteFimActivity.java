@@ -10,34 +10,34 @@ import android.widget.Toast;
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
-public class Questao1RepeticaoControleActivity extends AppCompatActivity {
+public class Questao4TesteFimActivity extends AppCompatActivity {
 
     RadioButton radioButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questao1_repeticao_controle);
-        radioButton = (RadioButton) findViewById(R.id.radioButton96);
+        setContentView(R.layout.activity_questao4_teste_fim);
+        radioButton = (RadioButton) findViewById(R.id.radioButton101);
     }
 
     public void inicio(View view){
-        Intent intent = new Intent(Questao1RepeticaoControleActivity.this, MainActivity.class);
+        Intent intent = new Intent(Questao4TesteFimActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
     public void anterior(View view){
-        Intent intent = new Intent(Questao1RepeticaoControleActivity.this, ExemploRepeticaoControleActivity.class);
+        Intent intent = new Intent(Questao4TesteFimActivity.this, Questao2TesteFimActivity.class);
         startActivity(intent);
     }
 
     public void proximo(View view){
         if(radioButton.isChecked()) {
-            Toast.makeText(Questao1RepeticaoControleActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(Questao1RepeticaoControleActivity.this, Questao2RepeticaoControleActivity.class);
+            Toast.makeText(Questao4TesteFimActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao4TesteFimActivity.this, RepeticaoActivity.class);
             startActivity(intent);
         }else{
-            Toast.makeText(Questao1RepeticaoControleActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            Toast.makeText(Questao4TesteFimActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
         }
     }
 

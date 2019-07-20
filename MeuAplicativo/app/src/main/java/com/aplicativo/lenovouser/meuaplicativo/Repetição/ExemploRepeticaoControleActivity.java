@@ -27,7 +27,7 @@ public class ExemploRepeticaoControleActivity extends AppCompatActivity {
     }
 
     public void proximo(View view){
-        Intent intent = new Intent(ExemploRepeticaoControleActivity.this, ExemploTesteFimActivity.class);
+        Intent intent = new Intent(ExemploRepeticaoControleActivity.this, Questao1RepeticaoControleActivity.class);
         startActivity(intent);
     }
 }

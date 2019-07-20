@@ -27,7 +27,7 @@ public class ExemploCondicaoEncadeadaActivity extends AppCompatActivity {
     }
 
     public void proximo(View view){
-        Intent intent = new Intent(ExemploCondicaoEncadeadaActivity.this, ExemploCondicaoCompostaActivity.class);
+        Intent intent = new Intent(ExemploCondicaoEncadeadaActivity.this, Questao1CondicaoEncadeadaActivity.class);
         startActivity(intent);
     }
 }
