@@ -132,7 +132,10 @@
         <activity android:name=".Repetição.Questao4TesteFimActivity" />
         <activity android:name=".Repetição.Questao2RepeticaoControleActivity" />
         <activity android:name=".Repetição.Questao3TesteControleActivity" />
-        <activity android:name=".Condicao.Questao1CondicaoEncadeadaActivity"></activity>
+        <activity android:name=".Condicao.Questao1CondicaoEncadeadaActivity" />
+        <activity android:name=".EntradaSaída.Questao1SaidaActivity" />
+        <activity android:name=".EntradaSaída.Questao2SaidaActivity" />
+        <activity android:name=".EntradaSaída.Questao3SaidaActivity"></activity>
     </application>
 
 </manifest>
