@@ -135,7 +135,8 @@
         <activity android:name=".Condicao.Questao1CondicaoEncadeadaActivity" />
         <activity android:name=".EntradaSaída.Questao1SaidaActivity" />
         <activity android:name=".EntradaSaída.Questao2SaidaActivity" />
-        <activity android:name=".EntradaSaída.Questao3SaidaActivity"></activity>
+        <activity android:name=".EntradaSaída.Questao3SaidaActivity" />
+        <activity android:name=".EntradaSaída.Questao4SaidaActivity"></activity>
     </application>
 
 </manifest>
