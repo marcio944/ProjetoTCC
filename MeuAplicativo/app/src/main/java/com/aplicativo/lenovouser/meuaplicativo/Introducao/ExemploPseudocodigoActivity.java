@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
@@ -22,11 +23,12 @@ public class ExemploPseudocodigoActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void retornarPseudocodigo(View view){
-
+    public void anterior(View view){
+        Intent intent = new Intent(ExemploPseudocodigoActivity.this, PseudocodigoActivity.class);
+        startActivity(intent);
     }
 
-    public void proximo(View view){
+    public  void proximo(View view){
         Intent intent = new Intent(ExemploPseudocodigoActivity.this, Questao1PseudocodigoActivity.class);
         startActivity(intent);
     }

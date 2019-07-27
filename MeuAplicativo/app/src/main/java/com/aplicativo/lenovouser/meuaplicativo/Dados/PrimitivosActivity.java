@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class PrimitivosActivity extends AppCompatActivity {
@@ -15,12 +16,17 @@ public class PrimitivosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_primitivos);
     }
 
-    public void retornarDados(View view){
+    public void inicio(View view){
+        Intent intent = new Intent(PrimitivosActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void anterior(View view){
         Intent intent = new Intent(PrimitivosActivity.this, DadosActivity.class);
         startActivity(intent);
     }
 
-    public void proximoPrimitivos(View view){
+    public void proximo(View view){
         Intent intent = new Intent(PrimitivosActivity.this, Primitivos2Activity.class);
         startActivity(intent);
     }

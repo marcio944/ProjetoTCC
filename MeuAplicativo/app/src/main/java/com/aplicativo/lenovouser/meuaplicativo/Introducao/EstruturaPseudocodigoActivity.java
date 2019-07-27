@@ -22,7 +22,8 @@ public class EstruturaPseudocodigoActivity extends AppCompatActivity {
     }
 
     public void proximo(View view){
-
+        Intent intent = new Intent(EstruturaPseudocodigoActivity.this, Questao1PseudocodigoActivity.class);
+        startActivity(intent);
     }
 
     public void anterior(View view){

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
 
@@ -15,6 +16,11 @@ public class Primitivos2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_primitivos2);
+    }
+
+    public void inicio(View view){
+        Intent intent = new Intent(Primitivos2Activity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void anterior(View view){

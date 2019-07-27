@@ -12,19 +12,23 @@
 
         <TextView
             android:id="@+id/textView23"
-            android:layout_width="361dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="22dp"
+            android:textStyle="bold"
             android:text="Objetos do tipo real são representados por números racionais e têm uma parte inteira e outra fracionária.  " />
 
         <RadioGroup
-            android:layout_width="99dp"
-            android:layout_height="76dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/textView23"
-            android:layout_marginTop="120dp">
+            android:layout_width="wrap_content"
+            android:layout_height="148dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="225dp"
+            android:layout_marginLeft="20dp">
 
             <RadioButton
                 android:id="@+id/radioButton33"
@@ -43,28 +47,41 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/button23"
-            android:layout_width="133dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/button24"
-            android:layout_marginEnd="40dp"
-            android:text="Próximo"
-            android:onClick="proximo"
-            android:background="@color/colorPrimary"
-            android:textColor="#ffffff"/>
-
-        <Button
             android:id="@+id/button24"
-            android:layout_width="134dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="26dp"
-            android:layout_marginStart="38dp"
-            android:text="Anterior"
-            android:onClick="anterior"
+            android:layout_marginBottom="43dp"
+            android:layout_marginStart="34dp"
             android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
             android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/button23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/button24"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="35dp"
+            android:background="@color/colorPrimary"
+            android:onClick="proximo"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton89"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/button24"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
+
+
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

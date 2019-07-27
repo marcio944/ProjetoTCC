@@ -18,7 +18,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:textStyle="bold"
-            android:text="O comando 29 = A atribui à variável A o valor 29."
+            android:text="Um algoritmo não representa um programa de computador, e pode ser essencialmente executado por um ser humano se este tiver disponível tempo e memória suficientes."
             android:textSize="18dp"/>
 
         <Button

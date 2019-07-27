@@ -12,19 +12,23 @@
 
         <TextView
             android:id="@+id/textView22"
-            android:layout_width="361dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="26dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="22dp"
+            android:textStyle="bold"
             android:text="Marque a alternativa que apresenta os tipos de dados mais comuns encontrados na maioria das linguagens de programação e que constituem a base de como qualquer informação será armazenada no mesmo." />
 
         <RadioGroup
             android:layout_width="wrap_content"
-            android:layout_height="143dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/textView22"
-            android:layout_marginTop="146dp">
+            android:layout_height="148dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="225dp"
+            android:layout_marginLeft="20dp">
 
             <RadioButton
                 android:id="@+id/radioButton31"
@@ -56,27 +60,40 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/button21"
-            android:layout_width="133dp"
+            android:id="@+id/button22"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/button22"
-            android:layout_marginEnd="34dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="43dp"
+            android:layout_marginStart="34dp"
             android:background="@color/colorPrimary"
-            android:text="Próximo"
-            android:onClick="proximo"
+            android:onClick="anterior"
+            android:text="Anterior"
             android:textColor="#ffffff" />
 
         <Button
-            android:id="@+id/button22"
-            android:layout_width="131dp"
+            android:id="@+id/button21"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/textView22"
-            android:layout_marginBottom="25dp"
+            android:layout_alignTop="@+id/imageButton88"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="35dp"
             android:background="@color/colorPrimary"
-            android:text="Anterior"
-            android:onClick="anterior"
+            android:onClick="proximo"
+            android:text="Próximo"
             android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton88"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/button22"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

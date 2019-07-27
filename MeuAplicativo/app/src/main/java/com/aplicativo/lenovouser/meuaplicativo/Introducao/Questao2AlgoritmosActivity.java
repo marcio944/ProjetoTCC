@@ -18,7 +18,7 @@ public class Questao2AlgoritmosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao2_algoritmos);
-        radioButton = (RadioButton) findViewById(R.id.radioButton40);
+        radioButton = (RadioButton) findViewById(R.id.radioButton41);
     }
 
     public void inicio(View view){

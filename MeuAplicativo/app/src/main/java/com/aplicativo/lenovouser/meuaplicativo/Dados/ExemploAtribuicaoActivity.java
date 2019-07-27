@@ -27,7 +27,7 @@ public class ExemploAtribuicaoActivity extends AppCompatActivity {
     }
 
     public void proximo(View view){
-        Intent intent = new Intent(ExemploAtribuicaoActivity.this, AtribuicaoActivity.class);
+        Intent intent = new Intent(ExemploAtribuicaoActivity.this, Questao1ManipulacaoActivity.class);
         startActivity(intent);
     }
 
