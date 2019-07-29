@@ -33,11 +33,14 @@
 
         <Button
             android:id="@+id/button73"
-            android:layout_width="135dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/imageView13"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="62dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginBottom="41dp"
             android:background="@color/colorPrimary"
             android:onClick="anterior"
             android:text="Anterior"
@@ -45,16 +48,28 @@
 
         <Button
             android:id="@+id/button74"
-            android:layout_width="135dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/imageView13"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="-1dp"
-            android:layout_marginBottom="65dp"
+            android:layout_alignTop="@+id/button73"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
             android:background="@color/colorPrimary"
             android:onClick="proximo"
             android:text="Próximo"
             android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton94"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/button73"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

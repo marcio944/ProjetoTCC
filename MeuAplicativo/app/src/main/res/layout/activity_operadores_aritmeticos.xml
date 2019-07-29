@@ -10,26 +10,37 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/imageButton18"
-            android:layout_width="75dp"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
+        <TextView
+            android:id="@+id/textView112"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="23dp"
-            android:background="@null"
-            android:onClick="inicio"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/home" />
+            android:layout_marginTop="27dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Operadores Aritméticos" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+            android:text="Os operadores aritméticos são símbolos que representam operações
+aritméticas, ou seja, as operações matemáticas básicas. Na próxima tela será apresentada uma tabela contendo os operadores aritméticos que
+são comumente utilizados em algoritmos."
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/button76"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="22dp"
+            android:layout_alignParentBottom="true"
             android:layout_marginStart="35dp"
+            android:layout_marginBottom="22dp"
             android:background="@color/colorPrimary"
             android:onClick="anterior"
             android:text="Anterior"
@@ -48,16 +59,17 @@
             android:text="Próximo"
             android:textColor="#ffffff" />
 
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="356dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+        <ImageButton
+            android:id="@+id/imageButton18"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:text="Os operadores aritméticos são símbolos que representam operações
-aritméticas, ou seja, as operações matemáticas básicas. Na próxima tela será apresentada uma tabela contendo os operadores aritméticos que
-são comumente utilizados em algoritmos."
-            android:textSize="20dp" />
+            android:layout_marginBottom="23dp"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
+
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

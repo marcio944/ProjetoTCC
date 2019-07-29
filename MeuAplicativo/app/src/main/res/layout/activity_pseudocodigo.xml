@@ -11,14 +11,25 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView_Pseudocodigo"
-            android:layout_width="359dp"
+            android:id="@+id/textView111"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="35dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:text="Pseudocódigo" />
+
+        <TextView
+            android:id="@+id/textView_Pseudocodigo"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
             android:text="O pseudocódigo é uma maneira intermediária entre a linguagem natural e uma linguagem de programação de representar um algoritmo. Ela utiliza um conjunto restrito de palavras-chave, em geral na língua nativa do programador, que tem equivalentes nas linguagens de programação. Além disso, o pseudocódigo não requer todo a rigidez sintática necessária numa linguagem de programação, permitindo que o aprendiz se detenha na lógica do algoritmos e não no formalismo da sua representação."
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/button119"

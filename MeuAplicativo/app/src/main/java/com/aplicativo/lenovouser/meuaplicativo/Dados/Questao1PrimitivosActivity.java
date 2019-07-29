@@ -27,7 +27,7 @@ public class Questao1PrimitivosActivity extends AppCompatActivity {
     }
 
     public void anterior(View view){
-        Intent intent = new Intent(Questao1PrimitivosActivity.this, DadosActivity.class);
+        Intent intent = new Intent(Questao1PrimitivosActivity.this, Primitivos2Activity.class);
         startActivity(intent);
     }
 

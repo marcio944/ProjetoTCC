@@ -11,16 +11,25 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView27"
-            android:layout_width="366dp"
-            android:layout_height="317dp"
+            android:id="@+id/textView113"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="43dp"
+            android:layout_marginTop="27dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Expressões Aritméticas" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
             android:text="As expressões aritméticas são aquelas em que os operadores são aritméticos e os operandos são valores do tipo numérico (inteiro ou real). \nEsses valores numéricos podem ser acessados por meio de identificadores constantes ou por meio de variáveis. As operações aritméticas fundamentais são: adição, subtração, multiplicação, divisão, potenciação, divisão inteira e o resto (módulo)."
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="163dp"
-            tools:layout_editor_absoluteY="55dp" />
+            android:textSize="15dp"/>
 
         <Button
             android:id="@+id/button29"
@@ -57,6 +66,7 @@
             android:scaleType="fitXY"
             android:onClick="inicio"
             app:srcCompat="@drawable/home"/>
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

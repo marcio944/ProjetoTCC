@@ -11,14 +11,25 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView29"
-            android:layout_width="369dp"
-            android:layout_height="414dp"
-            android:layout_alignParentEnd="true"
+            android:id="@+id/textView115"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="34dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Expressões Lógicas" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="46dp"
             android:text="As expressões lógicas são aquelas cujo valor só pode ser verdadeiro ou falso. São compostas por operadores relacionais, operadores lógicos, e por identificadores variáveis ou constantes do tipo lógico.As expressões lógicas também podem ser compostas por resultados de expressões aritméticas."
-            android:textSize="24dp" />
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/button33"

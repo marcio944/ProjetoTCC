@@ -13,14 +13,25 @@
         tools:layout_editor_absoluteY="70dp">
 
         <TextView
-            android:id="@+id/textView30"
-            android:layout_width="362dp"
+            android:id="@+id/textView114"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="27dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Precedência dos Operadores Aritméticos" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
             android:text="Quando uma expressão aritmética precisa ser avaliada num algoritmo, o analisador processa a expressão dando prioridade para certos operadores. As sub-expressões que contém estes operadores serão avaliadas primeiro e seu valor substituído pela sub-expressão inteira. A seguir a próxima sub-expressão na ordem é avaliada e assim por diante até que toda a expressão corresponda a um só valor. A Tabela da próxima tela mostra a ordem de prioridade na avaliação dos operadores numa expressão aritmética, chamada de precedência de operadores."
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/button35"

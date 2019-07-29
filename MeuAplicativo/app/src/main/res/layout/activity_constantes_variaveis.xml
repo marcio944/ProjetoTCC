@@ -13,23 +13,36 @@
         tools:layout_editor_absoluteY="0dp">
 
         <TextView
-            android:id="@+id/textView25"
-            android:layout_width="340dp"
-            android:layout_height="403dp"
+            android:id="@+id/textView108"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="35dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:text="Constantes e Variáveis" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
             android:text="Dentro de um algoritmo podemos encontrar basicamente duas classes diferentes de dados, os dados constantes e os variáveis. Um dado é uma constante quando seu valor não se altera ao longo do tempo em que o algoritmo é executado, ou seja, permanece o mesmo desde o início até o final da execução. Já um dado que pode ter seu valor alterado durante a execução do programa é tido como uma variável.\nPor exemplo, no cálculo da área de uma circunferência (A = π r2 ), o valor de π é constante, pois é sempre igual a 3.1416..., e o raio r é variável, pois pode assumir diferentes valores a cada cálculo da área. Seguindo a mesma lógica, a área A calculada para diferentes r também é variável. "
-            android:textSize="18dp" />
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/button27"
-            android:layout_width="133dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView25"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="22dp"
-            android:layout_marginBottom="37dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginBottom="41dp"
             android:background="@color/colorPrimary"
             android:onClick="anterior"
             android:text="Anterior"
@@ -37,16 +50,28 @@
 
         <Button
             android:id="@+id/button28"
-            android:layout_width="133dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/button27"
-            android:layout_alignEnd="@+id/textView25"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="22dp"
+            android:layout_alignTop="@+id/imageButton93"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
             android:background="@color/colorPrimary"
             android:onClick="proximo"
             android:text="Próximo"
             android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/imageButton93"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/button27"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
