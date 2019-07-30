@@ -139,7 +139,10 @@
         <activity android:name=".EntradaSaída.Questao4SaidaActivity" />
         <activity android:name=".Dados.Questao1ManipulacaoActivity" />
         <activity android:name=".Dados.Questao2ManipulacaoActivity" />
-        <activity android:name=".Dados.Questao3ManipulacaoActivity"></activity>
+        <activity android:name=".Dados.Questao3ManipulacaoActivity" />
+        <activity android:name=".EntradaSaída.Questao1EntradaActivity" />
+        <activity android:name=".EntradaSaída.Questao2EntradaActivity" />
+        <activity android:name=".EntradaSaída.Questao3EntradaActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EntradaSaída.Questao3EntradaActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView120"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:text="Complete o algoritmo abaixo para que esse funcione de forma correta."
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="82dp"
+            android:text="algoritmo 'Divisao'
+                          \n\nvar
+                            \n\nn1, n2, resultado : real
+                          \n\ninicio
+                            \n\nescreva('Digite o primeiro valor :')
+                            \n\n
+                            \n\nescreva('Digite o segundo valor :')
+                            \n\n
+                            \n\nresultado = n1/n2
+                            \n\nescreval('Divisao = ', resultado)
+                          \n\nfimalgoritmo"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button177"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginBottom="43dp"
+            android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button178"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="45dp"
+            android:background="@color/colorPrimary"
+            android:onClick="proximo"
+            android:text="Próximo"
+            android:textColor="#ffffff"/>
+
+        <ImageButton
+            android:id="@+id/imageButton97"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="45dp"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
+
+        <EditText
+            android:id="@+id/editText11"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView121"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-4dp"
+            android:layout_marginBottom="295dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText12"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editText11"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="225dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
