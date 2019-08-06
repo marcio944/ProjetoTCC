@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.aplicativo.lenovouser.meuaplicativo.Condicao.CondicaoActivity;
 import com.aplicativo.lenovouser.meuaplicativo.Dados.DadosActivity;
@@ -14,14 +15,34 @@ import com.aplicativo.lenovouser.meuaplicativo.Homogêneas.HomogeneasActivity;
 import com.aplicativo.lenovouser.meuaplicativo.Introducao.IntroducaoActivity;
 import com.aplicativo.lenovouser.meuaplicativo.Repetição.RepeticaoActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import  com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
 
     private static ImageButton ImageButtonDados;
+    private static ImageButton ImageButtonExpressoes;
+    private static ImageButton ImageButtonEntradaSaida;
+    private static ImageButton ImageButtonControle;
+    private static ImageButton ImageButtonRepeticao;
+    private static ImageButton ImageButtonHomogenias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageButtonDados = (ImageButton) findViewById(R.id.imageButton_Dados);
+        ImageButtonDados.setEnabled(false);
+        ImageButtonExpressoes = (ImageButton) findViewById(R.id.imageButton_Expressoes);
+        ImageButtonExpressoes.setEnabled(false);
+        ImageButtonEntradaSaida = (ImageButton) findViewById(R.id.imageButton9);
+        ImageButtonEntradaSaida.setEnabled(false);
+        ImageButtonControle = (ImageButton) findViewById(R.id.imageButton_Condicao);
+        ImageButtonControle.setEnabled(false);
+        ImageButtonRepeticao = (ImageButton) findViewById(R.id.imageButton_Repeticao);
+        ImageButtonRepeticao.setEnabled(false);
+        ImageButtonHomogenias = (ImageButton) findViewById(R.id.imageButton31);
+        ImageButtonHomogenias.setEnabled(false);
     }
 
     public void introducao(View view){

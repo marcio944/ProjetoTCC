@@ -10,18 +10,25 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
+import com.aplicativo.lenovouser.meuaplicativo.Models.PontuacaoModel;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
 
 public class Questao1FluxogramaActivity extends AppCompatActivity {
 
     RadioButton radioButton;
+    int ponto;
+    int pontoquestao5conceitoalgoritmo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao1_fluxograma);
         radioButton = (RadioButton) findViewById(R.id.radioButton5);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        pontoquestao5conceitoalgoritmo = bundle.getInt("pontoquestao5conceitoalgoritmo");
     }
 
     public void inicio(View view){
@@ -36,11 +43,17 @@ public class Questao1FluxogramaActivity extends AppCompatActivity {
 
     public void proximo(View view){
         if(radioButton.isChecked()) {
+            ponto = pontoquestao5conceitoalgoritmo + 1;
             Toast.makeText(Questao1FluxogramaActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao1FluxogramaActivity.this, Questao2FluxogramaActivity.class);
+            intent.putExtra("pontoquestao1", ponto);
             startActivity(intent);
         }else{
+            ponto = pontoquestao5conceitoalgoritmo + 0;
             Toast.makeText(Questao1FluxogramaActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao1FluxogramaActivity.this, Questao2FluxogramaActivity.class);
+            intent.putExtra("pontoquestao1", ponto);
+            startActivity(intent);
         }
     }
 

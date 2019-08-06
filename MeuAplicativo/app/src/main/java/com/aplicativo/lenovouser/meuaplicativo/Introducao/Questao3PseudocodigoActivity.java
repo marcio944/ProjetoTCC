@@ -13,12 +13,18 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class Questao3PseudocodigoActivity extends AppCompatActivity {
 
     EditText editText;
+    int ponto;
+    int pontoquestao2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao3_pseudocodigo);
         editText = (EditText) findViewById(R.id.editText);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        pontoquestao2 = bundle.getInt("pontoquestao2");
     }
 
     public void inicio(View view){
@@ -28,11 +34,17 @@ public class Questao3PseudocodigoActivity extends AppCompatActivity {
 
     public void proximo(View view){
         if (editText.getText().toString().equals("5")){
+            ponto = pontoquestao2 + 1;
             Toast.makeText(Questao3PseudocodigoActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao3PseudocodigoActivity.this, Questao4PseudocodigoActivity.class);
+            intent.putExtra("pontoquestao3", ponto);
             startActivity(intent);
         }else{
+            ponto = pontoquestao2 + 0;
             Toast.makeText(Questao3PseudocodigoActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao3PseudocodigoActivity.this, Questao4PseudocodigoActivity.class);
+            intent.putExtra("pontoquestao3", ponto);
+            startActivity(intent);
         }
     }
 

@@ -14,6 +14,7 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class Questao1AlgoritmosActivity extends AppCompatActivity {
 
     RadioButton radioButton;
+    int ponto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +35,17 @@ public class Questao1AlgoritmosActivity extends AppCompatActivity {
 
     public  void proximo(View view){
         if (radioButton.isChecked()){
+            ponto = 1;
             Toast.makeText(Questao1AlgoritmosActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao1AlgoritmosActivity.this, Questao2AlgoritmosActivity.class);
+            intent.putExtra("pontoquestao1", ponto);
             startActivity(intent);
         }else {
+            ponto = 0;
             Toast.makeText(Questao1AlgoritmosActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao1AlgoritmosActivity.this, Questao2AlgoritmosActivity.class);
+            intent.putExtra("pontoquestao1", ponto);
+            startActivity(intent);
         }
     }
 

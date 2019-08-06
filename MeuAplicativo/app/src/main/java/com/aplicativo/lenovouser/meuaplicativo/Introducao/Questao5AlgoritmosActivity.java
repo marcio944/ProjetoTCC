@@ -13,12 +13,19 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class Questao5AlgoritmosActivity extends AppCompatActivity {
 
     RadioButton radioButton;
+    int ponto;
+    int pontoquestao4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao5_algoritmos);
         radioButton = (RadioButton) findViewById(R.id.radioButton51);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        pontoquestao4 = bundle.getInt("pontoquestao4");
+
     }
 
     public void inicio(View view){
@@ -33,11 +40,19 @@ public class Questao5AlgoritmosActivity extends AppCompatActivity {
 
     public  void proximo(View view){
         if (radioButton.isChecked()){
+            ponto = pontoquestao4 + 1;
             Toast.makeText(Questao5AlgoritmosActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
+            Toast.makeText(Questao5AlgoritmosActivity.this, "Pontuação = " + ponto, Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao5AlgoritmosActivity.this, IntroducaoActivity.class);
+            intent.putExtra("pontoquestao5conceitoalgoritmo", ponto);
             startActivity(intent);
+            //Intent i = new Intent(Questao5AlgoritmosActivity.this, Questao1FluxogramaActivity.class);
         }else {
+            ponto = pontoquestao4 + 0;
             Toast.makeText(Questao5AlgoritmosActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao5AlgoritmosActivity.this, IntroducaoActivity.class);
+            intent.putExtra("pontoquestao5conceitoalgoritmo", ponto);
+            startActivity(intent);
         }
     }
 

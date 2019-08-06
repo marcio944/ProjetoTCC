@@ -10,10 +10,16 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class PseudocodigoActivity extends AppCompatActivity {
 
+    int pontoquestao5fluxograma;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pseudocodigo);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        pontoquestao5fluxograma = bundle.getInt("pontoquestao5fluxograma");
     }
 
     public void inicio(View view){
@@ -28,6 +34,7 @@ public class PseudocodigoActivity extends AppCompatActivity {
 
     public  void proximo(View view){
         Intent intent = new Intent(PseudocodigoActivity.this, EstruturaPseudocodigoActivity.class);
+        intent.putExtra("pontoquestao5fluxograma", pontoquestao5fluxograma);
         startActivity(intent);
     }
 

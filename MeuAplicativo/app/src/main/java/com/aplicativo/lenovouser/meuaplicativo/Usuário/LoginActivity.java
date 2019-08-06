@@ -21,6 +21,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 import java.util.regex.Pattern;
 
@@ -37,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText edPassword;
     private Button btnLogin;
     private TextView txtUsuario;
+
+    private String HOST = "http://192.168.0.10/login";
 
     UsuarioRepository usuarioRepository = new UsuarioRepository(this);
     UsuarioModel usuarioModel = new UsuarioModel();
@@ -85,35 +90,37 @@ public class LoginActivity extends AppCompatActivity {
 
         edEmail = (EditText) findViewById(R.id.editText_Email);
         edPassword = (EditText) findViewById(R.id.editText_Password);
+        String email = edEmail.getText().toString();
+        String senha = edPassword.getText().toString();
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference databaseReference = database.getReference();
+        boolean resultadoEmail = validaEmail();
+        boolean resultadoSenha = validaSenha();
 
-        Query query = databaseReference.child("Usuario").orderByChild("email_senha").equalTo(edEmail.getText().toString() + edPassword.getText().toString());
+        if (resultadoEmail && resultadoSenha) {
 
-        query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            String URL = HOST + "/login.php";
 
-                boolean res = validaEmail();
-                boolean resultado = validaSenha();
+            Ion.with(LoginActivity.this).load(URL).setBodyParameter("email_app", email).setBodyParameter("senha_app", senha).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
 
-                if (dataSnapshot.exists()){
-                    if (res && resultado) {
-                        Toast.makeText(LoginActivity.this, "Login efetuado com sucesso", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                        startActivity(intent);
+                    try {
+                        String RETORNO = result.get("LOGIN").getAsString();
+                        if (RETORNO.equals("SUCESSO")){
+                            Toast.makeText(LoginActivity.this, "Login efetuado com sucesso!", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Erro ao efetuar login!", Toast.LENGTH_LONG).show();
+                        }
+                    } catch (Exception ex){
+                        Toast.makeText(LoginActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
                     }
-                }else{
-                    Toast.makeText(LoginActivity.this, "Dados não cadastrados!", Toast.LENGTH_LONG).show();
+
                 }
-            }
+            });
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+        }
 
     }
 

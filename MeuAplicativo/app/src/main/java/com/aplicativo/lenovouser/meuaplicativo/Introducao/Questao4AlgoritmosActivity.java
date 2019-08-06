@@ -13,12 +13,18 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class Questao4AlgoritmosActivity extends AppCompatActivity {
 
     RadioButton radioButton;
+    int ponto;
+    int pontoquestao3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao4_algoritmos);
         radioButton = (RadioButton) findViewById(R.id.radioButton47);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        pontoquestao3 = bundle.getInt("pontoquestao3");
     }
 
     public void inicio(View view){
@@ -33,11 +39,17 @@ public class Questao4AlgoritmosActivity extends AppCompatActivity {
 
     public  void proximo(View view){
         if (radioButton.isChecked()){
+            ponto = pontoquestao3 + 1;
             Toast.makeText(Questao4AlgoritmosActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao4AlgoritmosActivity.this, Questao5AlgoritmosActivity.class);
+            intent.putExtra("pontoquestao4", ponto);
             startActivity(intent);
         }else {
+            ponto = pontoquestao3 + 0;
             Toast.makeText(Questao4AlgoritmosActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao4AlgoritmosActivity.this, Questao5AlgoritmosActivity.class);
+            intent.putExtra("pontoquestao4", ponto);
+            startActivity(intent);
         }
     }
 

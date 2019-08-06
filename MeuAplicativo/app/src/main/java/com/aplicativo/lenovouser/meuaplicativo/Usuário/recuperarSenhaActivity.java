@@ -1,5 +1,6 @@
 package com.aplicativo.lenovouser.meuaplicativo.Usuário;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.Models.UsuarioModel;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 import com.aplicativo.lenovouser.meuaplicativo.Repository.UsuarioRepository;
@@ -17,7 +19,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
@@ -33,6 +40,8 @@ public class recuperarSenhaActivity extends AppCompatActivity {
     EditText edEmail;
     EditText edSenha;
     EditText edRepetirSenha;
+
+    private String HOST = "http://10.180.43.246/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,46 +101,40 @@ public class recuperarSenhaActivity extends AppCompatActivity {
 
     public void recuperarSenha(View view){
 
-        final UsuarioModel usuarioModel = new UsuarioModel();
-        UsuarioModel usuario = new UsuarioModel();
-        UsuarioRepository usuarioRepository = new UsuarioRepository(this);
-
         edEmail = (EditText) findViewById(R.id.editText_Email);
         edSenha = (EditText) findViewById(R.id.editText_Senha);
+        String email = edEmail.getText().toString();
+        String senha = edSenha.getText().toString();
 
-        usuarioModel.setEmail(edEmail.getText().toString());
-        usuarioModel.setSenha(edSenha.getText().toString());
-        usuarioModel.setId(UUID.randomUUID().toString());
-        usuarioModel.setEmail_senha(edEmail.getText().toString() + edSenha.getText().toString());
+        boolean resultadoEmail = validaEmail();
+        boolean resultadoSenha = validaSenha();
+        boolean resultadoRepetir = validaRepetirSenha();
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference databaseReference = database.getReference();
+        if (resultadoEmail && resultadoSenha && resultadoRepetir) {
 
-        Query query = databaseReference.child("Usuario").orderByChild("email").equalTo(usuarioModel.getEmail());
+            String URL = HOST + "/alterar.php";
 
-        query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            Ion.with(recuperarSenhaActivity.this).load(URL).setBodyParameter("email_app", email).setBodyParameter("senha_app", senha).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
 
-                boolean resultadoEmail = validaEmail();
-                boolean resultadoSenha = validaSenha();
-                boolean resultadoRepetir = validaRepetirSenha();
-
-                if (dataSnapshot.exists()){
-                    if (resultadoEmail && resultadoSenha && resultadoRepetir) {
-                        databaseReference.child("Usuario").child(usuarioModel.getId()).setValue(usuarioModel);
-                        Toast.makeText(recuperarSenhaActivity.this, "Senha recuperada com sucesso!", Toast.LENGTH_LONG).show();
+                    try {
+                        String RETORNO = result.get("ALTERAR").getAsString();
+                        if (RETORNO.equals("SUCESSO")){
+                            Toast.makeText(recuperarSenhaActivity.this, "Senha alterada com sucesso!", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(recuperarSenhaActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(recuperarSenhaActivity.this, "Erro ao alterar senha!", Toast.LENGTH_LONG).show();
+                        }
+                    } catch (Exception ex){
+                        Toast.makeText(recuperarSenhaActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
                     }
-                }else {
-                    Toast.makeText(recuperarSenhaActivity.this, "Erro ao recuperar senha!", Toast.LENGTH_LONG).show();
+
                 }
-            }
+            });
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+        }
 
     }
 
