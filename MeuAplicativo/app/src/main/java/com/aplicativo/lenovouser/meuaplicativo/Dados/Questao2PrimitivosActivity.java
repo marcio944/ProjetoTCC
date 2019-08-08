@@ -13,12 +13,25 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class Questao2PrimitivosActivity extends AppCompatActivity {
 
     RadioButton radioButton;
+    private String emailusuario;
+    int pontoQuestao1;
+    int ponto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao2_primitivos);
         radioButton = (RadioButton) findViewById(R.id.radioButton33);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        pontoQuestao1 = bundle.getInt("pontoquestao1");
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
@@ -33,11 +46,19 @@ public class Questao2PrimitivosActivity extends AppCompatActivity {
 
     public  void proximo(View view){
         if (radioButton.isChecked()){
+            int ponto = pontoQuestao1 + 1;
             Toast.makeText(Questao2PrimitivosActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao2PrimitivosActivity.this, Questao3PrimitivosActivity.class);
+            intent.putExtra("pontoquestao2", ponto);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }else {
+            int ponto = pontoQuestao1 + 0;
             Toast.makeText(Questao2PrimitivosActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao2PrimitivosActivity.this, Questao3PrimitivosActivity.class);
+            intent.putExtra("pontoquestao2", ponto);
+            intent.putExtra("emailusuario", emailusuario);
+            startActivity(intent);
         }
     }
 

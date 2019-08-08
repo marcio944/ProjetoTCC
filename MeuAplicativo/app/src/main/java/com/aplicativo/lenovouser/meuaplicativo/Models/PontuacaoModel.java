@@ -2,31 +2,13 @@ package com.aplicativo.lenovouser.meuaplicativo.Models;
 
 public class PontuacaoModel {
 
-    private String idPontuacao;
-    private String topico;
-    private int pontos;
+    private String pontos;
 
-    public String getIdPontuacao() {
-        return idPontuacao;
-    }
-
-    public void setIdPontuacao(String idPontuacao) {
-        this.idPontuacao = idPontuacao;
-    }
-
-    public String getTopico() {
-        return topico;
-    }
-
-    public void setTopico(String topico) {
-        this.topico = topico;
-    }
-
-    public int getPontos() {
+    public String getPontos() {
         return pontos;
     }
 
-    public void setPontos(int pontos) {
+    public void setPontos(String pontos) {
         this.pontos = pontos;
     }
 }

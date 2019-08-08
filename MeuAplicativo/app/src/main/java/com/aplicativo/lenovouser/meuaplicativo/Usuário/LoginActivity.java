@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnLogin;
     private TextView txtUsuario;
 
-    private String HOST = "http://192.168.0.10/login";
+    private String HOST = "http://192.168.42.249/login";
 
     UsuarioRepository usuarioRepository = new UsuarioRepository(this);
     UsuarioModel usuarioModel = new UsuarioModel();
@@ -92,6 +92,7 @@ public class LoginActivity extends AppCompatActivity {
         edPassword = (EditText) findViewById(R.id.editText_Password);
         String email = edEmail.getText().toString();
         String senha = edPassword.getText().toString();
+        final String emailusuario = email;
 
         boolean resultadoEmail = validaEmail();
         boolean resultadoSenha = validaSenha();
@@ -109,6 +110,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (RETORNO.equals("SUCESSO")){
                             Toast.makeText(LoginActivity.this, "Login efetuado com sucesso!", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            intent.putExtra("emailusuario", emailusuario);
                             startActivity(intent);
                         } else {
                             Toast.makeText(LoginActivity.this, "Erro ao efetuar login!", Toast.LENGTH_LONG).show();

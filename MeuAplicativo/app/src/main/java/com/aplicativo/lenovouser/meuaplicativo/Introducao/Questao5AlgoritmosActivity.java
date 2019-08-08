@@ -15,6 +15,7 @@ public class Questao5AlgoritmosActivity extends AppCompatActivity {
     RadioButton radioButton;
     int ponto;
     int pontoquestao4;
+    private String emailusuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,12 @@ public class Questao5AlgoritmosActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
         pontoquestao4 = bundle.getInt("pontoquestao4");
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
 
     }
 
@@ -41,17 +48,16 @@ public class Questao5AlgoritmosActivity extends AppCompatActivity {
     public  void proximo(View view){
         if (radioButton.isChecked()){
             ponto = pontoquestao4 + 1;
-            Toast.makeText(Questao5AlgoritmosActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
-            Toast.makeText(Questao5AlgoritmosActivity.this, "Pontuação = " + ponto, Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao5AlgoritmosActivity.this, IntroducaoActivity.class);
             intent.putExtra("pontoquestao5conceitoalgoritmo", ponto);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
             //Intent i = new Intent(Questao5AlgoritmosActivity.this, Questao1FluxogramaActivity.class);
         }else {
             ponto = pontoquestao4 + 0;
-            Toast.makeText(Questao5AlgoritmosActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao5AlgoritmosActivity.this, IntroducaoActivity.class);
             intent.putExtra("pontoquestao5conceitoalgoritmo", ponto);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }
     }

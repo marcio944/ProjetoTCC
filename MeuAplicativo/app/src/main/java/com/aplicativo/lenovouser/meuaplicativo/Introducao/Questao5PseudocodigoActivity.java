@@ -11,12 +11,16 @@ import android.widget.Toast;
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.Models.PontuacaoModel;
 import com.aplicativo.lenovouser.meuaplicativo.R;
+import com.aplicativo.lenovouser.meuaplicativo.Usuário.CadastroActivity;
 import com.aplicativo.lenovouser.meuaplicativo.Usuário.LoginActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 import java.util.UUID;
 
@@ -25,6 +29,8 @@ public class Questao5PseudocodigoActivity extends AppCompatActivity {
     RadioButton radioButton;
     int ponto;
     int pontoquestao4;
+    private String emailusuario;
+    private String HOST = "http://192.168.42.249/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,12 @@ public class Questao5PseudocodigoActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
         pontoquestao4 = bundle.getInt("pontoquestao4");
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
@@ -50,27 +62,47 @@ public class Questao5PseudocodigoActivity extends AppCompatActivity {
     public void proximo(View view){
         if(radioButton.isChecked()){
             ponto = pontoquestao4 + 1;
-            PontuacaoModel pontuacaoModel = new PontuacaoModel();
-            pontuacaoModel.setIdPontuacao(UUID.randomUUID().toString());
-            pontuacaoModel.setTopico("introducao");
-            pontuacaoModel.setPontos(ponto);
-            FirebaseDatabase database = FirebaseDatabase.getInstance();
-            final DatabaseReference databaseReference = database.getReference();
-            databaseReference.child("pontuacao").child(pontuacaoModel.getIdPontuacao()).setValue(pontuacaoModel);
-            Toast.makeText(Questao5PseudocodigoActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(Questao5PseudocodigoActivity.this, IntroducaoActivity.class);
+            if (ponto < 13){
+                Toast.makeText(Questao5PseudocodigoActivity.this, "Pontuação = " + ponto + ". Pontuação insuficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(Questao5PseudocodigoActivity.this, "Pontuação = " + ponto + ". Pontuação suficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
+            }
+            String URL = HOST + "/cadastro_pontos.php";
+            Ion.with(Questao5PseudocodigoActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_introducao", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    try {
+                        String RETORNO = result.get("CADASTRO").getAsString();
+                    } catch (Exception ex){
+                        Toast.makeText(Questao5PseudocodigoActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            });
+            Intent intent = new Intent(Questao5PseudocodigoActivity.this, MainActivity.class);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }else{
             ponto = pontoquestao4 + 0;
-            PontuacaoModel pontuacaoModel = new PontuacaoModel();
-            pontuacaoModel.setIdPontuacao(UUID.randomUUID().toString());
-            pontuacaoModel.setTopico("introducao");
-            pontuacaoModel.setPontos(ponto);
-            FirebaseDatabase database = FirebaseDatabase.getInstance();
-            final DatabaseReference databaseReference = database.getReference();
-            databaseReference.child("pontuacao").child(pontuacaoModel.getIdPontuacao()).setValue(pontuacaoModel);
-            Toast.makeText(Questao5PseudocodigoActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            if (ponto < 13){
+                Toast.makeText(Questao5PseudocodigoActivity.this, "Pontuação = " + ponto + ". Pontuação insuficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(Questao5PseudocodigoActivity.this, "Pontuação = " + ponto + ". Pontuação suficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
+            }
+            String URL = HOST + "/cadastro_pontos.php";
+            Ion.with(Questao5PseudocodigoActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_introducao", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    try {
+                        String RETORNO = result.get("CADASTRO").getAsString();
+                    } catch (Exception ex){
+                        Toast.makeText(Questao5PseudocodigoActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            });
             Intent intent = new Intent(Questao5PseudocodigoActivity.this, IntroducaoActivity.class);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }
     }

@@ -12,10 +12,18 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class Primitivos2Activity extends AppCompatActivity {
 
+    private String emailusuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_primitivos2);
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
@@ -30,6 +38,7 @@ public class Primitivos2Activity extends AppCompatActivity {
 
     public void proximo(View view){
         Intent intent = new Intent(Primitivos2Activity.this, Questao1PrimitivosActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

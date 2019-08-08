@@ -13,12 +13,20 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class Questao1PrimitivosActivity extends AppCompatActivity {
 
     RadioButton radioButton;
+    int ponto;
+    private String emailusuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao1_primitivos);
         radioButton = (RadioButton) findViewById(R.id.radioButton28);
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
@@ -33,11 +41,19 @@ public class Questao1PrimitivosActivity extends AppCompatActivity {
 
     public  void proximo(View view){
         if (radioButton.isChecked()){
+            ponto = 1;
             Toast.makeText(Questao1PrimitivosActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao1PrimitivosActivity.this, Questao2PrimitivosActivity.class);
+            intent.putExtra("pontoquestao1", ponto);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }else {
+            ponto = 0;
             Toast.makeText(Questao1PrimitivosActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao1PrimitivosActivity.this, Questao2PrimitivosActivity.class);
+            intent.putExtra("pontoquestao1", ponto);
+            intent.putExtra("emailusuario", emailusuario);
+            startActivity(intent);
         }
     }
 

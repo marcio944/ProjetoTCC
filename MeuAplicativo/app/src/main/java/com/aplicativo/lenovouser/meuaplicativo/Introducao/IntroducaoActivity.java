@@ -8,14 +8,17 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.aplicativo.lenovouser.meuaplicativo.R;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 public class IntroducaoActivity extends AppCompatActivity {
 
     Button button;
     int pontoquestao5conceito;
     int pontoquestao5fluxograma;
+    private String emailusuario;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_introducao);
@@ -31,10 +34,17 @@ public class IntroducaoActivity extends AppCompatActivity {
         if (bundle1 != null){
             pontoquestao5fluxograma = bundle1.getInt("pontoquestao5fluxograma");
         }
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void conceitoAlgoritmo(View view){
         Intent intent = new Intent(this,ConceitoAlgoritmoActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
@@ -46,12 +56,14 @@ public class IntroducaoActivity extends AppCompatActivity {
     public void fluxograma(View view){
         Intent intent = new Intent(IntroducaoActivity.this, FluxogramaActivity.class);
         intent.putExtra("pontoquestao5conceitoalgoritmo", pontoquestao5conceito);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void pseudocodigo(View view){
         Intent intent = new Intent(IntroducaoActivity.this, PseudocodigoActivity.class);
         intent.putExtra("pontoquestao5fluxograma", pontoquestao5fluxograma);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

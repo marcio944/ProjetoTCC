@@ -11,6 +11,7 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class PseudocodigoActivity extends AppCompatActivity {
 
     int pontoquestao5fluxograma;
+    private  String emailusuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,12 @@ public class PseudocodigoActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
         pontoquestao5fluxograma = bundle.getInt("pontoquestao5fluxograma");
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
@@ -35,6 +42,7 @@ public class PseudocodigoActivity extends AppCompatActivity {
     public  void proximo(View view){
         Intent intent = new Intent(PseudocodigoActivity.this, EstruturaPseudocodigoActivity.class);
         intent.putExtra("pontoquestao5fluxograma", pontoquestao5fluxograma);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

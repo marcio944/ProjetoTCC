@@ -15,6 +15,7 @@ public class Questao4AlgoritmosActivity extends AppCompatActivity {
     RadioButton radioButton;
     int ponto;
     int pontoquestao3;
+    private String emailusuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,12 @@ public class Questao4AlgoritmosActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
         pontoquestao3 = bundle.getInt("pontoquestao3");
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
@@ -40,15 +47,15 @@ public class Questao4AlgoritmosActivity extends AppCompatActivity {
     public  void proximo(View view){
         if (radioButton.isChecked()){
             ponto = pontoquestao3 + 1;
-            Toast.makeText(Questao4AlgoritmosActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao4AlgoritmosActivity.this, Questao5AlgoritmosActivity.class);
             intent.putExtra("pontoquestao4", ponto);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }else {
             ponto = pontoquestao3 + 0;
-            Toast.makeText(Questao4AlgoritmosActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao4AlgoritmosActivity.this, Questao5AlgoritmosActivity.class);
             intent.putExtra("pontoquestao4", ponto);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }
     }

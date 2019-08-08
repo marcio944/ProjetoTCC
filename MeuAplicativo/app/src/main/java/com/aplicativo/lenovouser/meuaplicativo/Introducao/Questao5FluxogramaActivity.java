@@ -17,6 +17,7 @@ public class Questao5FluxogramaActivity extends AppCompatActivity {
     Button button;
     int pontoquestao4;
     int ponto;
+    private String emailusuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,12 @@ public class Questao5FluxogramaActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
         pontoquestao4 = bundle.getInt("pontoquestao4");
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
@@ -42,15 +49,15 @@ public class Questao5FluxogramaActivity extends AppCompatActivity {
     public void proximo(View view){
         if(radioButton.isChecked()){
             ponto = pontoquestao4 + 1;
-            Toast.makeText(Questao5FluxogramaActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao5FluxogramaActivity.this, IntroducaoActivity.class);
             intent.putExtra("pontoquestao5fluxograma", ponto);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }else{
             ponto = pontoquestao4 + 0;
-            Toast.makeText(Questao5FluxogramaActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao5FluxogramaActivity.this, IntroducaoActivity.class);
             intent.putExtra("pontoquestao5fluxograma", ponto);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }
     }

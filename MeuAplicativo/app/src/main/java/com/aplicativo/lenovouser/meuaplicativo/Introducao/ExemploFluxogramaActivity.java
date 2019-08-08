@@ -12,6 +12,7 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class ExemploFluxogramaActivity extends AppCompatActivity {
 
     int pontoquestao5conceito;
+    private String emailusuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,12 @@ public class ExemploFluxogramaActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
         pontoquestao5conceito = bundle.getInt("pontoquestao5conceitoalgoritmo");
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
@@ -31,6 +38,7 @@ public class ExemploFluxogramaActivity extends AppCompatActivity {
     public void proximo(View view){
         Intent intent = new Intent(ExemploFluxogramaActivity.this, SimbolosFluxogramaActivity.class);
         intent.putExtra("pontoquestao5conceitoalgoritmo", pontoquestao5conceito);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
