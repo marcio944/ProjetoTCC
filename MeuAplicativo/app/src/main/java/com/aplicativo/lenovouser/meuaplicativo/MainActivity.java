@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             emailusuario = bundle.getString("emailusuario");
         }
         buscapontosintroducao(emailusuario);
+        buscapontosdados(emailusuario);
     }
 
     public void buscapontosintroducao(String emailusuario){
@@ -71,6 +72,26 @@ public class MainActivity extends AppCompatActivity {
                     if (pontos >= 13) {
                         ImageButtonDados = (ImageButton) findViewById(R.id.imageButton_Dados);
                         ImageButtonDados.setEnabled(true);
+                    }
+                } catch (Exception ex){
+                    //Toast.makeText(MainActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+    }
+
+    public void buscapontosdados(String emailusuario){
+        String URL = HOST + "/buscar_pontos_dados.php";
+        Ion.with(MainActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+            @Override
+            public void onCompleted(Exception e, JsonObject result) {
+                try {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    int pontos = Integer.parseInt(RETORNO);
+                    if (pontos >= 11) {
+                        ImageButtonExpressoes = (ImageButton) findViewById(R.id.imageButton_Expressoes);
+                        ImageButtonExpressoes.setEnabled(true);
                     }
                 } catch (Exception ex){
                     //Toast.makeText(MainActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();

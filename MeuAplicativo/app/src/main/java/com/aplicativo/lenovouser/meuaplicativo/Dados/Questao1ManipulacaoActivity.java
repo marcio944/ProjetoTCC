@@ -13,12 +13,25 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class Questao1ManipulacaoActivity extends AppCompatActivity {
 
     RadioButton radioButton;
+    int pontoquestao5constantesvariaveis;
+    int ponto;
+    String emailusuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao1_manipulacao);
         radioButton = (RadioButton) findViewById(R.id.radioButton115);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        pontoquestao5constantesvariaveis = bundle.getInt("pontoquestao5constantesvariaveis");
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
@@ -33,11 +46,17 @@ public class Questao1ManipulacaoActivity extends AppCompatActivity {
 
     public void proximo(View view){
         if(radioButton.isChecked()) {
-            Toast.makeText(Questao1ManipulacaoActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
+            ponto = pontoquestao5constantesvariaveis + 1;
             Intent intent = new Intent(Questao1ManipulacaoActivity.this, Questao2ManipulacaoActivity.class);
+            intent.putExtra("pontoquestao1", ponto);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }else{
-            Toast.makeText(Questao1ManipulacaoActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            ponto = pontoquestao5constantesvariaveis + 0;
+            Intent intent = new Intent(Questao1ManipulacaoActivity.this, Questao2ManipulacaoActivity.class);
+            intent.putExtra("pontoquestao1", ponto);
+            intent.putExtra("emailusuario", emailusuario);
+            startActivity(intent);
         }
     }
 

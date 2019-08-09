@@ -47,14 +47,12 @@ public class Questao5PrimitivosActivity extends AppCompatActivity {
     public  void proximo(View view){
         if (radioButton.isChecked()){
             ponto = pontoquestao4 + 1;
-            Toast.makeText(Questao5PrimitivosActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao5PrimitivosActivity.this, DadosActivity.class);
             intent.putExtra("pontoquestao5primitivos", ponto);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }else {
             ponto = pontoquestao4 + 0;
-            Toast.makeText(Questao5PrimitivosActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao5PrimitivosActivity.this, DadosActivity.class);
             intent.putExtra("pontoquestao5primitivos", ponto);
             intent.putExtra("emailusuario", emailusuario);

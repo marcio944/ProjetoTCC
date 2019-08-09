@@ -13,12 +13,25 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class Questao5ConstantesVariaveisActivity extends AppCompatActivity {
 
     RadioButton radioButton;
+    int pontoquestao4;
+    int ponto;
+    String emailusuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao5_constantes_variaveis);
         radioButton = (RadioButton) findViewById(R.id.radioButton72);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        pontoquestao4 = bundle.getInt("pontoquestao4");
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
@@ -33,11 +46,17 @@ public class Questao5ConstantesVariaveisActivity extends AppCompatActivity {
 
     public void proximo(View view){
         if(radioButton.isChecked()) {
-            Toast.makeText(Questao5ConstantesVariaveisActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
+            ponto = pontoquestao4 + 1;
             Intent intent = new Intent(Questao5ConstantesVariaveisActivity.this, DadosActivity.class);
+            intent.putExtra("pontoquestao5constantesvariaveis", ponto);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }else{
-            Toast.makeText(Questao5ConstantesVariaveisActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            ponto = pontoquestao4 + 0;
+            Intent intent = new Intent(Questao5ConstantesVariaveisActivity.this, DadosActivity.class);
+            intent.putExtra("pontoquestao5constantesvariaveis", ponto);
+            intent.putExtra("emailusuario", emailusuario);
+            startActivity(intent);
         }
     }
 
