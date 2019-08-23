@@ -20,7 +20,7 @@ public class Questao3ManipulacaoActivity extends AppCompatActivity {
     int pontoquestao2;
     int ponto;
     String emailusuario;
-    private String HOST = "http://192.168.42.249/login";
+    private String HOST = "http://tccmarcio.000webhostapp.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

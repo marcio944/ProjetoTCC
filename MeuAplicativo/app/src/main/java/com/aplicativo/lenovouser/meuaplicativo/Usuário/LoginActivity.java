@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnLogin;
     private TextView txtUsuario;
 
-    private String HOST = "http://192.168.42.249/login";
+    private String HOST = "http://tccmarcio.000webhostapp.com";
 
     UsuarioRepository usuarioRepository = new UsuarioRepository(this);
     UsuarioModel usuarioModel = new UsuarioModel();

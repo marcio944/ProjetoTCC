@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private static ImageButton ImageButtonHomogenias;
 
     private String emailusuario;
-    private String HOST = "http://192.168.42.249/login";
+    private String HOST = "http://tccmarcio.000webhostapp.com";
     String pontos;
 
 
@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     String RETORNO = result.get("BUSCA").getAsString();
                     int pontos = Integer.parseInt(RETORNO);
+                    Toast.makeText(MainActivity.this, "Valor: " + pontos, Toast.LENGTH_SHORT).show();
                     if (pontos >= 11) {
                         ImageButtonExpressoes = (ImageButton) findViewById(R.id.imageButton_Expressoes);
                         ImageButtonExpressoes.setEnabled(true);

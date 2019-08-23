@@ -46,7 +46,7 @@ public class CadastroActivity extends AppCompatActivity {
     private EditText edSenha;
     private EditText edRepetirSenha;
 
-    private String HOST = "http://192.168.0.10/login";
+    private String HOST = "http://tccmarcio.000webhostapp.com";
 
     UsuarioModel usuario = new UsuarioModel();
     UsuarioRepository usuarioRepository = new UsuarioRepository(this);

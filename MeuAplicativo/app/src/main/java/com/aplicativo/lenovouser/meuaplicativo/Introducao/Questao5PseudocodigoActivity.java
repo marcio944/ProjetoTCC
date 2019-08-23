@@ -30,7 +30,7 @@ public class Questao5PseudocodigoActivity extends AppCompatActivity {
     int ponto;
     int pontoquestao4;
     private String emailusuario;
-    private String HOST = "http://192.168.42.249/login";
+    private String HOST = "http://tccmarcio.000webhostapp.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +89,7 @@ public class Questao5PseudocodigoActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(Questao5PseudocodigoActivity.this, "Pontuação = " + ponto + ". Pontuação suficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
             }
-            String URL = HOST + "/cadastro_pontos.php";
+            String URL = HOST + "/cadastro_pontos_introducao.php";
             Ion.with(Questao5PseudocodigoActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_introducao", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
                 @Override
                 public void onCompleted(Exception e, JsonObject result) {

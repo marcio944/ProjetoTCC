@@ -144,6 +144,13 @@
         <activity android:name=".EntradaSaída.Questao2EntradaActivity" />
         <activity android:name=".EntradaSaída.Questao3EntradaActivity" />
         <activity android:name=".Condicao.Questao1CondicaoSimplesActivity" />
+        <activity android:name=".Expressões.Questao1AritmeticasActivity" />
+        <activity android:name=".Expressões.Questao2AritmeticasActivity" />
+        <activity android:name=".Expressões.Questao3AritmeticasActivity" />
+        <activity android:name=".Expressões.Questao1LogicasRelacionaisActivity" />
+        <activity android:name=".Expressões.Questao2RelacionaisLogicasActivity" />
+        <activity android:name=".Expressões.Questao4AritmeticasActivity" />
+        <activity android:name=".Expressões.Questao3RelacionaisLogicasActivity"></activity>
     </application>
 
 </manifest>

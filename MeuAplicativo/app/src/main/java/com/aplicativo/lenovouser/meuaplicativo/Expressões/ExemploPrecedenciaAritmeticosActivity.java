@@ -26,5 +26,10 @@ public class ExemploPrecedenciaAritmeticosActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void proximo(View view){
+        Intent intent = new Intent(ExemploPrecedenciaAritmeticosActivity.this, Questao1AritmeticasActivity.class);
+        startActivity(intent);
+    }
+
 
 }
