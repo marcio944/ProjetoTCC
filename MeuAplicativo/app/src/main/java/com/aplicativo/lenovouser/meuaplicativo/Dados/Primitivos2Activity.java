@@ -28,11 +28,13 @@ public class Primitivos2Activity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(Primitivos2Activity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Primitivos2Activity.this, PrimitivosActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

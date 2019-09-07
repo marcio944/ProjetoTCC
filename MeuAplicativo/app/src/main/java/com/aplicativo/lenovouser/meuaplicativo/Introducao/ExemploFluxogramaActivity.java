@@ -32,6 +32,7 @@ public class ExemploFluxogramaActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(ExemploFluxogramaActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
@@ -44,6 +45,7 @@ public class ExemploFluxogramaActivity extends AppCompatActivity {
 
     public void anterior(View view){
         Intent intent = new Intent(ExemploFluxogramaActivity.this, FluxogramaActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

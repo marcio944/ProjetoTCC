@@ -36,11 +36,13 @@ public class Questao2FluxogramaActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(Questao2FluxogramaActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao2FluxogramaActivity.this, Questao1FluxogramaActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

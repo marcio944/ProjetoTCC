@@ -33,11 +33,13 @@ public class ExemploPseudocodigoActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(ExemploPseudocodigoActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(ExemploPseudocodigoActivity.this, PseudocodigoActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

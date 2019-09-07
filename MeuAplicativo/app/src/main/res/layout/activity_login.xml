@@ -64,11 +64,11 @@
                 android:id="@+id/textView_Recuperar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:layout_alignStart="@+id/editText_Email"
+                android:layout_alignParentBottom="true"
                 android:layout_marginBottom="61dp"
                 android:onClick="recuperarSenha"
-                android:text="RECUPERAR SENHA"
+                android:text="ALTERAR SENHA"
                 android:textColor="@color/colorPrimary" />
 
         </RelativeLayout>

@@ -73,9 +73,9 @@ public class recuperarSenhaActivity extends AppCompatActivity {
             edSenha.requestFocus();
             edSenha.setError("Campo deve ser preenchido");
             return false;
-        }else if (!PASSWORD_PATTERN.matcher(passwordInput).matches()){
+        }else if (passwordInput.length() < 8){
             edSenha.requestFocus();
-            edSenha.setError("Senha inválida. Senha deve ser composta por números, letras maiúsculas e minúsculas e caracteres especias");
+            edSenha.setError("Senha inválida. Senha deve conter no mínimo 8 caracteres");
             return false;
         }else {
             edSenha.setError(null);

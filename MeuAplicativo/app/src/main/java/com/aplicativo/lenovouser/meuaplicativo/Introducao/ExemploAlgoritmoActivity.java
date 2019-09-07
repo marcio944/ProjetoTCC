@@ -26,6 +26,7 @@ public class ExemploAlgoritmoActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(ExemploAlgoritmoActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
@@ -37,6 +38,7 @@ public class ExemploAlgoritmoActivity extends AppCompatActivity {
 
     public void anterior(View view){
         Intent intent = new Intent(ExemploAlgoritmoActivity.this, ConceitoAlgoritmoActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

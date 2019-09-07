@@ -1,7 +1,9 @@
 package com.aplicativo.lenovouser.meuaplicativo.Introducao;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -51,11 +53,13 @@ public class Questao5PseudocodigoActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(Questao5PseudocodigoActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao5PseudocodigoActivity.this, Questao4PseudocodigoActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
@@ -63,9 +67,36 @@ public class Questao5PseudocodigoActivity extends AppCompatActivity {
         if(radioButton.isChecked()){
             ponto = pontoquestao4 + 1;
             if (ponto < 13){
-                Toast.makeText(Questao5PseudocodigoActivity.this, "Pontuação = " + ponto + ". Pontuação insuficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alerta = new AlertDialog.Builder(Questao5PseudocodigoActivity.this);
+                alerta.setTitle("Pontuação Total");
+                alerta.setMessage("Pontuação = " + ponto + ". Pontuação insuficiente para desbloquear o próximo tópico.");
+                alerta.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Questao5PseudocodigoActivity.this, MainActivity.class);
+                        intent.putExtra("pontosquestoesintroducao", ponto);
+                        intent.putExtra("emailusuario", emailusuario);
+                        startActivity(intent);
+                    }
+                });
+                AlertDialog alertDialog = alerta.create();
+                alertDialog.show();
             } else {
-                Toast.makeText(Questao5PseudocodigoActivity.this, "Pontuação = " + ponto + ". Pontuação suficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alerta = new AlertDialog.Builder(Questao5PseudocodigoActivity.this);
+                alerta.setTitle("Pontuação Total");
+                alerta.setMessage("Pontuação = " + ponto + ". Pontuação suficiente para desbloquear o próximo tópico.");
+                alerta.setCancelable(false);
+                alerta.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Questao5PseudocodigoActivity.this, MainActivity.class);
+                        intent.putExtra("pontosquestoesintroducao", ponto);
+                        intent.putExtra("emailusuario", emailusuario);
+                        startActivity(intent);
+                    }
+                });
+                AlertDialog alertDialog = alerta.create();
+                alertDialog.show();
             }
             String URL = HOST + "/cadastro_pontos_introducao.php";
             Ion.with(Questao5PseudocodigoActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_introducao", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
@@ -79,15 +110,38 @@ public class Questao5PseudocodigoActivity extends AppCompatActivity {
 
                 }
             });
-            Intent intent = new Intent(Questao5PseudocodigoActivity.this, MainActivity.class);
-            intent.putExtra("emailusuario", emailusuario);
-            startActivity(intent);
         }else{
             ponto = pontoquestao4 + 0;
             if (ponto < 13){
-                Toast.makeText(Questao5PseudocodigoActivity.this, "Pontuação = " + ponto + ". Pontuação insuficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alerta = new AlertDialog.Builder(Questao5PseudocodigoActivity.this);
+                alerta.setTitle("Pontuação Total");
+                alerta.setMessage("Pontuação = " + ponto + ". Pontuação insuficiente para desbloquear o próximo tópico.");
+                alerta.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Questao5PseudocodigoActivity.this, MainActivity.class);
+                        intent.putExtra("pontosquestoesintroducao", ponto);
+                        intent.putExtra("emailusuario", emailusuario);
+                        startActivity(intent);
+                    }
+                });
+                AlertDialog alertDialog = alerta.create();
+                alertDialog.show();
             } else {
-                Toast.makeText(Questao5PseudocodigoActivity.this, "Pontuação = " + ponto + ". Pontuação suficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alerta = new AlertDialog.Builder(Questao5PseudocodigoActivity.this);
+                alerta.setTitle("Pontuação Total");
+                alerta.setMessage("Pontuação = " + ponto + ". Pontuação suficiente para desbloquear o próximo tópico.");
+                alerta.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Questao5PseudocodigoActivity.this, MainActivity.class);
+                        intent.putExtra("pontosquestoesintroducao", ponto);
+                        intent.putExtra("emailusuario", emailusuario);
+                        startActivity(intent);
+                    }
+                });
+                AlertDialog alertDialog = alerta.create();
+                alertDialog.show();
             }
             String URL = HOST + "/cadastro_pontos_introducao.php";
             Ion.with(Questao5PseudocodigoActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_introducao", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
@@ -101,9 +155,6 @@ public class Questao5PseudocodigoActivity extends AppCompatActivity {
 
                 }
             });
-            Intent intent = new Intent(Questao5PseudocodigoActivity.this, IntroducaoActivity.class);
-            intent.putExtra("emailusuario", emailusuario);
-            startActivity(intent);
         }
     }
 

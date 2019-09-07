@@ -14,6 +14,9 @@ public class Questao3EntradaActivity extends AppCompatActivity {
 
     EditText editText1;
     EditText editText2;
+    String emailusuario;
+    int ponto;
+    int pontoquestao2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,25 +24,47 @@ public class Questao3EntradaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_questao3_entrada);
         editText1 = (EditText) findViewById(R.id.editText11);
         editText2 = (EditText) findViewById(R.id.editText12);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        if (bundle != null){
+            pontoquestao2 = bundle.getInt("pontoquestao2");
+        }
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
         Intent intent = new Intent(Questao3EntradaActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao3EntradaActivity.this, Questao2EntradaActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void proximo(View view){
         if (editText1.getText().toString().equals("leia(n1)") && editText2.getText().toString().equals("leia(n2)")){
+            ponto = pontoquestao2 + 1;
             Toast.makeText(Questao3EntradaActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();;
             Intent intent = new Intent(Questao3EntradaActivity.this, EntradaSaidaActivity.class);
+            intent.putExtra("pontoquestoesentrada", ponto);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }else {
+            ponto = pontoquestao2 + 0;
             Toast.makeText(Questao3EntradaActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();;
+            Intent intent = new Intent(Questao3EntradaActivity.this, EntradaSaidaActivity.class);
+            intent.putExtra("pontoquestoesentrada", ponto);
+            intent.putExtra("emailusuario", emailusuario);
+            startActivity(intent);
         }
     }
 

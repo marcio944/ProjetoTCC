@@ -14,6 +14,8 @@ public class Questao1EntradaActivity extends AppCompatActivity {
 
     EditText editText1;
     EditText editText2;
+    String emailusuario;
+    int ponto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,25 +23,41 @@ public class Questao1EntradaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_questao1_entrada);
         editText1 = (EditText) findViewById(R.id.editText7);
         editText2 = (EditText) findViewById(R.id.editText8);
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
         Intent intent = new Intent(Questao1EntradaActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao1EntradaActivity.this, ExemploEntradaActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void proximo(View view){
         if (editText1.getText().toString().equals("leia") && editText2.getText().toString().equals("leia")){
+            ponto = 1;
             Toast.makeText(Questao1EntradaActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();;
             Intent intent = new Intent(Questao1EntradaActivity.this, Questao2EntradaActivity.class);
+            intent.putExtra("pontoquestao1", ponto);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }else {
-            Toast.makeText(Questao1EntradaActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();;
+            ponto = 0;
+            Toast.makeText(Questao1EntradaActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao1EntradaActivity.this, Questao2EntradaActivity.class);
+            intent.putExtra("pontoquestao1", ponto);
+            intent.putExtra("emailusuario", emailusuario);
+            startActivity(intent);
         }
     }
 

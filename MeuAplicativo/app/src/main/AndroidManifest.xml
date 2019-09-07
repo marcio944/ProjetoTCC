@@ -150,7 +150,11 @@
         <activity android:name=".Expressões.Questao1LogicasRelacionaisActivity" />
         <activity android:name=".Expressões.Questao2RelacionaisLogicasActivity" />
         <activity android:name=".Expressões.Questao4AritmeticasActivity" />
-        <activity android:name=".Expressões.Questao3RelacionaisLogicasActivity"></activity>
+        <activity android:name=".Expressões.Questao3RelacionaisLogicasActivity" />
+        <activity android:name=".Condicao.Questao2CondicaoSimplesActivity" />
+        <activity android:name=".Condicao.Questao3CondicaoSimplesActivity" />
+        <activity android:name=".Homogêneas.Questao1UnidimensionaisActivity" />
+        <activity android:name=".Homogêneas.Questao2UnidimensionaisActivity"></activity>
     </application>
 
 </manifest>

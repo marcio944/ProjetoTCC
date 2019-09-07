@@ -36,11 +36,13 @@ public class Questao2PseudocodigoActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(Questao2PseudocodigoActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public  void anterior(View view){
         Intent intent = new Intent(Questao2PseudocodigoActivity.this, Questao1PseudocodigoActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

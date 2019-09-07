@@ -36,11 +36,13 @@ public class Questao3PrimitivosActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(Questao3PrimitivosActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao3PrimitivosActivity.this, Questao2PrimitivosActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

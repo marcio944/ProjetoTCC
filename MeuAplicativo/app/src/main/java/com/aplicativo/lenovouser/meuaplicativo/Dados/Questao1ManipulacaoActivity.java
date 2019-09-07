@@ -36,11 +36,13 @@ public class Questao1ManipulacaoActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(Questao1ManipulacaoActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao1ManipulacaoActivity.this, ExemploAtribuicaoActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

@@ -36,11 +36,13 @@ public class Questao4AlgoritmosActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(Questao4AlgoritmosActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao4AlgoritmosActivity.this, Questao3AlgoritmosActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

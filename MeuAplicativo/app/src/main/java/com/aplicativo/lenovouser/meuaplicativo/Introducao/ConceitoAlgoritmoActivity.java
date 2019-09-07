@@ -26,11 +26,13 @@ public class ConceitoAlgoritmoActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(ConceitoAlgoritmoActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(this, IntroducaoActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

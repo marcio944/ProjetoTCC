@@ -59,6 +59,7 @@
             android:layout_marginRight="32dp"
             android:background="@color/colorPrimary"
             android:text="Próximo"
+            android:onClick="proximo"
             android:textColor="#ffffff" />
 
         <ImageButton

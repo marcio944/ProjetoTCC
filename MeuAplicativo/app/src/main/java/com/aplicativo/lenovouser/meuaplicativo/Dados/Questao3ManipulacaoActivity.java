@@ -1,6 +1,8 @@
 package com.aplicativo.lenovouser.meuaplicativo.Dados;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -41,21 +43,47 @@ public class Questao3ManipulacaoActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(Questao3ManipulacaoActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao3ManipulacaoActivity.this, Questao2ManipulacaoActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void proximo(View view){
         if(radioButton.isChecked()) {
             ponto = pontoquestao2 + 1;
-            if (ponto < 13){
-                Toast.makeText(Questao3ManipulacaoActivity.this, "Pontuação = " + ponto + ". Pontuação insuficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
+            if (ponto < 11){
+                AlertDialog.Builder alerta = new AlertDialog.Builder(Questao3ManipulacaoActivity.this);
+                alerta.setTitle("Pontuação Total");
+                alerta.setMessage("Pontuação = " + ponto + ". Pontuação insuficiente para desbloquear o próximo tópico.");
+                alerta.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Questao3ManipulacaoActivity.this, MainActivity.class);
+                        intent.putExtra("emailusuario", emailusuario);
+                        startActivity(intent);
+                    }
+                });
+                AlertDialog alertDialog = alerta.create();
+                alertDialog.show();
             } else {
-                Toast.makeText(Questao3ManipulacaoActivity.this, "Pontuação = " + ponto + ". Pontuação suficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alerta = new AlertDialog.Builder(Questao3ManipulacaoActivity.this);
+                alerta.setTitle("Pontuação Total");
+                alerta.setMessage("Pontuação = " + ponto + ". Pontuação suficiente para desbloquear o próximo tópico.");
+                alerta.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Questao3ManipulacaoActivity.this, MainActivity.class);
+                        intent.putExtra("emailusuario", emailusuario);
+                        startActivity(intent);
+                    }
+                });
+                AlertDialog alertDialog = alerta.create();
+                alertDialog.show();
             }
             String URL = HOST + "/cadastro_pontos_dados.php";
             Ion.with(Questao3ManipulacaoActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_dados", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
@@ -69,15 +97,36 @@ public class Questao3ManipulacaoActivity extends AppCompatActivity {
 
                 }
             });
-            Intent intent = new Intent(Questao3ManipulacaoActivity.this, MainActivity.class);
-            intent.putExtra("emailusuario", emailusuario);
-            startActivity(intent);
         }else{
             ponto = pontoquestao2 + 0;
             if (ponto < 11){
-                Toast.makeText(Questao3ManipulacaoActivity.this, "Pontuação = " + ponto + ". Pontuação insuficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alerta = new AlertDialog.Builder(Questao3ManipulacaoActivity.this);
+                alerta.setTitle("Pontuação Total");
+                alerta.setMessage("Pontuação = " + ponto + ". Pontuação insuficiente para desbloquear o próximo tópico.");
+                alerta.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Questao3ManipulacaoActivity.this, MainActivity.class);
+                        intent.putExtra("emailusuario", emailusuario);
+                        startActivity(intent);
+                    }
+                });
+                AlertDialog alertDialog = alerta.create();
+                alertDialog.show();
             } else {
-                Toast.makeText(Questao3ManipulacaoActivity.this, "Pontuação = " + ponto + ". Pontuação suficiente para desbloquear o próximo tópico.", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alerta = new AlertDialog.Builder(Questao3ManipulacaoActivity.this);
+                alerta.setTitle("Pontuação Total");
+                alerta.setMessage("Pontuação = " + ponto + ". Pontuação suficiente para desbloquear o próximo tópico.");
+                alerta.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Questao3ManipulacaoActivity.this, MainActivity.class);
+                        intent.putExtra("emailusuario", emailusuario);
+                        startActivity(intent);
+                    }
+                });
+                AlertDialog alertDialog = alerta.create();
+                alertDialog.show();
             }
             String URL = HOST + "/cadastro_pontos_dados.php";
             Ion.with(Questao3ManipulacaoActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_dados", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
@@ -91,10 +140,6 @@ public class Questao3ManipulacaoActivity extends AppCompatActivity {
 
                 }
             });
-            Toast.makeText(Questao3ManipulacaoActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(Questao3ManipulacaoActivity.this, MainActivity.class);
-            intent.putExtra("emailusuario", emailusuario);
-            startActivity(intent);
         }
     }
 

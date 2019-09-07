@@ -37,11 +37,13 @@ public class Questao1ConstantesVariaveisActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(Questao1ConstantesVariaveisActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao1ConstantesVariaveisActivity.this, ExemploConstantesVariaveisActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

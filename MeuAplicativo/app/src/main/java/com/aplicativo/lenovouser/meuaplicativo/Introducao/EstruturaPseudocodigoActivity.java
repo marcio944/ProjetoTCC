@@ -31,6 +31,7 @@ public class EstruturaPseudocodigoActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(EstruturaPseudocodigoActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
@@ -43,6 +44,7 @@ public class EstruturaPseudocodigoActivity extends AppCompatActivity {
 
     public void anterior(View view){
         Intent intent = new Intent(EstruturaPseudocodigoActivity.this, PseudocodigoActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

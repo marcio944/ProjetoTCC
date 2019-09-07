@@ -26,4 +26,9 @@ public class ExemploCondicaoSimplesActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void proximo(View view){
+        Intent intent = new Intent(ExemploCondicaoSimplesActivity.this, Questao1CondicaoSimplesActivity.class);
+        startActivity(intent);
+    }
+
 }

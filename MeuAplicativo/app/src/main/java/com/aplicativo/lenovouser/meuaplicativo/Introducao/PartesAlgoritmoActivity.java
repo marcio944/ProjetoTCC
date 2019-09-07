@@ -18,6 +18,7 @@ public class PartesAlgoritmoActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(PartesAlgoritmoActivity.this, MainActivity.class);
+
         startActivity(intent);
     }
 

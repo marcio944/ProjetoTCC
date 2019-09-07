@@ -10,34 +10,34 @@ import android.widget.Toast;
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
-public class Questao1CondicaoSimplesActivity extends AppCompatActivity {
+public class Questao2CondicaoSimplesActivity extends AppCompatActivity {
 
     RadioButton radioButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questao1_condicao_simples);
-        radioButton = (RadioButton) findViewById(R.id.radioButton124);
+        setContentView(R.layout.activity_questao2_condicao_simples);
+        radioButton = (RadioButton) findViewById(R.id.radioButton136);
     }
 
     public void inicio(View view){
-        Intent intent = new Intent(Questao1CondicaoSimplesActivity.this, MainActivity.class);
+        Intent intent = new Intent(Questao2CondicaoSimplesActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
     public void anterior(View view){
-        Intent intent = new Intent(Questao1CondicaoSimplesActivity.this, ExemploCondicaoSimplesActivity.class);
+        Intent intent = new Intent(Questao2CondicaoSimplesActivity.this, Questao1CondicaoSimplesActivity.class);
         startActivity(intent);
     }
 
     public void proximo(View view){
         if (radioButton.isChecked()){
-            Toast.makeText(Questao1CondicaoSimplesActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(Questao1CondicaoSimplesActivity.this, Questao2CondicaoSimplesActivity.class);
+            Toast.makeText(Questao2CondicaoSimplesActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao2CondicaoSimplesActivity.this, Questao3CondicaoSimplesActivity.class);
             startActivity(intent);
         }else{
-            Toast.makeText(Questao1CondicaoSimplesActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();
+            Toast.makeText(Questao2CondicaoSimplesActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();
         }
     }
 

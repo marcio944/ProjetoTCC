@@ -76,9 +76,9 @@ public class LoginActivity extends AppCompatActivity {
             edPassword.requestFocus();
             edPassword.setError("Campo deve ser preenchido");
             return false;
-        }else if (!PASSWORD_PATTERN.matcher(passwordInput).matches()){
+        }else if (passwordInput.length() < 8){
             edPassword.requestFocus();
-            edPassword.setError("Senha inválida. Senha deve ser composta por números, letras maiúsculas e minúsculas e caracteres especias");
+            edPassword.setError("Senha inválida. Senha deve conter no mínimo 8 caracteres");
             return false;
         }else {
             edPassword.setError(null);

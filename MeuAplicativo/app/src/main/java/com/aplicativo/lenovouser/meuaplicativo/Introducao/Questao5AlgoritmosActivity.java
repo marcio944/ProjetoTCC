@@ -37,11 +37,13 @@ public class Questao5AlgoritmosActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(Questao5AlgoritmosActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao5AlgoritmosActivity.this, Questao4AlgoritmosActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

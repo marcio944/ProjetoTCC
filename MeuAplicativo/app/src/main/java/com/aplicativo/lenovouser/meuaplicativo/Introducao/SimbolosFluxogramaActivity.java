@@ -33,11 +33,13 @@ public class SimbolosFluxogramaActivity extends AppCompatActivity {
 
     public void inicio(View view){
         Intent intent = new Intent(SimbolosFluxogramaActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(SimbolosFluxogramaActivity.this, ExemploFluxogramaActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

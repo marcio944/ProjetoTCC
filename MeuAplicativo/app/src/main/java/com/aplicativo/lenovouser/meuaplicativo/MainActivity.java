@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
     private String emailusuario;
     private String HOST = "http://tccmarcio.000webhostapp.com";
     String pontos;
+    int pontosquestoesintroducao;
+    int pontosquestoesexpressoes;
+    int pontosquestoesentradasaida;
 
 
     @Override
@@ -50,15 +53,43 @@ public class MainActivity extends AppCompatActivity {
         ImageButtonRepeticao.setEnabled(false);
         ImageButtonHomogenias = (ImageButton) findViewById(R.id.imageButton31);
         ImageButtonHomogenias.setEnabled(false);
-        buscapontosintroducao(emailusuario);
         Intent intent = getIntent();
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
         if (bundle != null){
             emailusuario = bundle.getString("emailusuario");
         }
+        Intent intent1 = getIntent();
+        Bundle bundle1 = new Bundle();
+        bundle1 = intent1.getExtras();
+        if (bundle1 != null){
+            pontosquestoesintroducao = bundle1.getInt("pontosquestoesintroducao");
+        }
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            pontosquestoesexpressoes = bundle2.getInt("pontosquestoesexpressoes");
+        }
+        Intent intent3 = getIntent();
+        Bundle bundle3 = new Bundle();
+        bundle3 = intent3.getExtras();
+        if (bundle3 != null){
+            pontosquestoesentradasaida = bundle3.getInt("pontoquestoesentradasaida");
+        }
+        if (pontosquestoesintroducao >= 13){
+            ImageButtonDados.setEnabled(true);
+        }
+        if (pontosquestoesexpressoes >= 5){
+            ImageButtonEntradaSaida.setEnabled(true);
+        }
+        if (pontosquestoesentradasaida >= 5){
+            ImageButtonEntradaSaida.setEnabled(true);
+        }
         buscapontosintroducao(emailusuario);
         buscapontosdados(emailusuario);
+        buscapontosexpressoes(emailusuario);
+        buscapontosentradasaida(emailusuario);
     }
 
     public void buscapontosintroducao(String emailusuario){
@@ -74,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                         ImageButtonDados.setEnabled(true);
                     }
                 } catch (Exception ex){
-                    //Toast.makeText(MainActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+
                 }
 
             }
@@ -89,10 +120,49 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     String RETORNO = result.get("BUSCA").getAsString();
                     int pontos = Integer.parseInt(RETORNO);
-                    Toast.makeText(MainActivity.this, "Valor: " + pontos, Toast.LENGTH_SHORT).show();
                     if (pontos >= 11) {
                         ImageButtonExpressoes = (ImageButton) findViewById(R.id.imageButton_Expressoes);
                         ImageButtonExpressoes.setEnabled(true);
+                    }
+                } catch (Exception ex){
+                    //Toast.makeText(MainActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+    }
+
+    public void buscapontosexpressoes(String emailusuario){
+        String URL = HOST + "/buscar_pontos_expressoes.php";
+        Ion.with(MainActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+            @Override
+            public void onCompleted(Exception e, JsonObject result) {
+                try {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    int pontos = Integer.parseInt(RETORNO);
+                    if (pontos >= 5) {
+                        ImageButtonEntradaSaida = (ImageButton) findViewById(R.id.imageButton9);
+                        ImageButtonEntradaSaida.setEnabled(true);
+                    }
+                } catch (Exception ex){
+                    //Toast.makeText(MainActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+    }
+
+    public void buscapontosentradasaida(String emailusuario){
+        String URL = HOST + "/buscar_pontos_entradasaida.php";
+        Ion.with(MainActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+            @Override
+            public void onCompleted(Exception e, JsonObject result) {
+                try {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    int pontos = Integer.parseInt(RETORNO);
+                    if (pontos >= 5) {
+                        ImageButtonControle = (ImageButton) findViewById(R.id.imageButton_Condicao);
+                        ImageButtonControle.setEnabled(true);
                     }
                 } catch (Exception ex){
                     //Toast.makeText(MainActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
@@ -116,11 +186,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void operadoresexpressoes(View view){
         Intent intent = new Intent(MainActivity.this, ExpressoesActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void entradasaida(View view){
         Intent intent = new Intent(MainActivity.this, EntradaSaidaActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
