@@ -154,7 +154,9 @@
         <activity android:name=".Condicao.Questao2CondicaoSimplesActivity" />
         <activity android:name=".Condicao.Questao3CondicaoSimplesActivity" />
         <activity android:name=".Homogêneas.Questao1UnidimensionaisActivity" />
-        <activity android:name=".Homogêneas.Questao2UnidimensionaisActivity"></activity>
+        <activity android:name=".Homogêneas.Questao2UnidimensionaisActivity" />
+        <activity android:name=".Homogêneas.Questao3UnidimensionaisActivity" />
+        <activity android:name=".Homogêneas.Questao4UnidimensionaisActivity"></activity>
     </application>
 
 </manifest>

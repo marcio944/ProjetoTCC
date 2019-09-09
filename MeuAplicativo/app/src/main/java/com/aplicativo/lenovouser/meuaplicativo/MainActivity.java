@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButtonRepeticao = (ImageButton) findViewById(R.id.imageButton_Repeticao);
         ImageButtonRepeticao.setEnabled(false);
         ImageButtonHomogenias = (ImageButton) findViewById(R.id.imageButton31);
-        ImageButtonHomogenias.setEnabled(false);
+        ImageButtonHomogenias.setEnabled(true);
         Intent intent = getIntent();
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
