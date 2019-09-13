@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             ImageButtonEntradaSaida.setEnabled(true);
         }
         if (pontosquestoesentradasaida >= 5){
-            ImageButtonEntradaSaida.setEnabled(true);
+            ImageButtonControle.setEnabled(true);
         }
         buscapontosintroducao(emailusuario);
         buscapontosdados(emailusuario);
@@ -198,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void condicao(View view){
         Intent intent = new Intent(MainActivity.this, CondicaoActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

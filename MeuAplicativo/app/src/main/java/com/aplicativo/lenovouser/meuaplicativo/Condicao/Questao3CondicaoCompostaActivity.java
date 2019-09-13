@@ -10,18 +10,18 @@ import android.widget.Toast;
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
-public class Questao2CompostaActivity extends AppCompatActivity {
+public class Questao3CondicaoCompostaActivity extends AppCompatActivity {
 
     RadioButton radioButton;
     String emailusuario;
-    int pontoquestao1;
+    int pontoquestao2;
     int ponto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questao2_composta);
-        radioButton = (RadioButton) findViewById(R.id.radioButton97);
+        setContentView(R.layout.activity_questao3_condicao_composta);
+        radioButton = (RadioButton) findViewById(R.id.radioButton108);
         Intent intent = getIntent();
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
@@ -32,35 +32,36 @@ public class Questao2CompostaActivity extends AppCompatActivity {
         Bundle bundle1 = new Bundle();
         bundle1 = intent1.getExtras();
         if (bundle1 != null){
-            pontoquestao1 = bundle.getInt("pontoquestao1");
+            pontoquestao2 = bundle.getInt("pontoquestao2");
         }
     }
 
     public void inicio(View view){
-        Intent intent = new Intent(Questao2CompostaActivity.this, MainActivity.class);
+        Intent intent = new Intent(Questao3CondicaoCompostaActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
-        Intent intent = new Intent(Questao2CompostaActivity.this, Questao1CompostaActivity.class);
+        Intent intent = new Intent(Questao3CondicaoCompostaActivity.this, Questao2CompostaActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void proximo(View view){
         if (radioButton.isChecked()){
-            ponto = pontoquestao1 + 1;
-            Toast.makeText(Questao2CompostaActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(Questao2CompostaActivity.this, Questao3CondicaoCompostaActivity.class);
+            ponto = pontoquestao2 + 1;
+            Toast.makeText(Questao3CondicaoCompostaActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao3CondicaoCompostaActivity.this, Questao4CondicaoCompostaActivity.class);
             intent.putExtra("emailusuario", emailusuario);
-            intent.putExtra("pontoquestao2", ponto);
+            intent.putExtra("pontoquestao3", ponto);
             startActivity(intent);
         }else{
-            Toast.makeText(Questao2CompostaActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(Questao2CompostaActivity.this, Questao3CondicaoCompostaActivity.class);
+            ponto = pontoquestao2 + 0;
+            Toast.makeText(Questao3CondicaoCompostaActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao3CondicaoCompostaActivity.this, Questao4CondicaoCompostaActivity.class);
             intent.putExtra("emailusuario", emailusuario);
-            intent.putExtra("pontoquestao2", ponto);
+            intent.putExtra("pontoquestao3", ponto);
             startActivity(intent);
         }
     }

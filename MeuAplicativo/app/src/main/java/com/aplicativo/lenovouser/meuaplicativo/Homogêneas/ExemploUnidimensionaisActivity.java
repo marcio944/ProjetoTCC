@@ -27,7 +27,7 @@ public class ExemploUnidimensionaisActivity extends AppCompatActivity {
     }
 
     public void proximo(View view){
-        Intent intent = new Intent(ExemploUnidimensionaisActivity.this, ExemploUnidimensionaisActivity.class);
+        Intent intent = new Intent(ExemploUnidimensionaisActivity.this, Questao1UnidimensionaisActivity.class);
         startActivity(intent);
     }
 

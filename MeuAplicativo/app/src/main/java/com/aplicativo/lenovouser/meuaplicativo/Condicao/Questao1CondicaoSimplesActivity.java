@@ -13,31 +13,49 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class Questao1CondicaoSimplesActivity extends AppCompatActivity {
 
     RadioButton radioButton;
+    String emailusuario;
+    int ponto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao1_condicao_simples);
         radioButton = (RadioButton) findViewById(R.id.radioButton124);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        if (bundle != null){
+            emailusuario = bundle.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
         Intent intent = new Intent(Questao1CondicaoSimplesActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao1CondicaoSimplesActivity.this, ExemploCondicaoSimplesActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void proximo(View view){
         if (radioButton.isChecked()){
+            ponto = ponto + 1;
             Toast.makeText(Questao1CondicaoSimplesActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao1CondicaoSimplesActivity.this, Questao2CondicaoSimplesActivity.class);
+            intent.putExtra("emailusuario", emailusuario);
+            intent.putExtra("pontoquestao1", ponto);
             startActivity(intent);
         }else{
+            ponto = ponto + 0;
             Toast.makeText(Questao1CondicaoSimplesActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao1CondicaoSimplesActivity.this, Questao2CondicaoSimplesActivity.class);
+            intent.putExtra("emailusuario", emailusuario);
+            intent.putExtra("pontoquestao1", ponto);
+            startActivity(intent);
         }
     }
 

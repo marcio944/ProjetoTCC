@@ -13,24 +13,35 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class CondicaoSimplesActivity extends AppCompatActivity {
 
+    String emailusuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_condicao_simples);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        if (bundle != null){
+            emailusuario = bundle.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
         Intent intent = new Intent(CondicaoSimplesActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(CondicaoSimplesActivity.this, CondicaoActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void proximo(View view){
         Intent intent = new Intent(CondicaoSimplesActivity.this, ExemploCondicaoSimplesActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

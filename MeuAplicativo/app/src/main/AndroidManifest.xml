@@ -44,8 +44,6 @@
         <activity android:name=".Condicao.CondicaoActivity" />
         <activity android:name=".Repetição.RepeticaoActivity" />
         <activity android:name=".Dados.PrimitivosActivity" />
-        <activity android:name=".Introducao.PartesAlgoritmoActivity" />
-        <activity android:name=".Introducao.ExemploPartesActivity" />
         <activity android:name=".Introducao.FluxogramaActivity" />
         <activity android:name=".Introducao.ExemploFluxogramaActivity" />
         <activity android:name=".Introducao.PseudocodigoActivity" />
@@ -97,8 +95,6 @@
         <activity android:name=".Expressões.OperadoresAritmeticosActivity" />
         <activity android:name=".Expressões.ExemploOperadoresAritmeticosActivity" />
         <activity android:name=".Expressões.ExemploLogicasCompostasActivity" />
-        <activity android:name=".Condicao.CondicaoEncadeadaActivity" />
-        <activity android:name=".Condicao.ExemploCondicaoEncadeadaActivity" />
         <activity android:name=".Repetição.TesteInicioActivity" />
         <activity android:name=".Repetição.ExemploTesteInicioActivity" />
         <activity android:name=".Repetição.TesteFimActivity" />
@@ -132,7 +128,6 @@
         <activity android:name=".Repetição.Questao4TesteFimActivity" />
         <activity android:name=".Repetição.Questao2RepeticaoControleActivity" />
         <activity android:name=".Repetição.Questao3TesteControleActivity" />
-        <activity android:name=".Condicao.Questao1CondicaoEncadeadaActivity" />
         <activity android:name=".EntradaSaída.Questao1SaidaActivity" />
         <activity android:name=".EntradaSaída.Questao2SaidaActivity" />
         <activity android:name=".EntradaSaída.Questao3SaidaActivity" />
@@ -156,7 +151,9 @@
         <activity android:name=".Homogêneas.Questao1UnidimensionaisActivity" />
         <activity android:name=".Homogêneas.Questao2UnidimensionaisActivity" />
         <activity android:name=".Homogêneas.Questao3UnidimensionaisActivity" />
-        <activity android:name=".Homogêneas.Questao4UnidimensionaisActivity"></activity>
+        <activity android:name=".Homogêneas.Questao4UnidimensionaisActivity" />
+        <activity android:name=".Condicao.Questao3CondicaoCompostaActivity" />
+        <activity android:name=".Condicao.Questao4CondicaoCompostaActivity"></activity>
     </application>
 
 </manifest>

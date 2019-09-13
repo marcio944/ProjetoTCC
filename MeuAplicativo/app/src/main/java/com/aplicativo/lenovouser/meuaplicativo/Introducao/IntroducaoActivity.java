@@ -48,11 +48,6 @@ public class IntroducaoActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void partesAlgoritmo(View view){
-        Intent intent = new Intent(IntroducaoActivity.this, PartesAlgoritmoActivity.class);
-        startActivity(intent);
-    }
-
     public void fluxograma(View view){
         Intent intent = new Intent(IntroducaoActivity.this, FluxogramaActivity.class);
         intent.putExtra("pontoquestao5conceitoalgoritmo", pontoquestao5conceito);
