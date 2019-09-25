@@ -30,11 +30,12 @@ public class MainActivity extends AppCompatActivity {
     private static ImageButton ImageButtonHomogenias;
 
     private String emailusuario;
-    private String HOST = "http://tccmarcio.000webhostapp.com";
+    private String HOST = "http://algoeduc.000webhostapp.com/appalgoeduc";
     String pontos;
     int pontosquestoesintroducao;
     int pontosquestoesexpressoes;
     int pontosquestoesentradasaida;
+    int pontosquestoescondicao;
 
 
     @Override
@@ -77,6 +78,12 @@ public class MainActivity extends AppCompatActivity {
         if (bundle3 != null){
             pontosquestoesentradasaida = bundle3.getInt("pontoquestoesentradasaida");
         }
+        Intent intent4 = getIntent();
+        Bundle bundle4 = new Bundle();
+        bundle4 = intent4.getExtras();
+        if (bundle4 != null){
+            pontosquestoescondicao = bundle4.getInt("pontosquestoescondicao");
+        }
         if (pontosquestoesintroducao >= 13){
             ImageButtonDados.setEnabled(true);
         }
@@ -86,10 +93,14 @@ public class MainActivity extends AppCompatActivity {
         if (pontosquestoesentradasaida >= 5){
             ImageButtonControle.setEnabled(true);
         }
+        if (pontosquestoescondicao >= 5){
+            ImageButtonRepeticao.setEnabled(true);
+        }
         buscapontosintroducao(emailusuario);
         buscapontosdados(emailusuario);
         buscapontosexpressoes(emailusuario);
         buscapontosentradasaida(emailusuario);
+        buscapontoscondicao(emailusuario);
     }
 
     public void buscapontosintroducao(String emailusuario){
@@ -163,6 +174,26 @@ public class MainActivity extends AppCompatActivity {
                     if (pontos >= 5) {
                         ImageButtonControle = (ImageButton) findViewById(R.id.imageButton_Condicao);
                         ImageButtonControle.setEnabled(true);
+                    }
+                } catch (Exception ex){
+                    //Toast.makeText(MainActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+    }
+
+    public void buscapontoscondicao(String emailusuario){
+        String URL = HOST + "/buscar_pontos_condicao.php";
+        Ion.with(MainActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+            @Override
+            public void onCompleted(Exception e, JsonObject result) {
+                try {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    int pontos = Integer.parseInt(RETORNO);
+                    if (pontos >= 5) {
+                        ImageButtonRepeticao = (ImageButton) findViewById(R.id.imageButton_Repeticao);
+                        ImageButtonRepeticao.setEnabled(true);
                     }
                 } catch (Exception ex){
                     //Toast.makeText(MainActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();

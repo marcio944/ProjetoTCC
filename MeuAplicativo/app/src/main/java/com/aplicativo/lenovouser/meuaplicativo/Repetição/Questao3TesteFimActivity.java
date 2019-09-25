@@ -13,21 +13,30 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class Questao3TesteFimActivity extends AppCompatActivity {
 
     RadioButton radioButton;
+    String emailusuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao3_teste_fim);
         radioButton = (RadioButton) findViewById(R.id.radioButton92);
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
         Intent intent = new Intent(Questao3TesteFimActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao3TesteFimActivity.this, Questao2TesteFimActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
@@ -35,9 +44,13 @@ public class Questao3TesteFimActivity extends AppCompatActivity {
         if(radioButton.isChecked()) {
             Toast.makeText(Questao3TesteFimActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao3TesteFimActivity.this, Questao4TesteFimActivity.class);
+            intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }else{
             Toast.makeText(Questao3TesteFimActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao3TesteFimActivity.this, Questao4TesteFimActivity.class);
+            intent.putExtra("emailusuario", emailusuario);
+            startActivity(intent);
         }
     }
 

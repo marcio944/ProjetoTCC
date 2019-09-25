@@ -22,7 +22,7 @@ public class Questao4SaidaActivity extends AppCompatActivity {
     String emailusuario;
     int pontoquestao3;
     int ponto;
-    private String HOST = "http://tccmarcio.000webhostapp.com";
+    private String HOST = "http://algoeduc.000webhostapp.com/appalgoeduc";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

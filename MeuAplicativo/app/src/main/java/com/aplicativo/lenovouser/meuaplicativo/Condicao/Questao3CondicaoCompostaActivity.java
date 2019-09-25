@@ -51,14 +51,12 @@ public class Questao3CondicaoCompostaActivity extends AppCompatActivity {
     public void proximo(View view){
         if (radioButton.isChecked()){
             ponto = pontoquestao2 + 1;
-            Toast.makeText(Questao3CondicaoCompostaActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao3CondicaoCompostaActivity.this, Questao4CondicaoCompostaActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontoquestao3", ponto);
             startActivity(intent);
         }else{
             ponto = pontoquestao2 + 0;
-            Toast.makeText(Questao3CondicaoCompostaActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao3CondicaoCompostaActivity.this, Questao4CondicaoCompostaActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontoquestao3", ponto);

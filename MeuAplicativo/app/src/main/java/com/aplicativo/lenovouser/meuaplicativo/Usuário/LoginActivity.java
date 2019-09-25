@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnLogin;
     private TextView txtUsuario;
 
-    private String HOST = "http://tccmarcio.000webhostapp.com";
+    private String HOST = "http://algoeduc.000webhostapp.com/appalgoeduc";
 
     UsuarioRepository usuarioRepository = new UsuarioRepository(this);
     UsuarioModel usuarioModel = new UsuarioModel();

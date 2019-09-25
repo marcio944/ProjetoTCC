@@ -41,7 +41,7 @@ public class recuperarSenhaActivity extends AppCompatActivity {
     EditText edSenha;
     EditText edRepetirSenha;
 
-    private String HOST = "http://tccmarcio.000webhostapp.com";
+    private String HOST = "http://algoeduc.000webhostapp.com/appalgoeduc";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
