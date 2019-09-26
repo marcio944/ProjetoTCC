@@ -14,12 +14,18 @@ public class Questao1RepeticaoControleActivity extends AppCompatActivity {
 
     RadioButton radioButton;
     String emailusuario;
+    int pontoquestoestestefim;
+    int ponto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao1_repeticao_controle);
         radioButton = (RadioButton) findViewById(R.id.radioButton96);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        pontoquestoestestefim = bundle.getInt("pontoquestoestestefim");
         Intent intent2 = getIntent();
         Bundle bundle2 = new Bundle();
         bundle2 = intent2.getExtras();
@@ -42,14 +48,18 @@ public class Questao1RepeticaoControleActivity extends AppCompatActivity {
 
     public void proximo(View view){
         if(radioButton.isChecked()) {
+            ponto = pontoquestoestestefim + 1;
             Toast.makeText(Questao1RepeticaoControleActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao1RepeticaoControleActivity.this, Questao2RepeticaoControleActivity.class);
             intent.putExtra("emailusuario", emailusuario);
+            intent.putExtra("pontoquestao1", ponto);
             startActivity(intent);
         }else{
+            ponto = pontoquestoestestefim + 0;
             Toast.makeText(Questao1RepeticaoControleActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao1RepeticaoControleActivity.this, Questao2RepeticaoControleActivity.class);
             intent.putExtra("emailusuario", emailusuario);
+            intent.putExtra("pontoquestao1", ponto);
             startActivity(intent);
         }
     }

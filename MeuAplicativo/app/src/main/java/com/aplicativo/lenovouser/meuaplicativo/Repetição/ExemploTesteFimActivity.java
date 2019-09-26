@@ -11,11 +11,16 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class ExemploTesteFimActivity extends AppCompatActivity {
 
     String emailusuario;
+    int pontoquestoestesteinicio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exemplo_teste_fim);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        pontoquestoestesteinicio = bundle.getInt("pontoquestoestesteinicio");
         Intent intent2 = getIntent();
         Bundle bundle2 = new Bundle();
         bundle2 = intent2.getExtras();
@@ -39,6 +44,7 @@ public class ExemploTesteFimActivity extends AppCompatActivity {
     public void proximo(View view){
         Intent intent = new Intent(ExemploTesteFimActivity.this, Questao1TesteFimActivity.class);
         intent.putExtra("emailusuario", emailusuario);
+        intent.putExtra("pontoquestoestesteinicio", pontoquestoestesteinicio);
         startActivity(intent);
     }
 }

@@ -14,12 +14,18 @@ public class Questao2TesteFimActivity extends AppCompatActivity {
 
     RadioButton radioButton;
     String emailusuario;
+    int pontoquestao1;
+    int ponto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao2_teste_fim);
         radioButton = (RadioButton) findViewById(R.id.radioButton89);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        pontoquestao1 = bundle.getInt("pontoquestao1");
         Intent intent2 = getIntent();
         Bundle bundle2 = new Bundle();
         bundle2 = intent2.getExtras();
@@ -42,14 +48,18 @@ public class Questao2TesteFimActivity extends AppCompatActivity {
 
     public void proximo(View view){
         if(radioButton.isChecked()) {
+            ponto = pontoquestao1 + 1;
             Toast.makeText(Questao2TesteFimActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao2TesteFimActivity.this, Questao3TesteFimActivity.class);
             intent.putExtra("emailusuario", emailusuario);
+            intent.putExtra("pontoquestao2", ponto);
             startActivity(intent);
         }else{
+            ponto = pontoquestao1 + 0;
             Toast.makeText(Questao2TesteFimActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao2TesteFimActivity.this, Questao3TesteFimActivity.class);
             intent.putExtra("emailusuario", emailusuario);
+            intent.putExtra("pontoquestao2", ponto);
             startActivity(intent);
         }
     }
