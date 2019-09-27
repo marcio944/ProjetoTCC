@@ -36,12 +36,15 @@ public class MainActivity extends AppCompatActivity {
     int pontosquestoesexpressoes;
     int pontosquestoesentradasaida;
     int pontosquestoescondicao;
+    int pontosquestoesrepeticao;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ImageButtonDados = (ImageButton) findViewById(R.id.imageButton_Dados);
         ImageButtonDados.setEnabled(false);
         ImageButtonExpressoes = (ImageButton) findViewById(R.id.imageButton_Expressoes);
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButtonRepeticao.setEnabled(false);
         ImageButtonHomogenias = (ImageButton) findViewById(R.id.imageButton31);
         ImageButtonHomogenias.setEnabled(false);
+
         Intent intent = getIntent();
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
@@ -84,6 +88,13 @@ public class MainActivity extends AppCompatActivity {
         if (bundle4 != null){
             pontosquestoescondicao = bundle4.getInt("pontosquestoescondicao");
         }
+        Intent intent5 = getIntent();
+        Bundle bundle5 = new Bundle();
+        bundle5 = intent5.getExtras();
+        if (bundle5 != null){
+            pontosquestoesrepeticao = bundle5.getInt("pontosquestoesrepeticao");
+        }
+
         if (pontosquestoesintroducao >= 13){
             ImageButtonDados.setEnabled(true);
         }
@@ -96,11 +107,16 @@ public class MainActivity extends AppCompatActivity {
         if (pontosquestoescondicao >= 5){
             ImageButtonRepeticao.setEnabled(true);
         }
+        if (pontosquestoesrepeticao >= 9){
+            ImageButtonHomogenias.setEnabled(true);
+        }
+
         buscapontosintroducao(emailusuario);
         buscapontosdados(emailusuario);
         buscapontosexpressoes(emailusuario);
         buscapontosentradasaida(emailusuario);
         buscapontoscondicao(emailusuario);
+        buscapontosrepeticao(emailusuario);
     }
 
     public void buscapontosintroducao(String emailusuario){
@@ -203,6 +219,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void buscapontosrepeticao(String emailusuario){
+        String URL = HOST + "/buscar_pontos_repeticao.php";
+        Ion.with(MainActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+            @Override
+            public void onCompleted(Exception e, JsonObject result) {
+                try {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    int pontos = Integer.parseInt(RETORNO);
+                    if (pontos >= 9) {
+                        ImageButtonHomogenias = (ImageButton) findViewById(R.id.imageButton31);
+                        ImageButtonHomogenias.setEnabled(true);
+                    }
+                } catch (Exception ex){
+                    //Toast.makeText(MainActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+    }
+
     public void introducao(View view){
         Intent intent = new Intent(MainActivity.this, IntroducaoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
@@ -235,6 +271,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void repeticao(View view){
         Intent intent = new Intent(MainActivity.this, RepeticaoActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

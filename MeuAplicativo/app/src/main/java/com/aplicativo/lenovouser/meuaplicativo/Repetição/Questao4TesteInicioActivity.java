@@ -49,14 +49,12 @@ public class Questao4TesteInicioActivity extends AppCompatActivity {
     public void proximo(View view){
         if(radioButton.isChecked()) {
             ponto = pontoquestao3 + 1;
-            Toast.makeText(Questao4TesteInicioActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao4TesteInicioActivity.this, RepeticaoActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontoquestoestesteinicio", ponto);
             startActivity(intent);
         }else{
             ponto = pontoquestao3 + 0;
-            Toast.makeText(Questao4TesteInicioActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao4TesteInicioActivity.this, RepeticaoActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontoquestoestesteinicio", ponto);

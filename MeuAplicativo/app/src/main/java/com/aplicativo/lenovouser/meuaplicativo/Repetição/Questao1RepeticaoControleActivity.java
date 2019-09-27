@@ -49,14 +49,12 @@ public class Questao1RepeticaoControleActivity extends AppCompatActivity {
     public void proximo(View view){
         if(radioButton.isChecked()) {
             ponto = pontoquestoestestefim + 1;
-            Toast.makeText(Questao1RepeticaoControleActivity.this, "Resposta correta!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao1RepeticaoControleActivity.this, Questao2RepeticaoControleActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontoquestao1", ponto);
             startActivity(intent);
         }else{
             ponto = pontoquestoestestefim + 0;
-            Toast.makeText(Questao1RepeticaoControleActivity.this, "Resposta errada!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao1RepeticaoControleActivity.this, Questao2RepeticaoControleActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontoquestao1", ponto);
