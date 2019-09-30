@@ -153,7 +153,10 @@
         <activity android:name=".Homogêneas.Questao3UnidimensionaisActivity" />
         <activity android:name=".Homogêneas.Questao4UnidimensionaisActivity" />
         <activity android:name=".Condicao.Questao3CondicaoCompostaActivity" />
-        <activity android:name=".Condicao.Questao4CondicaoCompostaActivity"></activity>
+        <activity android:name=".Condicao.Questao4CondicaoCompostaActivity" />
+        <activity android:name=".Homogêneas.Questao1BidimensionaisActivity" />
+        <activity android:name=".Homogêneas.Questao2BidimensionaisActivity" />
+        <activity android:name=".Homogêneas.Questao3BidimensionaisActivity"></activity>
     </application>
 
 </manifest>

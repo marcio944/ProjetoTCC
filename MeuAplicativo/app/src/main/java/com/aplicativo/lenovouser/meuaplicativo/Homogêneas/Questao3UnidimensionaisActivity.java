@@ -13,32 +13,55 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class Questao3UnidimensionaisActivity extends AppCompatActivity {
 
     RadioButton radioButton;
+    String emailusuario;
+    int pontoquestao2;
+    int ponto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao3_unidimensionais);
         radioButton = (RadioButton) findViewById(R.id.radioButton145);
+        Intent intent = getIntent();
+        Bundle bundle = new Bundle();
+        bundle = intent.getExtras();
+        if (bundle != null){
+            pontoquestao2 = bundle.getInt("pontoquestao2");
+        }
+        Intent intent2 = getIntent();
+        Bundle bundle2 = new Bundle();
+        bundle2 = intent2.getExtras();
+        if (bundle2 != null){
+            emailusuario = bundle2.getString("emailusuario");
+        }
     }
 
     public void inicio(View view){
         Intent intent = new Intent(Questao3UnidimensionaisActivity.this, MainActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao3UnidimensionaisActivity.this, Questao2UnidimensionaisActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void proximo(View view){
         if (radioButton.isChecked()){
+            ponto = pontoquestao2 + 1;
             Toast.makeText(Questao3UnidimensionaisActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao3UnidimensionaisActivity.this, Questao4UnidimensionaisActivity.class);
+            intent.putExtra("emailusuario", emailusuario);
+            intent.putExtra("pontoquestao3", ponto);
             startActivity(intent);
         }else {
+            ponto = pontoquestao2 + 0;
             Toast.makeText(Questao3UnidimensionaisActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao3UnidimensionaisActivity.this, Questao4UnidimensionaisActivity.class);
+            intent.putExtra("emailusuario", emailusuario);
+            intent.putExtra("pontoquestao3", ponto);
             startActivity(intent);
         }
 

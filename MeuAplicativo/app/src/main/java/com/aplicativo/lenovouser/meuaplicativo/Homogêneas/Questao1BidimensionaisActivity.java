@@ -10,23 +10,23 @@ import android.widget.Toast;
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 
-public class Questao4UnidimensionaisActivity extends AppCompatActivity {
+public class Questao1BidimensionaisActivity extends AppCompatActivity {
 
     RadioButton radioButton;
     String emailusuario;
-    int pontoquestao3;
+    int pontoquestoesunidimensionais;
     int ponto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questao4_unidimensionais);
-        radioButton = (RadioButton) findViewById(R.id.radioButton146);
+        setContentView(R.layout.activity_questao1_bidimensionais);
+        radioButton = (RadioButton) findViewById(R.id.radioButton154);
         Intent intent = getIntent();
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
         if (bundle != null){
-            pontoquestao3 = bundle.getInt("pontoquestao3");
+            pontoquestoesunidimensionais = bundle.getInt("pontoquestoesunidimensionais");
         }
         Intent intent2 = getIntent();
         Bundle bundle2 = new Bundle();
@@ -37,31 +37,31 @@ public class Questao4UnidimensionaisActivity extends AppCompatActivity {
     }
 
     public void inicio(View view){
-        Intent intent = new Intent(Questao4UnidimensionaisActivity.this, MainActivity.class);
+        Intent intent = new Intent(Questao1BidimensionaisActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void anterior(View view){
-        Intent intent = new Intent(Questao4UnidimensionaisActivity.this, Questao3UnidimensionaisActivity.class);
+        Intent intent = new Intent(Questao1BidimensionaisActivity.this, ExemploBidimensionaisActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void proximo(View view){
         if (radioButton.isChecked()){
-            ponto = pontoquestao3 + 1;
-            Toast.makeText(Questao4UnidimensionaisActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(Questao4UnidimensionaisActivity.this, MainActivity.class);
+            ponto = pontoquestoesunidimensionais + 1;
+            Toast.makeText(Questao1BidimensionaisActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao1BidimensionaisActivity.this, Questao2BidimensionaisActivity.class);
             intent.putExtra("emailusuario", emailusuario);
-            intent.putExtra("pontoquestoesunidimensionais", ponto);
+            intent.putExtra("pontoquestao1", ponto);
             startActivity(intent);
         }else {
-            ponto = pontoquestao3 + 0;
-            Toast.makeText(Questao4UnidimensionaisActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(Questao4UnidimensionaisActivity.this, MainActivity.class);
+            ponto = pontoquestoesunidimensionais + 0;
+            Toast.makeText(Questao1BidimensionaisActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(Questao1BidimensionaisActivity.this, Questao2BidimensionaisActivity.class);
             intent.putExtra("emailusuario", emailusuario);
-            intent.putExtra("pontoquestoesunidimensionais", ponto);
+            intent.putExtra("pontoquestao1", ponto);
             startActivity(intent);
         }
 
