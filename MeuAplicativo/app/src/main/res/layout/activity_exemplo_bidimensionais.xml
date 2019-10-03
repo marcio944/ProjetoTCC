@@ -22,8 +22,8 @@
 
         <ImageView
             android:id="@+id/imageView23"
-            android:layout_width="354dp"
-            android:layout_height="189dp"
+            android:layout_width="350dp"
+            android:layout_height="223dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="93dp"
@@ -54,6 +54,7 @@
             android:layout_marginEnd="38dp"
             android:background="@color/colorPrimary"
             android:text="Próximo"
+            android:onClick="proximo"
             android:textColor="#ffffff" />
 
         <ImageButton

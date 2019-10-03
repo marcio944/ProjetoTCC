@@ -51,14 +51,12 @@ public class Questao1BidimensionaisActivity extends AppCompatActivity {
     public void proximo(View view){
         if (radioButton.isChecked()){
             ponto = pontoquestoesunidimensionais + 1;
-            Toast.makeText(Questao1BidimensionaisActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao1BidimensionaisActivity.this, Questao2BidimensionaisActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontoquestao1", ponto);
             startActivity(intent);
         }else {
             ponto = pontoquestoesunidimensionais + 0;
-            Toast.makeText(Questao1BidimensionaisActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(Questao1BidimensionaisActivity.this, Questao2BidimensionaisActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontoquestao1", ponto);

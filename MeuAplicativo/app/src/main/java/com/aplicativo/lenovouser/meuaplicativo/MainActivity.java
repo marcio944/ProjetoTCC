@@ -277,6 +277,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void homogenias(View view){
         Intent intent = new Intent(MainActivity.this, HomogeneasActivity.class);
+        intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 

@@ -38,7 +38,6 @@
         <activity
             android:name=".Dados.DadosActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Controle.ControleActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Expressões.ExpressoesActivity" />
         <activity android:name=".Condicao.CondicaoActivity" />

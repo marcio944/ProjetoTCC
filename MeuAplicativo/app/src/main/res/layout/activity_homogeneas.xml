@@ -90,43 +90,6 @@ tools:context=".Homogêneas.HomogeneasActivity">
             android:onClick="bidimensionais"
             android:textColor="#FFFFFF" />
 
-        <View
-            android:id="@+id/viewMultidimensionais"
-            android:layout_width="300dp"
-            android:layout_height="393dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="90dp"
-            android:layout_marginTop="56dp"
-            android:background="#FFFFFF"
-            android:visibility="visible" />
-
-        <TextView
-            android:id="@+id/textViewMultidimensionais"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="-290dp"
-            android:layout_marginTop="96dp"
-            android:fontFamily="Times new Roman"
-            android:text="Vetores Multidimensionais"
-            android:textSize="24dp" />
-
-        <Button
-            android:id="@+id/buttonMultidimensionais"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="190dp"
-            android:layout_marginStart="-235dp"
-            android:layout_marginTop="350dp"
-            android:background="@color/colorPrimary"
-            android:text="Iniciar"
-            android:onClick="condicaoEncadeada"
-            android:textColor="#FFFFFF" />
-
     </LinearLayout>
 
 </HorizontalScrollView>
