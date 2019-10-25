@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
@@ -16,12 +17,13 @@ public class Questao3PseudocodigoActivity extends AppCompatActivity {
     int ponto;
     int pontoquestao2;
     private String emailusuario;
+    RadioButton radioButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao3_pseudocodigo);
-        editText = (EditText) findViewById(R.id.editText);
+        radioButton = (RadioButton) findViewById(R.id.radioButton162);
         Intent intent = getIntent();
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
@@ -41,7 +43,7 @@ public class Questao3PseudocodigoActivity extends AppCompatActivity {
     }
 
     public void proximo(View view){
-        if (editText.getText().toString().equals("5")){
+        if (radioButton.isChecked()){
             ponto = pontoquestao2 + 1;
             Intent intent = new Intent(Questao3PseudocodigoActivity.this, Questao4PseudocodigoActivity.class);
             intent.putExtra("pontoquestao3", ponto);
@@ -57,7 +59,7 @@ public class Questao3PseudocodigoActivity extends AppCompatActivity {
     }
 
     public void anterior(View view){
-        Intent intent = new Intent(Questao3PseudocodigoActivity.this, Questao5PseudocodigoActivity.class);
+        Intent intent = new Intent(Questao3PseudocodigoActivity.this, Questao2PseudocodigoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }

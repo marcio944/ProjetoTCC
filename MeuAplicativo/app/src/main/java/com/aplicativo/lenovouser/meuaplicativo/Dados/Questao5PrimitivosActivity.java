@@ -16,6 +16,7 @@ public class Questao5PrimitivosActivity extends AppCompatActivity {
     private String emailusuario;
     int pontoquestao4;
     int ponto;
+    int pontosintroducao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,32 +33,44 @@ public class Questao5PrimitivosActivity extends AppCompatActivity {
         if (bundle2 != null){
             emailusuario = bundle2.getString("emailusuario");
         }
+        Intent intent3 = getIntent();
+        Bundle bundle3 = new Bundle();
+        bundle3 = intent3.getExtras();
+        if (bundle3 != null){
+            pontosintroducao = bundle3.getInt("pontosintroducao");
+        }
     }
 
     public void inicio(View view){
         Intent intent = new Intent(Questao5PrimitivosActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
+        intent.putExtra("pontosintroducao", pontosintroducao);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao5PrimitivosActivity.this, Questao4PrimitivosActivity.class);
         intent.putExtra("emailusuario", emailusuario);
+        intent.putExtra("pontosintroducao", pontosintroducao);
         startActivity(intent);
     }
 
     public  void proximo(View view){
         if (radioButton.isChecked()){
             ponto = pontoquestao4 + 1;
+            pontosintroducao = pontosintroducao + ponto;
             Intent intent = new Intent(Questao5PrimitivosActivity.this, DadosActivity.class);
             intent.putExtra("pontoquestao5primitivos", ponto);
             intent.putExtra("emailusuario", emailusuario);
+            intent.putExtra("pontosparcial", pontosintroducao);
             startActivity(intent);
         }else {
             ponto = pontoquestao4 + 0;
+            pontosintroducao = pontosintroducao + ponto;
             Intent intent = new Intent(Questao5PrimitivosActivity.this, DadosActivity.class);
             intent.putExtra("pontoquestao5primitivos", ponto);
             intent.putExtra("emailusuario", emailusuario);
+            intent.putExtra("pontosparcial", pontosintroducao);
             startActivity(intent);
         }
     }

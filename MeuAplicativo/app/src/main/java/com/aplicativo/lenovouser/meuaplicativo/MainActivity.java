@@ -3,8 +3,13 @@ package com.aplicativo.lenovouser.meuaplicativo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aplicativo.lenovouser.meuaplicativo.Condicao.CondicaoActivity;
@@ -16,6 +21,7 @@ import com.aplicativo.lenovouser.meuaplicativo.Introducao.IntroducaoActivity;
 import com.aplicativo.lenovouser.meuaplicativo.Models.PontuacaoModel;
 import com.aplicativo.lenovouser.meuaplicativo.Repetição.RepeticaoActivity;
 
+import com.aplicativo.lenovouser.meuaplicativo.Usuário.LoginActivity;
 import com.google.gson.JsonObject;
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
@@ -37,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
     int pontosquestoesentradasaida;
     int pontosquestoescondicao;
     int pontosquestoesrepeticao;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +121,45 @@ public class MainActivity extends AppCompatActivity {
         buscapontosentradasaida(emailusuario);
         buscapontoscondicao(emailusuario);
         buscapontosrepeticao(emailusuario);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.sair:
+                Intent i = new Intent(this, LoginActivity.class);
+                this.startActivity(i);
+                finish();
+                return true;
+            case R.id.pontuacao_total:
+                String URL = HOST + "/buscar_pontuacaototal.php";
+                Ion.with(MainActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                    @Override
+                    public void onCompleted(Exception e, JsonObject result) {
+                        try {
+                            String RETORNO = result.get("BUSCA").getAsString();
+                            int pontos = Integer.parseInt(RETORNO);
+                            if (pontos > 0) {
+                                Intent intent = new Intent(MainActivity.this, PontuacaoTotalActivity.class);
+                                intent.putExtra("emailusuario", emailusuario);
+                                startActivity(intent);
+                            }
+                        } catch (Exception ex){
+
+                        }
+
+                    }
+                });
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void buscapontosintroducao(String emailusuario){
@@ -248,6 +291,7 @@ public class MainActivity extends AppCompatActivity {
     public void dados(View view){
         Intent intent = new Intent(MainActivity.this, DadosActivity.class);
         intent.putExtra("emailusuario", emailusuario);
+        intent.putExtra("pontosintroducao", pontosquestoesintroducao);
         startActivity(intent);
     }
 

@@ -17,41 +17,88 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="19dp"
-            android:text="Considere um algoritmo escrito em portugol onde o mesmo possui uma variável do tipo inteiro x. Atribua o valor 10 a essa variável." />
+            android:text="Complete as linhas abaixo com os comando básicos utilizados na escrita de um pseudocódigo em portugol." />
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_width="329dp"
+            android:layout_width="172dp"
             android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button17"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="174dp"
+            android:layout_marginTop="122dp"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/button17"
-            android:layout_width="131dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="38dp"
-            android:layout_marginStart="33dp"
-            android:text="Anterior"
-            android:onClick="anterior"
+            android:layout_marginBottom="43dp"
+            android:layout_marginStart="34dp"
             android:background="@color/colorPrimary"
+            android:onClick="anterior"
+            android:text="Anterior"
             android:textColor="#ffffff"/>
 
         <Button
             android:id="@+id/button18"
-            android:layout_width="133dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageButton115"
             android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/button17"
-            android:layout_marginEnd="34dp"
-            android:text="Proximo"
-            android:onClick="proximo"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="35dp"
             android:background="@color/colorPrimary"
-            android:textColor="#ffffff"/>
+            android:onClick="proximo"
+            android:text="Próximo"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="67dp"
+            android:layout_marginLeft="67dp"
+            android:layout_marginTop="186dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editText"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="221dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editText17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editText2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="157dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <ImageButton
+            android:id="@+id/imageButton115"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/button17"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="inicio"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/home" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

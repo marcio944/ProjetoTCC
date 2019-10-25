@@ -60,7 +60,6 @@
         <activity android:name=".Introducao.Questao3PseudocodigoActivity" />
         <activity android:name=".Introducao.Questao4PseudocodigoActivity" />
         <activity android:name=".Introducao.EstruturaPseudocodigoActivity" />
-        <activity android:name=".Introducao.Questao5PseudocodigoActivity" />
         <activity android:name=".Dados.Questao1PrimitivosActivity" />
         <activity android:name=".Dados.Questao2PrimitivosActivity" />
         <activity android:name=".Dados.Questao3PrimitivosActivity" />
@@ -155,7 +154,9 @@
         <activity android:name=".Condicao.Questao4CondicaoCompostaActivity" />
         <activity android:name=".Homogêneas.Questao1BidimensionaisActivity" />
         <activity android:name=".Homogêneas.Questao2BidimensionaisActivity" />
-        <activity android:name=".Homogêneas.Questao3BidimensionaisActivity"></activity>
+        <activity android:name=".Homogêneas.Questao3BidimensionaisActivity" />
+        <activity android:name=".PontuacaoTotalActivity" />
+        <activity android:name=".RankingActivity"></activity>
     </application>
 
 </manifest>

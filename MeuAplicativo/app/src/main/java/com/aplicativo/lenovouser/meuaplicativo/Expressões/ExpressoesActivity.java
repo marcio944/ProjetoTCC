@@ -11,6 +11,7 @@ public class ExpressoesActivity extends AppCompatActivity {
 
     private String emailusuario;
     int pontoquestao4aritmeticas;
+    int pontosparcial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +29,18 @@ public class ExpressoesActivity extends AppCompatActivity {
         if (bundle1 != null){
             emailusuario = bundle1.getString("emailusuario");
         }
+        Intent intent3 = getIntent();
+        Bundle bundle3 = new Bundle();
+        bundle3 = intent3.getExtras();
+        if (bundle3 != null){
+            pontosparcial = bundle3.getInt("pontosparcial");
+        }
     }
 
     public void aritmeticas(View view){
         Intent intent = new Intent(ExpressoesActivity.this, OperadoresAritmeticosActivity.class);
         intent.putExtra("emailusuario", emailusuario);
+        intent.putExtra("pontosparcial", pontosparcial);
         startActivity(intent);
     }
 
@@ -40,6 +48,7 @@ public class ExpressoesActivity extends AppCompatActivity {
         Intent intent = new Intent(ExpressoesActivity.this, OperadoresRelacionaisActivity.class);
         intent.putExtra("pontoquestao4aritmeticas", pontoquestao4aritmeticas);
         intent.putExtra("emailusuario", emailusuario);
+        intent.putExtra("pontosparcial", pontosparcial);
         startActivity(intent);
     }
 

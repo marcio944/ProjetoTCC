@@ -16,6 +16,7 @@ public class Questao3PrimitivosActivity extends AppCompatActivity {
     private String emailusuario;
     int pontoquestao2;
     int ponto;
+    int pontosintroducao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +33,25 @@ public class Questao3PrimitivosActivity extends AppCompatActivity {
         if (bundle2 != null){
             emailusuario = bundle2.getString("emailusuario");
         }
+        Intent intent3 = getIntent();
+        Bundle bundle3 = new Bundle();
+        bundle3 = intent3.getExtras();
+        if (bundle3 != null){
+            pontosintroducao = bundle3.getInt("pontosintroducao");
+        }
     }
 
     public void inicio(View view){
         Intent intent = new Intent(Questao3PrimitivosActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
+        intent.putExtra("pontosintroducao", pontosintroducao);
         startActivity(intent);
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao3PrimitivosActivity.this, Questao2PrimitivosActivity.class);
         intent.putExtra("emailusuario", emailusuario);
+        intent.putExtra("pontosintroducao", pontosintroducao);
         startActivity(intent);
     }
 
@@ -52,12 +61,14 @@ public class Questao3PrimitivosActivity extends AppCompatActivity {
             Intent intent = new Intent(Questao3PrimitivosActivity.this, Questao4PrimitivosActivity.class);
             intent.putExtra("pontoquestao3", ponto);
             intent.putExtra("emailusuario", emailusuario);
+            intent.putExtra("pontosintroducao", pontosintroducao);
             startActivity(intent);
         }else {
             ponto = pontoquestao2 + 0;
             Intent intent = new Intent(Questao3PrimitivosActivity.this, Questao4PrimitivosActivity.class);
             intent.putExtra("pontoquestao3", ponto);
             intent.putExtra("emailusuario", emailusuario);
+            intent.putExtra("pontosintroducao", pontosintroducao);
             startActivity(intent);
         }
     }

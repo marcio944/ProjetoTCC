@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.aplicativo.lenovouser.meuaplicativo.Introducao.Questao5PseudocodigoActivity;
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
 import com.google.gson.JsonObject;

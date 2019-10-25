@@ -6,6 +6,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -22,6 +23,8 @@ public class Questao3BidimensionaisActivity extends AppCompatActivity {
     String emailusuario;
     int pontoquestao2;
     int ponto;
+    int pontosintroducao;
+    int pontuacaototal = 0;
     private String HOST = "http://algoeduc.000webhostapp.com/appalgoeduc";
 
     @Override
@@ -83,6 +86,18 @@ public class Questao3BidimensionaisActivity extends AppCompatActivity {
 
                 }
             });
+            String URL1 = HOST + "/pontuacao_total.php";
+            Ion.with(Questao3BidimensionaisActivity.this).load(URL1).setBodyParameter("email_app", emailusuario).setBodyParameter("pontuacao_total", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    try {
+                        String RETORNO = result.get("CADASTRO").getAsString();
+                    } catch (Exception ex){
+                        Toast.makeText(Questao3BidimensionaisActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            });
         }else {
             ponto = pontoquestao2 + 0;
             AlertDialog.Builder alerta = new AlertDialog.Builder(Questao3BidimensionaisActivity.this);
@@ -100,6 +115,18 @@ public class Questao3BidimensionaisActivity extends AppCompatActivity {
             alertDialog.show();
             String URL = HOST + "/cadastro_pontos_homogeneas.php";
             Ion.with(Questao3BidimensionaisActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_homogeneas", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    try {
+                        String RETORNO = result.get("CADASTRO").getAsString();
+                    } catch (Exception ex){
+                        Toast.makeText(Questao3BidimensionaisActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            });
+            String URL1 = HOST + "/pontuacao_total.php";
+            Ion.with(Questao3BidimensionaisActivity.this).load(URL1).setBodyParameter("email_app", emailusuario).setBodyParameter("pontuacao_total", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
                 @Override
                 public void onCompleted(Exception e, JsonObject result) {
                     try {
