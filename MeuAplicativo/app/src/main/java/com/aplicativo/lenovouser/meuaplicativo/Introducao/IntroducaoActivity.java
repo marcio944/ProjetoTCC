@@ -22,18 +22,6 @@ public class IntroducaoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_introducao);
-        Intent intent = getIntent();
-        Bundle bundle = new Bundle();
-        bundle = intent.getExtras();
-        if (bundle != null){
-            pontoquestao5conceito = bundle.getInt("pontoquestao5conceitoalgoritmo");
-        }
-        Intent intent1 = getIntent();
-        Bundle bundle1 = new Bundle();
-        bundle1 = intent1.getExtras();
-        if (bundle1 != null){
-            pontoquestao5fluxograma = bundle1.getInt("pontoquestao5fluxograma");
-        }
         Intent intent2 = getIntent();
         Bundle bundle2 = new Bundle();
         bundle2 = intent2.getExtras();
@@ -50,14 +38,12 @@ public class IntroducaoActivity extends AppCompatActivity {
 
     public void fluxograma(View view){
         Intent intent = new Intent(IntroducaoActivity.this, FluxogramaActivity.class);
-        intent.putExtra("pontoquestao5conceitoalgoritmo", pontoquestao5conceito);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }
 
     public void pseudocodigo(View view){
         Intent intent = new Intent(IntroducaoActivity.this, PseudocodigoActivity.class);
-        intent.putExtra("pontoquestao5fluxograma", pontoquestao5fluxograma);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }

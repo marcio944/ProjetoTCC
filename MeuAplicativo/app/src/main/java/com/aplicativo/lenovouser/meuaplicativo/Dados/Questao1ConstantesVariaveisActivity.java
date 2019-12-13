@@ -8,25 +8,27 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.aplicativo.lenovouser.meuaplicativo.Introducao.ExemploFluxogramaActivity;
+import com.aplicativo.lenovouser.meuaplicativo.Introducao.Questao1FluxogramaActivity;
+import com.aplicativo.lenovouser.meuaplicativo.Introducao.Questao2FluxogramaActivity;
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 public class Questao1ConstantesVariaveisActivity extends AppCompatActivity {
 
     RadioButton radioButton;
-    int pontoquestao5primitivos;
     int ponto;
+    int pontos;
     String emailusuario;
+    private String HOST = "http://algoeduc.000webhostapp.com/appalgoeduc";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao1_constantes_variaveis);
         radioButton = (RadioButton) findViewById(R.id.radioButton62);
-        Intent intent = getIntent();
-        Bundle bundle = new Bundle();
-        bundle = intent.getExtras();
-        pontoquestao5primitivos = bundle.getInt("pontoquestao5primitivos");
         Intent intent2 = getIntent();
         Bundle bundle2 = new Bundle();
         bundle2 = intent2.getExtras();
@@ -49,17 +51,33 @@ public class Questao1ConstantesVariaveisActivity extends AppCompatActivity {
 
     public void proximo(View view){
         if(radioButton.isChecked()) {
-            ponto = pontoquestao5primitivos + 1;
-            Intent intent = new Intent(Questao1ConstantesVariaveisActivity.this, Questao2ConstantesVariaveisActivity.class);
-            intent.putExtra("pontoquestao1", ponto);
-            intent.putExtra("emailusuario", emailusuario);
-            startActivity(intent);
+            String URL = HOST + "/buscar_pontos_primitivos.php";
+            Ion.with(Questao1ConstantesVariaveisActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    pontos = Integer.parseInt(RETORNO);
+                    ponto = pontos + 1;
+                    Intent intent = new Intent(Questao1ConstantesVariaveisActivity.this, Questao2ConstantesVariaveisActivity.class);
+                    intent.putExtra("pontoquestao1", ponto);
+                    intent.putExtra("emailusuario", emailusuario);
+                    startActivity(intent);
+                }
+            });
         }else{
-            ponto = pontoquestao5primitivos + 0;
-            Intent intent = new Intent(Questao1ConstantesVariaveisActivity.this, Questao2ConstantesVariaveisActivity.class);
-            intent.putExtra("pontoquestao1", ponto);
-            intent.putExtra("emailusuario", emailusuario);
-            startActivity(intent);
+            String URL = HOST + "/buscar_pontos_primitivos.php";
+            Ion.with(Questao1ConstantesVariaveisActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    pontos = Integer.parseInt(RETORNO);
+                    ponto = pontos + 0;
+                    Intent intent = new Intent(Questao1ConstantesVariaveisActivity.this, Questao2ConstantesVariaveisActivity.class);
+                    intent.putExtra("pontoquestao1", ponto);
+                    intent.putExtra("emailusuario", emailusuario);
+                    startActivity(intent);
+                }
+            });
         }
     }
 

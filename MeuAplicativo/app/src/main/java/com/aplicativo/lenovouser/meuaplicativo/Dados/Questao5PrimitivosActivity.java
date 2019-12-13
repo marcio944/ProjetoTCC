@@ -7,8 +7,12 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.aplicativo.lenovouser.meuaplicativo.Introducao.Questao5AlgoritmosActivity;
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 public class Questao5PrimitivosActivity extends AppCompatActivity {
 
@@ -17,6 +21,7 @@ public class Questao5PrimitivosActivity extends AppCompatActivity {
     int pontoquestao4;
     int ponto;
     int pontosintroducao;
+    private String HOST = "http://algoeduc.000webhostapp.com/appalgoeduc";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,18 +65,40 @@ public class Questao5PrimitivosActivity extends AppCompatActivity {
             ponto = pontoquestao4 + 1;
             pontosintroducao = pontosintroducao + ponto;
             Intent intent = new Intent(Questao5PrimitivosActivity.this, DadosActivity.class);
-            intent.putExtra("pontoquestao5primitivos", ponto);
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontosparcial", pontosintroducao);
             startActivity(intent);
+            String URL = HOST + "/cadastro_pontos_primitivos.php";
+            Ion.with(Questao5PrimitivosActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_primitivos", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    try {
+                        String RETORNO = result.get("CADASTRO").getAsString();
+                    } catch (Exception ex){
+                        Toast.makeText(Questao5PrimitivosActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            });
         }else {
             ponto = pontoquestao4 + 0;
             pontosintroducao = pontosintroducao + ponto;
             Intent intent = new Intent(Questao5PrimitivosActivity.this, DadosActivity.class);
-            intent.putExtra("pontoquestao5primitivos", ponto);
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontosparcial", pontosintroducao);
             startActivity(intent);
+            String URL = HOST + "/cadastro_pontos_primitivos.php";
+            Ion.with(Questao5PrimitivosActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_primitivos", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    try {
+                        String RETORNO = result.get("CADASTRO").getAsString();
+                    } catch (Exception ex){
+                        Toast.makeText(Questao5PrimitivosActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            });
         }
     }
 

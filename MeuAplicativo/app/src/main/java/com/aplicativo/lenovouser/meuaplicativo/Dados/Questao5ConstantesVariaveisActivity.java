@@ -9,6 +9,9 @@ import android.widget.Toast;
 
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 public class Questao5ConstantesVariaveisActivity extends AppCompatActivity {
 
@@ -16,6 +19,7 @@ public class Questao5ConstantesVariaveisActivity extends AppCompatActivity {
     int pontoquestao4;
     int ponto;
     String emailusuario;
+    private String HOST = "http://algoeduc.000webhostapp.com/appalgoeduc";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,15 +54,37 @@ public class Questao5ConstantesVariaveisActivity extends AppCompatActivity {
         if(radioButton.isChecked()) {
             ponto = pontoquestao4 + 1;
             Intent intent = new Intent(Questao5ConstantesVariaveisActivity.this, DadosActivity.class);
-            intent.putExtra("pontoquestao5constantesvariaveis", ponto);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            String URL = HOST + "/cadastro_pontos_constantesvariaveis.php";
+            Ion.with(Questao5ConstantesVariaveisActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_constantesvariaveis", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    try {
+                        String RETORNO = result.get("CADASTRO").getAsString();
+                    } catch (Exception ex){
+                        Toast.makeText(Questao5ConstantesVariaveisActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            });
         }else{
             ponto = pontoquestao4 + 0;
             Intent intent = new Intent(Questao5ConstantesVariaveisActivity.this, DadosActivity.class);
-            intent.putExtra("pontoquestao5constantesvariaveis", ponto);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            String URL = HOST + "/cadastro_pontos_constantesvariaveis.php";
+            Ion.with(Questao5ConstantesVariaveisActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_constantesvariaveis", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    try {
+                        String RETORNO = result.get("CADASTRO").getAsString();
+                    } catch (Exception ex){
+                        Toast.makeText(Questao5ConstantesVariaveisActivity.this, "Erro: " + ex, Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            });
         }
     }
 

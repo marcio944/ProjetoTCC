@@ -9,23 +9,23 @@ import android.widget.Toast;
 
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 public class Questao1PseudocodigoActivity extends AppCompatActivity {
 
     RadioButton radioButton;
-    int pontoquestao5fluxograma;
     int ponto;
     private String emailusuario;
+    private String HOST = "http://algoeduc.000webhostapp.com/appalgoeduc";
+    int pontos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questao1_pseudocodigo);
         radioButton = (RadioButton) findViewById(R.id.radioButton22);
-        Intent intent = getIntent();
-        Bundle bundle = new Bundle();
-        bundle = intent.getExtras();
-        pontoquestao5fluxograma = bundle.getInt("pontoquestao5fluxograma");
         Intent intent2 = getIntent();
         Bundle bundle2 = new Bundle();
         bundle2 = intent2.getExtras();
@@ -48,17 +48,33 @@ public class Questao1PseudocodigoActivity extends AppCompatActivity {
 
     public void proximo(View view){
         if(radioButton.isChecked()){
-            ponto = pontoquestao5fluxograma + 1;
-            Intent intent = new Intent(Questao1PseudocodigoActivity.this, Questao2PseudocodigoActivity.class);
-            intent.putExtra("pontoquestao1", ponto);
-            intent.putExtra("emailusuario", emailusuario);
-            startActivity(intent);
+            String URL = HOST + "/buscar_pontos_fluxograma.php";
+            Ion.with(Questao1PseudocodigoActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    pontos = Integer.parseInt(RETORNO);
+                    ponto = pontos + 1;
+                    Intent intent = new Intent(Questao1PseudocodigoActivity.this, Questao2PseudocodigoActivity.class);
+                    intent.putExtra("pontoquestao1", ponto);
+                    intent.putExtra("emailusuario", emailusuario);
+                    startActivity(intent);
+                }
+            });
         }else {
-            ponto = pontoquestao5fluxograma + 0;
-            Intent intent = new Intent(Questao1PseudocodigoActivity.this, Questao2PseudocodigoActivity.class);
-            intent.putExtra("pontoquestao1", ponto);
-            intent.putExtra("emailusuario", emailusuario);
-            startActivity(intent);
+            String URL = HOST + "/buscar_pontos_fluxograma.php";
+            Ion.with(Questao1PseudocodigoActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    pontos = Integer.parseInt(RETORNO);
+                    ponto = pontos + 0;
+                    Intent intent = new Intent(Questao1PseudocodigoActivity.this, Questao2PseudocodigoActivity.class);
+                    intent.putExtra("pontoquestao1", ponto);
+                    intent.putExtra("emailusuario", emailusuario);
+                    startActivity(intent);
+                }
+            });
         }
     }
 

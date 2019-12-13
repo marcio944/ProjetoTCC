@@ -10,19 +10,12 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class OperadoresRelacionaisActivity extends AppCompatActivity {
 
-    int pontoquestao4aritmeticas;
     private String emailusuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_operadores_relacionais);
-        Intent intent = getIntent();
-        Bundle bundle = new Bundle();
-        bundle = intent.getExtras();
-        if (bundle != null){
-            pontoquestao4aritmeticas = bundle.getInt("pontoquestao4aritmeticas");
-        }
         Intent intent1 = getIntent();
         Bundle bundle1 = new Bundle();
         bundle1 = intent1.getExtras();
@@ -45,7 +38,6 @@ public class OperadoresRelacionaisActivity extends AppCompatActivity {
 
     public void proximo(View view){
         Intent intent = new Intent(OperadoresRelacionaisActivity.this, ExemploOperadoresRelacionaisActivity.class);
-        intent.putExtra("pontoquestao4aritmeticas", pontoquestao4aritmeticas);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }

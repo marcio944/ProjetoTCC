@@ -18,10 +18,6 @@ public class ExemploFluxogramaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exemplo_fluxograma);
-        Intent intent = getIntent();
-        Bundle bundle = new Bundle();
-        bundle = intent.getExtras();
-        pontoquestao5conceito = bundle.getInt("pontoquestao5conceitoalgoritmo");
         Intent intent2 = getIntent();
         Bundle bundle2 = new Bundle();
         bundle2 = intent2.getExtras();
@@ -38,7 +34,6 @@ public class ExemploFluxogramaActivity extends AppCompatActivity {
 
     public void proximo(View view){
         Intent intent = new Intent(ExemploFluxogramaActivity.this, SimbolosFluxogramaActivity.class);
-        intent.putExtra("pontoquestao5conceitoalgoritmo", pontoquestao5conceito);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }

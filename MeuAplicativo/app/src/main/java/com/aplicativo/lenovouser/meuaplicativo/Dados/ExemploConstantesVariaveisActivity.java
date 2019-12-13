@@ -10,7 +10,6 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class ExemploConstantesVariaveisActivity extends AppCompatActivity {
 
-    int pontoquestao5primitivos;
     int ponto;
     String emailusuario;
 
@@ -18,10 +17,6 @@ public class ExemploConstantesVariaveisActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exemplo_constantes_variaveis);
-        Intent intent = getIntent();
-        Bundle bundle = new Bundle();
-        bundle = intent.getExtras();
-        pontoquestao5primitivos = bundle.getInt("pontoquestao5primitivos");
         Intent intent2 = getIntent();
         Bundle bundle2 = new Bundle();
         bundle2 = intent2.getExtras();
@@ -44,7 +39,6 @@ public class ExemploConstantesVariaveisActivity extends AppCompatActivity {
 
     public void proximo(View view){
         Intent intent = new Intent(ExemploConstantesVariaveisActivity.this, Questao1ConstantesVariaveisActivity.class);
-        intent.putExtra("pontoquestao5primitivos", pontoquestao5primitivos);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }

@@ -10,7 +10,6 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class ExemploAtribuicaoActivity extends AppCompatActivity {
 
-    int pontoquestao5constantesvariaveis;
     int ponto;
     String emailusuario;
 
@@ -21,7 +20,6 @@ public class ExemploAtribuicaoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = new Bundle();
         bundle = intent.getExtras();
-        pontoquestao5constantesvariaveis = bundle.getInt("pontoquestao5constantesvariaveis");
         Intent intent2 = getIntent();
         Bundle bundle2 = new Bundle();
         bundle2 = intent2.getExtras();
@@ -44,7 +42,6 @@ public class ExemploAtribuicaoActivity extends AppCompatActivity {
 
     public void proximo(View view){
         Intent intent = new Intent(ExemploAtribuicaoActivity.this, Questao1ManipulacaoActivity.class);
-        intent.putExtra("pontoquestao5constantesvariaveis", pontoquestao5constantesvariaveis);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
     }

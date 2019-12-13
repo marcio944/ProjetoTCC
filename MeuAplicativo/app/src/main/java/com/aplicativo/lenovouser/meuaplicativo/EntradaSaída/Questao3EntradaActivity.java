@@ -53,14 +53,12 @@ public class Questao3EntradaActivity extends AppCompatActivity {
     public void proximo(View view){
         if (editText1.getText().toString().equals("leia(n1)") && editText2.getText().toString().equals("leia(n2)")){
             ponto = pontoquestao2 + 1;
-            Toast.makeText(Questao3EntradaActivity.this, "Resposta correta", Toast.LENGTH_LONG).show();;
             Intent intent = new Intent(Questao3EntradaActivity.this, EntradaSaidaActivity.class);
             intent.putExtra("pontoquestoesentrada", ponto);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
         }else {
             ponto = pontoquestao2 + 0;
-            Toast.makeText(Questao3EntradaActivity.this, "Resposta errada", Toast.LENGTH_LONG).show();;
             Intent intent = new Intent(Questao3EntradaActivity.this, EntradaSaidaActivity.class);
             intent.putExtra("pontoquestoesentrada", ponto);
             intent.putExtra("emailusuario", emailusuario);
