@@ -32,18 +32,21 @@ public class DefinicaoActivity extends AppCompatActivity {
         Intent intent = new Intent(DefinicaoActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(DefinicaoActivity.this, IdentificacaoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(DefinicaoActivity.this, AtribuicaoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }

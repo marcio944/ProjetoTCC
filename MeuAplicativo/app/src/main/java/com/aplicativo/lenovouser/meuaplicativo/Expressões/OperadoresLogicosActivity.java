@@ -28,18 +28,21 @@ public class OperadoresLogicosActivity extends AppCompatActivity {
         Intent intent = new Intent(OperadoresLogicosActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(OperadoresLogicosActivity.this, ExemploOperadoresRelacionaisActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(OperadoresLogicosActivity.this, ExemploOperadoresLogicosActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 

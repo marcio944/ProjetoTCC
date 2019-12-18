@@ -38,12 +38,14 @@ public class Questao2RepeticaoControleActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao2RepeticaoControleActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao2RepeticaoControleActivity.this, Questao1RepeticaoControleActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -53,12 +55,14 @@ public class Questao2RepeticaoControleActivity extends AppCompatActivity {
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontoquestao2", ponto);
             startActivity(intent);
+            finish();
         }else{
             ponto = pontoquestao1 + 0;
             Intent intent = new Intent(Questao2RepeticaoControleActivity.this, Questao3TesteControleActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontoquestao2", ponto);
             startActivity(intent);
+            finish();
         }
     }
 

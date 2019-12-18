@@ -34,18 +34,21 @@ public class IntroducaoActivity extends AppCompatActivity {
         Intent intent = new Intent(this,ConceitoAlgoritmoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void fluxograma(View view){
         Intent intent = new Intent(IntroducaoActivity.this, FluxogramaActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void pseudocodigo(View view){
         Intent intent = new Intent(IntroducaoActivity.this, PseudocodigoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }

@@ -50,12 +50,14 @@ public class Questao3BidimensionaisActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao3BidimensionaisActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao3BidimensionaisActivity.this, Questao2BidimensionaisActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -70,6 +72,7 @@ public class Questao3BidimensionaisActivity extends AppCompatActivity {
                     Intent intent = new Intent(Questao3BidimensionaisActivity.this, MainActivity.class);
                     intent.putExtra("emailusuario", emailusuario);
                     startActivity(intent);
+                    finish();
                 }
             });
             AlertDialog alertDialog = alerta.create();
@@ -109,6 +112,7 @@ public class Questao3BidimensionaisActivity extends AppCompatActivity {
                     Intent intent = new Intent(Questao3BidimensionaisActivity.this, MainActivity.class);
                     intent.putExtra("emailusuario", emailusuario);
                     startActivity(intent);
+                    finish();
                 }
             });
             AlertDialog alertDialog = alerta.create();

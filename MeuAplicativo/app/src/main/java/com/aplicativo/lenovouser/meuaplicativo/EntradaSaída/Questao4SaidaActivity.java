@@ -47,12 +47,14 @@ public class Questao4SaidaActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao4SaidaActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao4SaidaActivity.this, Questao2SaidaActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -69,6 +71,7 @@ public class Questao4SaidaActivity extends AppCompatActivity {
                         intent.putExtra("emailusuario", emailusuario);
                         intent.putExtra("pontoquestoesentradasaida", ponto);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -84,6 +87,7 @@ public class Questao4SaidaActivity extends AppCompatActivity {
                         intent.putExtra("emailusuario", emailusuario);
                         intent.putExtra("pontoquestoesentradasaida", ponto);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -114,6 +118,7 @@ public class Questao4SaidaActivity extends AppCompatActivity {
                         intent.putExtra("emailusuario", emailusuario);
                         intent.putExtra("pontoquestoesentradasaida", ponto);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -129,6 +134,7 @@ public class Questao4SaidaActivity extends AppCompatActivity {
                         intent.putExtra("emailusuario", emailusuario);
                         intent.putExtra("pontoquestoesentradasaida", ponto);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();

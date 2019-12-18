@@ -17,7 +17,6 @@ import com.koushikdutta.ion.Ion;
 public class Questao5FluxogramaActivity extends AppCompatActivity {
 
     private RadioButton radioButton;
-    Button button;
     int pontoquestao4;
     int ponto;
     private String emailusuario;
@@ -44,12 +43,14 @@ public class Questao5FluxogramaActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao5FluxogramaActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao5FluxogramaActivity.this, Questao4FluxogramaActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -58,6 +59,7 @@ public class Questao5FluxogramaActivity extends AppCompatActivity {
             Intent intent = new Intent(Questao5FluxogramaActivity.this, IntroducaoActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            finish();
             String URL = HOST + "/cadastro_pontos_fluxograma.php";
             Ion.with(Questao5FluxogramaActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_fluxograma", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
                 @Override
@@ -75,6 +77,7 @@ public class Questao5FluxogramaActivity extends AppCompatActivity {
             Intent intent = new Intent(Questao5FluxogramaActivity.this, IntroducaoActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            finish();
             String URL = HOST + "/cadastro_pontos_fluxograma.php";
             Ion.with(Questao5FluxogramaActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_fluxograma", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
                 @Override

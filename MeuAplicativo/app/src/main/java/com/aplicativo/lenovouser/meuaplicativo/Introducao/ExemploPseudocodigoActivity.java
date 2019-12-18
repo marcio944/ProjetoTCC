@@ -30,18 +30,21 @@ public class ExemploPseudocodigoActivity extends AppCompatActivity {
         Intent intent = new Intent(ExemploPseudocodigoActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(ExemploPseudocodigoActivity.this, PseudocodigoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public  void proximo(View view){
         Intent intent = new Intent(ExemploPseudocodigoActivity.this, Questao1PseudocodigoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }

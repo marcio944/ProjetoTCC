@@ -38,6 +38,7 @@ public class DadosActivity extends AppCompatActivity {
         intent.putExtra("emailusuario", emailusuario);
         intent.putExtra("pontosintroducao", pontosintroducao);
         startActivity(intent);
+        finish();
     }
 
     public void constantes_variaveis(View view){
@@ -45,6 +46,7 @@ public class DadosActivity extends AppCompatActivity {
         intent.putExtra("emailusuario", emailusuario);
         intent.putExtra("pontosintroducao", pontosintroducao);
         startActivity(intent);
+        finish();
     }
 
     public void manipulacao_dados(View view){
@@ -52,6 +54,7 @@ public class DadosActivity extends AppCompatActivity {
         intent.putExtra("emailusuario", emailusuario);
         intent.putExtra("pontosintroducao", pontosintroducao);
         startActivity(intent);
+        finish();
     }
 
 }

@@ -9,6 +9,11 @@ import android.widget.Toast;
 
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
+import com.aplicativo.lenovouser.meuaplicativo.Repetição.Questao1TesteFimActivity;
+import com.aplicativo.lenovouser.meuaplicativo.Repetição.Questao2TesteFimActivity;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 public class Questao1BidimensionaisActivity extends AppCompatActivity {
 
@@ -16,6 +21,8 @@ public class Questao1BidimensionaisActivity extends AppCompatActivity {
     String emailusuario;
     int pontoquestoesunidimensionais;
     int ponto;
+    int pontos;
+    private String HOST = "http://algoeduc.000webhostapp.com/appalgoeduc";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,27 +47,47 @@ public class Questao1BidimensionaisActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao1BidimensionaisActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao1BidimensionaisActivity.this, ExemploBidimensionaisActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         if (radioButton.isChecked()){
-            ponto = pontoquestoesunidimensionais + 1;
-            Intent intent = new Intent(Questao1BidimensionaisActivity.this, Questao2BidimensionaisActivity.class);
-            intent.putExtra("emailusuario", emailusuario);
-            intent.putExtra("pontoquestao1", ponto);
-            startActivity(intent);
+            String URL = HOST + "/buscar_pontos_unidimensionais.php";
+            Ion.with(Questao1BidimensionaisActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    pontos = Integer.parseInt(RETORNO);
+                    ponto = pontos + 1;
+                    Intent intent = new Intent(Questao1BidimensionaisActivity.this, Questao2BidimensionaisActivity.class);
+                    intent.putExtra("emailusuario", emailusuario);
+                    intent.putExtra("pontoquestao1", ponto);
+                    startActivity(intent);
+                    finish();
+                }
+            });
         }else {
-            ponto = pontoquestoesunidimensionais + 0;
-            Intent intent = new Intent(Questao1BidimensionaisActivity.this, Questao2BidimensionaisActivity.class);
-            intent.putExtra("emailusuario", emailusuario);
-            intent.putExtra("pontoquestao1", ponto);
-            startActivity(intent);
+            String URL = HOST + "/buscar_pontos_unidimensionais.php";
+            Ion.with(Questao1BidimensionaisActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    pontos = Integer.parseInt(RETORNO);
+                    ponto = pontos + 0;
+                    Intent intent = new Intent(Questao1BidimensionaisActivity.this, Questao2BidimensionaisActivity.class);
+                    intent.putExtra("emailusuario", emailusuario);
+                    intent.putExtra("pontoquestao1", ponto);
+                    startActivity(intent);
+                    finish();
+                }
+            });
         }
 
     }

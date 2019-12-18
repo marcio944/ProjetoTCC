@@ -28,17 +28,20 @@ public class ExemploTesteInicioActivity extends AppCompatActivity {
         Intent intent = new Intent(ExemploTesteInicioActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(ExemploTesteInicioActivity.this, TesteInicioActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(ExemploTesteInicioActivity.this, Questao1TesteInicioActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 }

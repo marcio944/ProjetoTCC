@@ -28,18 +28,21 @@ public class UnidimensionaisActivity extends AppCompatActivity {
         Intent intent = new Intent(UnidimensionaisActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(UnidimensionaisActivity.this, HomogeneasActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(UnidimensionaisActivity.this, ExemploUnidimensionaisActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }

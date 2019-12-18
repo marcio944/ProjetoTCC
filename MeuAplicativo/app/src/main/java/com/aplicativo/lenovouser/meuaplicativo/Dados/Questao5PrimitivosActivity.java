@@ -51,6 +51,7 @@ public class Questao5PrimitivosActivity extends AppCompatActivity {
         intent.putExtra("emailusuario", emailusuario);
         intent.putExtra("pontosintroducao", pontosintroducao);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
@@ -58,6 +59,7 @@ public class Questao5PrimitivosActivity extends AppCompatActivity {
         intent.putExtra("emailusuario", emailusuario);
         intent.putExtra("pontosintroducao", pontosintroducao);
         startActivity(intent);
+        finish();
     }
 
     public  void proximo(View view){
@@ -68,6 +70,7 @@ public class Questao5PrimitivosActivity extends AppCompatActivity {
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontosparcial", pontosintroducao);
             startActivity(intent);
+            finish();
             String URL = HOST + "/cadastro_pontos_primitivos.php";
             Ion.with(Questao5PrimitivosActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_primitivos", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
                 @Override
@@ -87,6 +90,7 @@ public class Questao5PrimitivosActivity extends AppCompatActivity {
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontosparcial", pontosintroducao);
             startActivity(intent);
+            finish();
             String URL = HOST + "/cadastro_pontos_primitivos.php";
             Ion.with(Questao5PrimitivosActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_primitivos", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
                 @Override

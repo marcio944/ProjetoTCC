@@ -35,6 +35,7 @@ public class ExpressoesActivity extends AppCompatActivity {
         intent.putExtra("emailusuario", emailusuario);
         intent.putExtra("pontosparcial", pontosparcial);
         startActivity(intent);
+        finish();
     }
 
     public void logicas(View view){
@@ -42,6 +43,7 @@ public class ExpressoesActivity extends AppCompatActivity {
         intent.putExtra("emailusuario", emailusuario);
         intent.putExtra("pontosparcial", pontosparcial);
         startActivity(intent);
+        finish();
     }
 
 }

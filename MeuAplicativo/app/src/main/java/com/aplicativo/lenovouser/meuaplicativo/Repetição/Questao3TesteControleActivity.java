@@ -45,12 +45,14 @@ public class Questao3TesteControleActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao3TesteControleActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao3TesteControleActivity.this, Questao1TesteInicioActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -67,6 +69,7 @@ public class Questao3TesteControleActivity extends AppCompatActivity {
                         intent.putExtra("emailusuario", emailusuario);
                         intent.putExtra("pontoquestoesrepeticao", ponto);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -82,6 +85,7 @@ public class Questao3TesteControleActivity extends AppCompatActivity {
                         intent.putExtra("emailusuario", emailusuario);
                         intent.putExtra("pontosquestoesrepeticao", ponto);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -112,6 +116,7 @@ public class Questao3TesteControleActivity extends AppCompatActivity {
                         intent.putExtra("emailusuario", emailusuario);
                         intent.putExtra("pontoquestoesrepeticao", ponto);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -127,6 +132,7 @@ public class Questao3TesteControleActivity extends AppCompatActivity {
                         intent.putExtra("emailusuario", emailusuario);
                         intent.putExtra("pontosquestoesrepeticao", ponto);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();

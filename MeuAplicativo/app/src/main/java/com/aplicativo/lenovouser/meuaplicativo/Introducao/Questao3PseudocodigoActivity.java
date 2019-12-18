@@ -40,6 +40,7 @@ public class Questao3PseudocodigoActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao3PseudocodigoActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -49,12 +50,14 @@ public class Questao3PseudocodigoActivity extends AppCompatActivity {
             intent.putExtra("pontoquestao3", ponto);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            finish();
         }else{
             ponto = pontoquestao2 + 0;
             Intent intent = new Intent(Questao3PseudocodigoActivity.this, Questao4PseudocodigoActivity.class);
             intent.putExtra("pontoquestao3", ponto);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            finish();
         }
     }
 
@@ -62,6 +65,7 @@ public class Questao3PseudocodigoActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao3PseudocodigoActivity.this, Questao2PseudocodigoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }

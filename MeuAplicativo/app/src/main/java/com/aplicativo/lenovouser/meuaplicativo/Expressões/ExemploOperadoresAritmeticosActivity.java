@@ -28,18 +28,21 @@ public class ExemploOperadoresAritmeticosActivity extends AppCompatActivity {
         Intent intent = new Intent(ExemploOperadoresAritmeticosActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(ExemploOperadoresAritmeticosActivity.this, OperadoresAritmeticosActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(ExemploOperadoresAritmeticosActivity.this, AritmeticasActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }

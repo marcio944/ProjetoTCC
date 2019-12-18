@@ -28,18 +28,21 @@ public class ExemploLogicasCompostasActivity extends AppCompatActivity {
         Intent intent = new Intent(ExemploLogicasCompostasActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(ExemploLogicasCompostasActivity.this, ExemploLogicasSimplesActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(ExemploLogicasCompostasActivity.this, Questao1LogicasRelacionaisActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 

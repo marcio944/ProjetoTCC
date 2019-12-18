@@ -11,8 +11,6 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class CondicaoCompostaActivity extends AppCompatActivity {
 
     String emailusuario;
-    int pontoquestao3condicaosimples;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,31 +21,27 @@ public class CondicaoCompostaActivity extends AppCompatActivity {
         if (bundle != null){
             emailusuario = bundle.getString("emailusuario");
         }
-        Intent intent1 = getIntent();
-        Bundle bundle1 = new Bundle();
-        bundle1 = intent1.getExtras();
-        if (bundle1 != null){
-            pontoquestao3condicaosimples = bundle.getInt("pontoquestao3condicaosimples");
-        }
     }
 
     public void inicio(View view){
         Intent intent = new Intent(CondicaoCompostaActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(CondicaoCompostaActivity.this, CondicaoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(CondicaoCompostaActivity.this, ExemploCondicaoCompostaActivity.class);
         intent.putExtra("emailusuario", emailusuario);
-        intent.putExtra("pontoquestao3condicaosimples", pontoquestao3condicaosimples);
         startActivity(intent);
+        finish();
     }
 
 }

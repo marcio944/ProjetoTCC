@@ -11,7 +11,6 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 
 public class SimbolosFluxogramaActivity extends AppCompatActivity {
 
-    int pontoquestao5conceito;
     private String emailusuario;
 
     @Override
@@ -31,18 +30,21 @@ public class SimbolosFluxogramaActivity extends AppCompatActivity {
         Intent intent = new Intent(SimbolosFluxogramaActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(SimbolosFluxogramaActivity.this, ExemploFluxogramaActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(SimbolosFluxogramaActivity.this, Questao1FluxogramaActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }

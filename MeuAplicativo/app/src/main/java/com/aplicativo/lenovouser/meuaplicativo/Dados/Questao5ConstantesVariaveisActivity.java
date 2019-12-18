@@ -42,12 +42,14 @@ public class Questao5ConstantesVariaveisActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao5ConstantesVariaveisActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao5ConstantesVariaveisActivity.this, Questao4ConstantesVariaveisActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -56,6 +58,7 @@ public class Questao5ConstantesVariaveisActivity extends AppCompatActivity {
             Intent intent = new Intent(Questao5ConstantesVariaveisActivity.this, DadosActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            finish();
             String URL = HOST + "/cadastro_pontos_constantesvariaveis.php";
             Ion.with(Questao5ConstantesVariaveisActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_constantesvariaveis", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
                 @Override
@@ -73,6 +76,7 @@ public class Questao5ConstantesVariaveisActivity extends AppCompatActivity {
             Intent intent = new Intent(Questao5ConstantesVariaveisActivity.this, DadosActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            finish();
             String URL = HOST + "/cadastro_pontos_constantesvariaveis.php";
             Ion.with(Questao5ConstantesVariaveisActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_constantesvariaveis", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
                 @Override

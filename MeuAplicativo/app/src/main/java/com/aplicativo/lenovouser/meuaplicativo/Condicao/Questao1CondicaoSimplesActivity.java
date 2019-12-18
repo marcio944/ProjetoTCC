@@ -33,12 +33,14 @@ public class Questao1CondicaoSimplesActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao1CondicaoSimplesActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao1CondicaoSimplesActivity.this, ExemploCondicaoSimplesActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -48,12 +50,14 @@ public class Questao1CondicaoSimplesActivity extends AppCompatActivity {
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontoquestao1", ponto);
             startActivity(intent);
+            finish();
         }else{
             ponto = ponto + 0;
             Intent intent = new Intent(Questao1CondicaoSimplesActivity.this, Questao2CondicaoSimplesActivity.class);
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontoquestao1", ponto);
             startActivity(intent);
+            finish();
         }
     }
 

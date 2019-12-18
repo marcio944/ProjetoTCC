@@ -45,12 +45,14 @@ public class Questao3RelacionaisLogicasActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao3RelacionaisLogicasActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao3RelacionaisLogicasActivity.this, Questao2RelacionaisLogicasActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -67,6 +69,7 @@ public class Questao3RelacionaisLogicasActivity extends AppCompatActivity {
                         intent.putExtra("emailusuario", emailusuario);
                         intent.putExtra("pontosquestoesexpressoes", ponto);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -82,6 +85,7 @@ public class Questao3RelacionaisLogicasActivity extends AppCompatActivity {
                         intent.putExtra("emailusuario", emailusuario);
                         intent.putExtra("pontosquestoesexpressoes", ponto);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -112,6 +116,7 @@ public class Questao3RelacionaisLogicasActivity extends AppCompatActivity {
                         intent.putExtra("emailusuario", emailusuario);
                         intent.putExtra("pontosquestoesexpressoes", ponto);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -127,6 +132,7 @@ public class Questao3RelacionaisLogicasActivity extends AppCompatActivity {
                         intent.putExtra("emailusuario", emailusuario);
                         intent.putExtra("pontosquestoesexpressoes", ponto);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();

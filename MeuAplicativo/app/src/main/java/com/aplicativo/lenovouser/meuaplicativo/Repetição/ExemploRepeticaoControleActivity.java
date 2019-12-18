@@ -11,16 +11,11 @@ import com.aplicativo.lenovouser.meuaplicativo.R;
 public class ExemploRepeticaoControleActivity extends AppCompatActivity {
 
     String emailusuario;
-    int pontoquestoestestefim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exemplo_repeticao_controle);
-        Intent intent = getIntent();
-        Bundle bundle = new Bundle();
-        bundle = intent.getExtras();
-        pontoquestoestestefim = bundle.getInt("pontoquestoestestefim");
         Intent intent2 = getIntent();
         Bundle bundle2 = new Bundle();
         bundle2 = intent2.getExtras();
@@ -33,18 +28,20 @@ public class ExemploRepeticaoControleActivity extends AppCompatActivity {
         Intent intent = new Intent(ExemploRepeticaoControleActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(ExemploRepeticaoControleActivity.this, RepeticaoControleActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(ExemploRepeticaoControleActivity.this, Questao1RepeticaoControleActivity.class);
         intent.putExtra("emailusuario", emailusuario);
-        intent.putExtra("pontoquestoestestefim", pontoquestoestestefim);
         startActivity(intent);
+        finish();
     }
 }

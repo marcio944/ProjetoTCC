@@ -43,21 +43,23 @@ public class Questao5AlgoritmosActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao5AlgoritmosActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao5AlgoritmosActivity.this, Questao4AlgoritmosActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public  void proximo(View view){
         if (radioButton.isChecked()){
             ponto = pontoquestao4 + 1;
             Intent intent = new Intent(Questao5AlgoritmosActivity.this, IntroducaoActivity.class);
-            //intent.putExtra("pontoquestao5conceitoalgoritmo", ponto);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            finish();
             String URL = HOST + "/cadastro_pontos_conceito_algoritmos.php";
             Ion.with(Questao5AlgoritmosActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_conceito_algoritmos", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
                 @Override
@@ -73,9 +75,9 @@ public class Questao5AlgoritmosActivity extends AppCompatActivity {
         }else {
             ponto = pontoquestao4 + 0;
             Intent intent = new Intent(Questao5AlgoritmosActivity.this, IntroducaoActivity.class);
-            //intent.putExtra("pontoquestao5conceitoalgoritmo", ponto);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            finish();
             String URL = HOST + "/cadastro_pontos_conceito_algoritmos.php";
             Ion.with(Questao5AlgoritmosActivity.this).load(URL).setBodyParameter("email_app", emailusuario).setBodyParameter("pontos_conceito_algoritmos", String.valueOf(ponto)).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
                 @Override

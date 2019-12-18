@@ -7,15 +7,21 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.aplicativo.lenovouser.meuaplicativo.Dados.Questao1ConstantesVariaveisActivity;
+import com.aplicativo.lenovouser.meuaplicativo.Dados.Questao2ConstantesVariaveisActivity;
 import com.aplicativo.lenovouser.meuaplicativo.MainActivity;
 import com.aplicativo.lenovouser.meuaplicativo.R;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 public class Questao1CompostaActivity extends AppCompatActivity {
 
     RadioButton radioButton;
     String emailusuario;
-    int pontoquestao3condicaosimples;
     int ponto;
+    int pontos;
+    private String HOST = "http://algoeduc.000webhostapp.com/appalgoeduc";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,39 +34,53 @@ public class Questao1CompostaActivity extends AppCompatActivity {
         if (bundle != null){
             emailusuario = bundle.getString("emailusuario");
         }
-        Intent intent1 = getIntent();
-        Bundle bundle1 = new Bundle();
-        bundle1 = intent1.getExtras();
-        if (bundle1 != null){
-            pontoquestao3condicaosimples = bundle.getInt("pontoquestao3condicaosimples");
-        }
     }
 
     public void inicio(View view){
         Intent intent = new Intent(Questao1CompostaActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao1CompostaActivity.this, ExemploCondicaoCompostaActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         if(radioButton.isChecked()) {
-            ponto = pontoquestao3condicaosimples + 1;
-            Intent intent = new Intent(Questao1CompostaActivity.this, Questao2CompostaActivity.class);
-            intent.putExtra("emailusuario", emailusuario);
-            intent.putExtra("pontoquestao1", ponto);
-            startActivity(intent);
+            String URL = HOST + "/buscar_pontos_condicao_simples.php";
+            Ion.with(Questao1CompostaActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    pontos = Integer.parseInt(RETORNO);
+                    ponto = pontos + 1;
+                    Intent intent = new Intent(Questao1CompostaActivity.this, Questao2CompostaActivity.class);
+                    intent.putExtra("emailusuario", emailusuario);
+                    intent.putExtra("pontoquestao1", ponto);
+                    startActivity(intent);
+                    finish();
+                }
+            });
         }else{
-            ponto = pontoquestao3condicaosimples + 0;
-            Intent intent = new Intent(Questao1CompostaActivity.this, Questao2CompostaActivity.class);
-            intent.putExtra("emailusuario", emailusuario);
-            intent.putExtra("pontoquestao1", ponto);
-            startActivity(intent);
+            String URL = HOST + "/buscar_pontos_condicao_simples.php";
+            Ion.with(Questao1CompostaActivity.this).load(URL).setBodyParameter("email_app", emailusuario).asJsonObject().setCallback(new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    String RETORNO = result.get("BUSCA").getAsString();
+                    pontos = Integer.parseInt(RETORNO);
+                    ponto = pontos + 0;
+                    Intent intent = new Intent(Questao1CompostaActivity.this, Questao2CompostaActivity.class);
+                    intent.putExtra("emailusuario", emailusuario);
+                    intent.putExtra("pontoquestao1", ponto);
+                    startActivity(intent);
+                    finish();
+                }
+            });
         }
     }
 

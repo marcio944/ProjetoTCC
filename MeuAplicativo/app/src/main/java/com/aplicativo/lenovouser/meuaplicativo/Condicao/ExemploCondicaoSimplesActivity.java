@@ -28,18 +28,21 @@ public class ExemploCondicaoSimplesActivity extends AppCompatActivity {
         Intent intent = new Intent(ExemploCondicaoSimplesActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(ExemploCondicaoSimplesActivity.this, CondicaoSimplesActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(ExemploCondicaoSimplesActivity.this, Questao1CondicaoSimplesActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }

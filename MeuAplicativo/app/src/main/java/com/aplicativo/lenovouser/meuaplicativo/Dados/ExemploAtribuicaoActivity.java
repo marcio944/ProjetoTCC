@@ -32,18 +32,21 @@ public class ExemploAtribuicaoActivity extends AppCompatActivity {
         Intent intent = new Intent(ExemploAtribuicaoActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(ExemploAtribuicaoActivity.this, AtribuicaoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(ExemploAtribuicaoActivity.this, Questao1ManipulacaoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }

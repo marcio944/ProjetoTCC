@@ -38,12 +38,14 @@ public class Questao4ConstantesVariaveisActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao4ConstantesVariaveisActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao4ConstantesVariaveisActivity.this, Questao3ConstantesVariaveisActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -53,12 +55,14 @@ public class Questao4ConstantesVariaveisActivity extends AppCompatActivity {
             intent.putExtra("pontoquestao4", ponto);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            finish();
         }else{
             ponto = pontoquestao3 + 0;
             Intent intent = new Intent(Questao4ConstantesVariaveisActivity.this, Questao5ConstantesVariaveisActivity.class);
             intent.putExtra("pontoquestao4", ponto);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            finish();
         }
     }
 

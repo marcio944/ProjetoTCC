@@ -28,18 +28,21 @@ public class PrecedenciaAritmeticosActivity extends AppCompatActivity {
         Intent intent = new Intent(PrecedenciaAritmeticosActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(PrecedenciaAritmeticosActivity.this, ExemploAritmeticasActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(PrecedenciaAritmeticosActivity.this, ExemploPrecedenciaAritmeticosActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }

@@ -39,12 +39,14 @@ public class Questao4FluxogramaActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao4FluxogramaActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(Questao4FluxogramaActivity.this, Questao3FluxogramaActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -54,12 +56,14 @@ public class Questao4FluxogramaActivity extends AppCompatActivity {
             intent.putExtra("pontoquestao4", ponto);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            finish();
         }else{
             ponto = pontoquestao3 + 0;
             Intent intent = new Intent(Questao4FluxogramaActivity.this, Questao5FluxogramaActivity.class);
             intent.putExtra("pontoquestao4", ponto);
             intent.putExtra("emailusuario", emailusuario);
             startActivity(intent);
+            finish();
         }
     }
 

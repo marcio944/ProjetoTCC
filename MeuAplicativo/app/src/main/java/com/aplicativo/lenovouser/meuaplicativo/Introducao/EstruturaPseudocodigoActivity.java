@@ -33,6 +33,7 @@ public class EstruturaPseudocodigoActivity extends AppCompatActivity {
         Intent intent = new Intent(EstruturaPseudocodigoActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -40,12 +41,14 @@ public class EstruturaPseudocodigoActivity extends AppCompatActivity {
         intent.putExtra("pontoquestao5fluxograma", pontoquestao5fluxograma);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(EstruturaPseudocodigoActivity.this, PseudocodigoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }

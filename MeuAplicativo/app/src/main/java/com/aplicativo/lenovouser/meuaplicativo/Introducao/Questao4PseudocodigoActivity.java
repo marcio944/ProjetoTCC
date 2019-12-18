@@ -47,6 +47,7 @@ public class Questao4PseudocodigoActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao4PseudocodigoActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
@@ -63,6 +64,7 @@ public class Questao4PseudocodigoActivity extends AppCompatActivity {
                         intent.putExtra("pontosquestoesintroducao", ponto);
                         intent.putExtra("emailusuario", emailusuario);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -79,6 +81,7 @@ public class Questao4PseudocodigoActivity extends AppCompatActivity {
                         intent.putExtra("pontosquestoesintroducao", ponto);
                         intent.putExtra("emailusuario", emailusuario);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -109,6 +112,7 @@ public class Questao4PseudocodigoActivity extends AppCompatActivity {
                         intent.putExtra("pontosquestoesintroducao", ponto);
                         intent.putExtra("emailusuario", emailusuario);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -125,6 +129,7 @@ public class Questao4PseudocodigoActivity extends AppCompatActivity {
                         intent.putExtra("pontosquestoesintroducao", ponto);
                         intent.putExtra("emailusuario", emailusuario);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog alertDialog = alerta.create();
@@ -149,6 +154,7 @@ public class Questao4PseudocodigoActivity extends AppCompatActivity {
         Intent intent = new Intent(Questao4PseudocodigoActivity.this, Questao3PseudocodigoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }

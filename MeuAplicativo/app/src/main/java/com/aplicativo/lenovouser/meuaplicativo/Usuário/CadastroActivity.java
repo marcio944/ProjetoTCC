@@ -48,10 +48,6 @@ public class CadastroActivity extends AppCompatActivity {
 
     private String HOST = "http://algoeduc.000webhostapp.com/appalgoeduc";
 
-    UsuarioModel usuario = new UsuarioModel();
-    UsuarioRepository usuarioRepository = new UsuarioRepository(this);
-    UsuarioModel usuarioModel = new UsuarioModel();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

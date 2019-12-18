@@ -47,6 +47,7 @@ public class Questao4PrimitivosActivity extends AppCompatActivity {
         intent.putExtra("emailusuario", emailusuario);
         intent.putExtra("pontosintroducao", pontosintroducao);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
@@ -54,6 +55,7 @@ public class Questao4PrimitivosActivity extends AppCompatActivity {
         intent.putExtra("emailusuario", emailusuario);
         intent.putExtra("pontosintroducao", pontosintroducao);
         startActivity(intent);
+        finish();
     }
 
     public  void proximo(View view){
@@ -64,6 +66,7 @@ public class Questao4PrimitivosActivity extends AppCompatActivity {
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontosintroducao", pontosintroducao);
             startActivity(intent);
+            finish();
         }else {
             ponto = pontoquestao3 + 0;
             Intent intent = new Intent(Questao4PrimitivosActivity.this, Questao5PrimitivosActivity.class);
@@ -71,6 +74,7 @@ public class Questao4PrimitivosActivity extends AppCompatActivity {
             intent.putExtra("emailusuario", emailusuario);
             intent.putExtra("pontosintroducao", pontosintroducao);
             startActivity(intent);
+            finish();
         }
     }
 

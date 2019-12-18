@@ -28,18 +28,21 @@ public class ExemploAlgoritmoActivity extends AppCompatActivity {
         Intent intent = new Intent(ExemploAlgoritmoActivity.this, MainActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void proximo(View view){
         Intent intent = new Intent(this, Questao1AlgoritmosActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
     public void anterior(View view){
         Intent intent = new Intent(ExemploAlgoritmoActivity.this, ConceitoAlgoritmoActivity.class);
         intent.putExtra("emailusuario", emailusuario);
         startActivity(intent);
+        finish();
     }
 
 }
