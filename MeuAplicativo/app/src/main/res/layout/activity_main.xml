@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -33,17 +33,18 @@
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/imageButton_Introducao"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="30dp"
-                android:text="Introdução" />
+                android:layout_marginTop="10dp"
+                android:text="Introdução"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton_Introducao" />
 
             <ImageButton
                 android:id="@+id/imageButton_Dados"
                 android:layout_width="129dp"
                 android:layout_height="130dp"
                 android:layout_alignTop="@+id/imageButton_Introducao"
+                android:layout_marginLeft="220dp"
                 android:layout_marginTop="-160dp"
-                android:layout_marginLeft="225dp"
                 android:background="@null"
                 android:onClick="dados"
                 android:scaleType="fitXY"
@@ -86,7 +87,7 @@
                 android:id="@+id/imageButton9"
                 android:layout_width="129dp"
                 android:layout_height="130dp"
-                android:layout_marginLeft="225dp"
+                android:layout_marginLeft="220dp"
                 android:layout_marginTop="-175dp"
                 android:layout_alignStart="@+id/imageButton_Dados"
                 android:layout_alignTop="@+id/imageButton_Expressoes"
@@ -133,7 +134,7 @@
                 android:id="@+id/imageButton_Repeticao"
                 android:layout_width="129dp"
                 android:layout_height="130dp"
-                android:layout_marginLeft="225dp"
+                android:layout_marginLeft="220dp"
                 android:layout_marginTop="-158dp"
                 android:layout_alignStart="@+id/imageButton_Dados"
                 android:layout_alignParentBottom="true"
