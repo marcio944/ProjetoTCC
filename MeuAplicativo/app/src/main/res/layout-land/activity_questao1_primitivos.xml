@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Repetição.Questao1RepeticaoControleActivity">
+    tools:context=".Dados.Questao1PrimitivosActivity">
 
     <TextView
-        android:id="@+id/textView89"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView22"
+        android:layout_width="649dp"
+        android:layout_height="54dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -19,17 +19,17 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="A estrutura de repetição para-faça utiliza variáveis de controle que definem exatamente o número máximo de vezes que a sequência de instruções será executada."
+        android:text="Marque a alternativa que apresenta os tipos de dados mais comuns encontrados na maioria das linguagens de programação e que constituem a base de como qualquer informação será armazenada no mesmo."
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.014" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <RadioGroup
-        android:layout_width="146dp"
+        android:id="@+id/radioGroup"
+        android:layout_width="307dp"
         android:layout_height="148dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="8dp"
@@ -40,32 +40,51 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339">
+        app:layout_constraintVertical_bias="0.445">
 
         <RadioButton
-            android:id="@+id/radioButton96"
-            android:layout_width="96dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Certo"
-            tools:layout_editor_absoluteX="20dp"
-            tools:layout_editor_absoluteY="229dp" />
-
-        <RadioButton
-            android:id="@+id/radioButton95"
+            android:id="@+id/radioButton31"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Errado"
-            tools:layout_editor_absoluteX="20dp"
-            tools:layout_editor_absoluteY="229dp" />
+            android:text="inteiro, constante, caractere e logico"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="227dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="real, booleano, logico e caractere"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="inteiro, real, caractere e logico"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="325dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="numerico, real, char e booleano"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="338dp" />
+
     </RadioGroup>
 
     <Button
-        android:id="@+id/button147"
+        android:id="@+id/button22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -82,16 +101,16 @@
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.927" />
+        app:layout_constraintVertical_bias="0.933" />
 
     <Button
-        android:id="@+id/button148"
+        android:id="@+id/button21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageButton73"
+        android:layout_alignTop="@+id/imageButton88"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -108,13 +127,13 @@
         app:layout_constraintHorizontal_bias="0.892"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.927" />
+        app:layout_constraintVertical_bias="0.929" />
 
     <ImageButton
-        android:id="@+id/imageButton73"
+        android:id="@+id/imageButton88"
         android:layout_width="75dp"
         android:layout_height="50dp"
-        android:layout_alignBottom="@+id/button147"
+        android:layout_alignBottom="@+id/button22"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -128,7 +147,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView22"
         app:layout_constraintVertical_bias="0.932"
         app:srcCompat="@drawable/home" />
 

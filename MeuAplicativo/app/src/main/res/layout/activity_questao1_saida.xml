@@ -6,107 +6,168 @@
     android:layout_height="match_parent"
     tools:context=".EntradaSaída.Questao1SaidaActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView95"
+        android:layout_width="396dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Com base no algoritmo abaixo, e supondo que o valor fornecido para 'A' na linha 'leia A' seja 3 e o valor fornecido para 'B' na linha 'leia B' seja 4, pode-se afirmar que o valor da variável 'C' na linha 'escreva C' é:"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015" />
 
-        <TextView
-            android:id="@+id/textView95"
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.243"
+        app:srcCompat="@drawable/questao1saida" />
+
+    <RadioGroup
+        android:layout_width="55dp"
+        android:layout_height="148dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.674">
+
+        <RadioButton
+            android:id="@+id/radioButton112"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="19dp"
-            android:layout_marginLeft="19dp"
-            android:layout_marginTop="22dp"
-            android:text="Com base no algoritmo abaixo, e supondo que o valor fornecido para 'A' na linha 'leia A' seja 3 e o valor fornecido para 'B' na linha 'leia B' seja 4, pode-se afirmar que o valor da variável 'C' na linha 'escreva C' é:"
-            android:textStyle="bold" />
+            android:layout_weight="1"
+            android:text="24"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="314dp" />
 
-        <ImageView
-            android:id="@+id/imageView28"
+        <RadioButton
+            android:id="@+id/radioButton111"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="22dp"
-            android:layout_marginLeft="22dp"
-            android:layout_marginTop="106dp"
-            app:srcCompat="@drawable/questao1saida" />
+            android:layout_weight="1"
+            android:text="28"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="314dp" />
 
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="148dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="140dp"
-            android:layout_marginLeft="20dp" >
-
-            <RadioButton
-                android:id="@+id/radioButton112"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="24" />
-
-            <RadioButton
-                android:id="@+id/radioButton111"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="28" />
-
-            <RadioButton
-                android:id="@+id/radioButton110"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="32" />
-
-            <RadioButton
-                android:id="@+id/radioButton109"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="34" />
-
-        </RadioGroup>
-
-        <Button
-            android:id="@+id/button159"
+        <RadioButton
+            android:id="@+id/radioButton110"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="43dp"
-            android:layout_marginStart="34dp"
-            android:background="@color/colorPrimary"
-            android:onClick="anterior"
-            android:text="Anterior"
-            android:textColor="#ffffff" />
+            android:layout_weight="1"
+            android:text="32"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="314dp" />
 
-        <Button
-            android:id="@+id/button160"
+        <RadioButton
+            android:id="@+id/radioButton109"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/button159"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="35dp"
-            android:background="@color/colorPrimary"
-            android:onClick="proximo"
-            android:text="Próximo"
-            android:textColor="#ffffff" />" />
+            android:layout_weight="1"
+            android:text="34"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="314dp" />
+    </RadioGroup>
 
-        <ImageButton
-            android:id="@+id/imageButton79"
-            android:layout_width="75dp"
-            android:layout_height="50dp"
-            android:layout_alignTop="@+id/button159"
-            android:layout_centerHorizontal="true"
-            android:background="@null"
-            android:onClick="inicio"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/home" />
-    </RelativeLayout>
+    <Button
+        android:id="@+id/button159"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="anterior"
+        android:text="Anterior"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936" />
+
+    <Button
+        android:id="@+id/button160"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button159"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="proximo"
+        android:text="Próximo"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.933" />
+
+    <ImageButton
+        android:id="@+id/imageButton79"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/button159"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        android:onClick="inicio"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938"
+        app:srcCompat="@drawable/home" />
+
 </android.support.constraint.ConstraintLayout>

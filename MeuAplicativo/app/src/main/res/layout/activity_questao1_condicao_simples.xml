@@ -6,95 +6,148 @@
     android:layout_height="match_parent"
     tools:context=".Condicao.Questao1CondicaoSimplesActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView122"
+        android:layout_width="398dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="As linguagens de programação possuem estruturas para que se criem soluções melhores. Marque a alternativa que possui estrutura de condição simples representada em pseudocódigo."
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015" />
 
-        <TextView
-            android:id="@+id/textView122"
-            android:layout_width="wrap_content"
+    <RadioGroup
+        android:layout_width="198dp"
+        android:layout_height="148dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.334">
+
+        <RadioButton
+            android:id="@+id/radioButton121"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="19dp"
-            android:layout_marginLeft="19dp"
-            android:layout_marginTop="22dp"
-            android:textStyle="bold"
-            android:text="As linguagens de programação possuem estruturas para que se criem soluções melhores. Marque a alternativa que possui estrutura de condição simples representada em pseudocódigo." />
+            android:layout_weight="1"
+            android:text="Enquanto....faça...."
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="229dp" />
 
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="148dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="225dp"
-            android:layout_marginLeft="20dp" >
-
-            <RadioButton
-                android:id="@+id/radioButton124"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Se....então" />
-
-            <RadioButton
-                android:id="@+id/radioButton123"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Caso...Faça..." />
-
-            <RadioButton
-                android:id="@+id/radioButton122"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Se...Então...Senão..." />
-
-            <RadioButton
-                android:id="@+id/radioButton121"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Enquanto....faça...." />
-
-        </RadioGroup>
-
-        <Button
-            android:id="@+id/button179"
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/radioButton122"
+            android:layout_width="228dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="43dp"
-            android:layout_marginStart="34dp"
-            android:background="@color/colorPrimary"
-            android:onClick="anterior"
-            android:text="Anterior"
-            android:textColor="#ffffff" />
+            android:layout_weight="1"
+            android:text="Se...Então...Senão..."
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="229dp" />
 
-        <Button
-            android:id="@+id/button180"
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/radioButton123"
+            android:layout_width="208dp"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/imageButton98"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="35dp"
-            android:background="@color/colorPrimary"
-            android:onClick="proximo"
-            android:text="Próximo"
-            android:textColor="#ffffff" />
+            android:layout_weight="1"
+            android:text="Caso...Faça..."
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="229dp" />
 
-        <ImageButton
-            android:id="@+id/imageButton98"
-            android:layout_width="75dp"
-            android:layout_height="50dp"
-            android:layout_alignBottom="@+id/button179"
-            android:layout_centerHorizontal="true"
-            android:background="@null"
-            android:onClick="inicio"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/home" />
-    </RelativeLayout>
+        <RadioButton
+            android:id="@+id/radioButton124"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Se....então"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="229dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button179"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="anterior"
+        android:text="Anterior"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.929" />
+
+    <Button
+        android:id="@+id/button180"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageButton98"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="proximo"
+        android:text="Próximo"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.927" />
+
+    <ImageButton
+        android:id="@+id/imageButton98"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/button179"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        android:onClick="inicio"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.927"
+        app:srcCompat="@drawable/home" />
+
 </android.support.constraint.ConstraintLayout>

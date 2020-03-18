@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Repetição.Questao1RepeticaoControleActivity">
+    tools:context=".Condicao.Questao1CondicaoSimplesActivity">
 
     <TextView
-        android:id="@+id/textView89"
-        android:layout_width="400dp"
+        android:id="@+id/textView122"
+        android:layout_width="644dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -19,17 +19,17 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="A estrutura de repetição para-faça utiliza variáveis de controle que definem exatamente o número máximo de vezes que a sequência de instruções será executada."
+        android:text="As linguagens de programação possuem estruturas para que se criem soluções melhores. Marque a alternativa que possui estrutura de condição simples representada em pseudocódigo."
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.014" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <RadioGroup
-        android:layout_width="146dp"
+        android:layout_width="198dp"
         android:layout_height="148dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="8dp"
@@ -40,32 +40,50 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339">
+        app:layout_constraintVertical_bias="0.334">
 
         <RadioButton
-            android:id="@+id/radioButton96"
-            android:layout_width="96dp"
+            android:id="@+id/radioButton121"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Certo"
+            android:text="Enquanto....faça...."
             tools:layout_editor_absoluteX="20dp"
             tools:layout_editor_absoluteY="229dp" />
 
         <RadioButton
-            android:id="@+id/radioButton95"
-            android:layout_width="wrap_content"
+            android:id="@+id/radioButton122"
+            android:layout_width="228dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Errado"
+            android:text="Se...Então...Senão..."
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="229dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton123"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Caso...Faça..."
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="229dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton124"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Se....então"
             tools:layout_editor_absoluteX="20dp"
             tools:layout_editor_absoluteY="229dp" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/button147"
+        android:id="@+id/button179"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -82,16 +100,16 @@
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.927" />
+        app:layout_constraintVertical_bias="0.929" />
 
     <Button
-        android:id="@+id/button148"
+        android:id="@+id/button180"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageButton73"
+        android:layout_alignTop="@+id/imageButton98"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -105,16 +123,16 @@
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.927" />
 
     <ImageButton
-        android:id="@+id/imageButton73"
+        android:id="@+id/imageButton98"
         android:layout_width="75dp"
         android:layout_height="50dp"
-        android:layout_alignBottom="@+id/button147"
+        android:layout_alignBottom="@+id/button179"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -129,7 +147,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.932"
+        app:layout_constraintVertical_bias="0.927"
         app:srcCompat="@drawable/home" />
 
 </android.support.constraint.ConstraintLayout>

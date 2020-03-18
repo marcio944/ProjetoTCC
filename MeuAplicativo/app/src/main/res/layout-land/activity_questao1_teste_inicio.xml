@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Repetição.Questao1RepeticaoControleActivity">
+    tools:context=".Repetição.Questao1TesteInicioActivity">
 
     <TextView
-        android:id="@+id/textView89"
-        android:layout_width="400dp"
+        android:id="@+id/textView15"
+        android:layout_width="652dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -19,17 +19,17 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="A estrutura de repetição para-faça utiliza variáveis de controle que definem exatamente o número máximo de vezes que a sequência de instruções será executada."
+        android:text="A condição, na estrutura de repetição enquanto-faça, é testada antes de se executar o conjunto de instruções."
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.014" />
 
     <RadioGroup
-        android:layout_width="146dp"
+        android:layout_width="172dp"
         android:layout_height="148dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="8dp"
@@ -40,14 +40,14 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339">
+        app:layout_constraintVertical_bias="0.434">
 
         <RadioButton
-            android:id="@+id/radioButton96"
-            android:layout_width="96dp"
+            android:id="@+id/radioButton74"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Certo"
@@ -55,7 +55,7 @@
             tools:layout_editor_absoluteY="229dp" />
 
         <RadioButton
-            android:id="@+id/radioButton95"
+            android:id="@+id/radioButton73"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -65,7 +65,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button147"
+        android:id="@+id/button131"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -82,16 +82,16 @@
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.927" />
+        app:layout_constraintVertical_bias="0.933" />
 
     <Button
-        android:id="@+id/button148"
+        android:id="@+id/button132"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageButton73"
+        android:layout_height="47dp"
+        android:layout_alignBottom="@+id/imageButton65"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -105,16 +105,16 @@
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.927" />
 
     <ImageButton
-        android:id="@+id/imageButton73"
+        android:id="@+id/imageButton65"
         android:layout_width="75dp"
         android:layout_height="50dp"
-        android:layout_alignBottom="@+id/button147"
+        android:layout_alignTop="@+id/button131"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -129,7 +129,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.932"
+        app:layout_constraintVertical_bias="0.934"
         app:srcCompat="@drawable/home" />
 
 </android.support.constraint.ConstraintLayout>
